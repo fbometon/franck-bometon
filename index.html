@@ -1274,18 +1274,19 @@
 
     grid.innerHTML = filtered.map(b => {
       const catLabel = b.cat === 'essais' ? 'Philosophie & SH' : (b.cat === 'vademecum' ? 'Vade-mecum' : (b.cat === 'voyages' ? 'Voyages' : 'Fictions'));
-     return `
+return `
   <article class="book">
     <img class="cover"
-     src="${b.cover}"
-     alt="Couverture — ${b.title}"
-     loading="lazy">
-         
+         src="${b.cover || 'covers/placeholder.jpg'}"
+         alt="Couverture — ${b.title}"
+         loading="lazy">
+
     <div class="title">${b.title}</div>
-    <a href="${b.url}" target="_blank" rel="noopener">Voir sur Amazon</a>
+    <a href="${b.url}" target="_blank" rel="noopener">
+      Voir sur Amazon
+    </a>
   </article>
 `;
-
     }).join('');
 
     if (filtered.length === 0) {
