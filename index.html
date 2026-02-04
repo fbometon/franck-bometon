@@ -1027,42 +1027,7 @@
 
   // --- Book data (provided by you)
   const BOOKS = [
-    {n: 1, cat: 'essais', title: "Philosophie de l'Assertivité : Oser Être, Dire et Agir", url: 'https://www.amazon.fr/dp/B0F21VYGJZ'},
-    {n: 2, cat: 'essais', title: "La Synergologie : Lire l’humain sans le réduire", url: 'https://www.amazon.fr/dp/B0GHWBDFMR'},
-    {n: 3, cat: 'essais', title: "Leadership et Management des Organisations : Vers une Autorité Éclairée", url: 'https://www.amazon.fr/dp/B0F6MZMFHS'},
-    {n: 4, cat: 'essais', title: "L’Intelligence Émotionnelle : Philosophie, Pratique et Réflexion", url: 'https://www.amazon.fr/dp/B0DZTB7HW3'},
-    {n: 5, cat: 'essais', title: "Métamorphoses du Désir : Technologie et Intimité à l'Ère Numérique", url: 'https://www.amazon.fr/dp/B0CX4GGTZH'},
-    {n: 6, cat: 'essais', title: "Solitudes Connectées : L'Ère de l'Individualisme Numérique", url: 'https://www.amazon.fr/dp/B0CV81F5B5'},
-    {n: 7, cat: 'essais', title: "Le Miroir des Illusions : Philosophie de la Manipulation dans la Trame Sociale", url: 'https://www.amazon.fr/dp/B0CSVW4VZ6'},
-    {n: 8, cat: 'essais', title: "Socrate de Retour en 2025 : Dialogues avec le Futur", url: 'https://www.amazon.fr/dp/B0CRR6K4X6'},
-    {n: 9, cat: 'essais', title: "Chroniques d'un Optimiste Incorrigible : Sourire en Dépit du Chaos", url: 'https://www.amazon.fr/dp/B0CR8F69XF'},
-    {n: 10, cat: 'essais', title: "Au-delà du Soi : Voyages en Philosophie Réflexive", url: 'https://www.amazon.fr/dp/B0CP9JQWLQ'},
-    {n: 11, cat: 'essais', title: "Sculpter la Psyché : L'Art et la Science de l'Esprit", url: 'https://www.amazon.fr/dp/B0CPXT5973'},
-    {n: 12, cat: 'essais', title: "L'Art du Coaching : Explorer et Transformer le Potentiel Humain", url: 'https://www.amazon.fr/dp/B0CPPMDFSP'},
-
-    {n: 13, cat: 'vademecum', title: "Vade-mecum du Management Intergénérationnel et Interculturel : Stratégies pour un Leadership Harmonieux", url: 'https://www.amazon.fr/dp/B0CMNRXZR5'},
-    {n: 14, cat: 'vademecum', title: "Formateurs d'Aujourd'hui : Vers une Pédagogie Réflexive et Engagée", url: 'https://www.amazon.fr/dp/B0CP1PLQ27'},
-    {n: 15, cat: 'vademecum', title: "Vade-mecum de Management : L'Artisanat du Leadership : Traité en Miniatures", url: 'https://www.amazon.fr/dp/B0CKXBJ5L5'},
-    {n: 16, cat: 'vademecum', title: "Vade Mecum du Management Toxique : Comprendre et Prévenir les RPS", url: 'https://www.amazon.fr/dp/B0CMPVJH8R'},
-    {n: 17, cat: 'vademecum', title: "Vade-mecum de l'Art Oratoire : Psychologie de la Prise de Parole en Public", url: 'https://www.amazon.fr/dp/B0CMJMRLK7'},
-    {n: 18, cat: 'vademecum', title: "Vade-mecum des Mécanismes de Défense : Une Approche Psychodynamique à la Gestion du Stress", url: 'https://www.amazon.fr/dp/B0CMCLBFK6'},
-    {n: 19, cat: 'vademecum', title: "Vade-mecum de l'Harmonie dans la Discorde : Stratégies et Techniques en Gestion des Conflits", url: 'https://www.amazon.fr/dp/B0CLYJRPTQ'},
-    {n: 20, cat: 'vademecum', title: "Vade-mecum de la Métamorphose Managériale : Un Traité sur la Conduite du Changement", url: 'https://www.amazon.fr/dp/B0CLXXL3RC'},
-    {n: 21, cat: 'vademecum', title: "Vade-mecum de Management : Guide Érudit des Pratiques Managériales", url: 'https://www.amazon.fr/dp/B0CKSPYQ6W'},
-    {n: 22, cat: 'vademecum', title: "Le Vade-mecum de la Bienveillance Managériale et du Bien-être au Travail", url: 'https://www.amazon.fr/dp/B0CLND85CY'},
-    {n: 23, cat: 'vademecum', title: "Le Management en Évolution : De l'Art de Diriger à l'Agilité du 21ème Siècle", url: 'https://www.amazon.fr/dp/B0CH2D7Q4Y'},
-
-    {n: 24, cat: 'voyages', title: "Java, Sumatra, Célèbes : Empreintes d'un Archipel Infini", url: 'https://www.amazon.fr/dp/B0DSBN2YNQ'},
-    {n: 25, cat: 'voyages', title: "L’Île des Mystères : Chroniques d’un Explorateur à Bornéo", url: 'https://www.amazon.fr/dp/B0DGLB8C9P'},
-    {n: 26, cat: 'voyages', title: "Bali en Réflexion : Chroniques d'un Explorateur Philosophe", url: 'https://www.amazon.fr/dp/B0DCFZLFFN'},
-    {n: 27, cat: 'voyages', title: "Carnets de Route en Indochine : Laos, Cambodge et Vietnam", url: 'https://www.amazon.fr/dp/B0D9VF81WB'},
-    {n: 28, cat: 'voyages', title: "Pérégrinations d'un Philosophe Aventurier en Thaïlande et Birmanie", url: 'https://www.amazon.fr/dp/B0D9GRJ225'},
-    {n: 29, cat: 'voyages', title: "Par-delà les Frontières : Récits d'un Philosophe-Voyageur", url: 'https://www.amazon.fr/dp/B0D2X83JHT'},
-    {n: 30, cat: 'voyages', title: "Voyage Initiatique au Népal et en Inde : Du Nord Légendaire au Sud Mystique", url: 'https://www.amazon.fr/dp/B0D41ZM17X'},
-    {n: 31, cat: 'voyages', title: "Chroniques d'un Globe-Trotter à la Confluence des Cultures au Cœur du Continent Américain", url: 'https://www.amazon.fr/dp/B0D29HXLHD'},
-
-    {n: 32, cat: 'fictions', title: "Meurtre sur le Green : Le mystère du golf provençal", url: 'https://www.amazon.fr/dp/B0CK3H5F36'},
-    {n: 33, cat: 'fictions', title: "Le Souffle de la Guerre : Entre Honneur et Devoir (Lieutenant, 2e REP)", url: 'https://www.amazon.fr/dp/B0CQY2H9FM'},
+   
   ];
 
   const grid = document.getElementById('bookGrid');
