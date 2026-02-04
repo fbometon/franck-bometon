@@ -5,1345 +5,906 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0b0b0b" />
   <title>Franck Bometon — Franky | Noir & Or</title>
-  <meta name="description" content="Franck Bometon (Franky) — Explorer l’humain sans le réduire. Philosophie, leadership, sciences humaines, vade-mecum et récits." />
+  <meta name="description" content="Franck Bometon (Franky) — Explorer l’humain sans le réduire. Philosophie appliquée, leadership, sciences humaines, vade-mecum et récits." />
+
+  <!-- Open Graph (meilleur rendu quand tu partages le lien) -->
+  <meta property="og:title" content="Franck Bometon — Franky | Noir & Or" />
+  <meta property="og:description" content="Explorer l’humain sans le réduire. Philosophie appliquée, leadership, sciences humaines." />
+  <meta property="og:type" content="website" />
+  <!-- TODO: mets une image carrée (1200x630) -->
+  <meta property="og:image" content="assets/og-cover.jpg" />
 
   <style>
-    :root {
-      --bg: #0b0b0b;
-      --bg2: #0f0f10;
-      --ink: #f2f0ea;
-      --muted: rgba(242,240,234,.72);
-      --muted2: rgba(242,240,234,.55);
-      --line: rgba(242,240,234,.14);
-      --gold: #d6b56d;
-      --gold2:#b89445;
-      --shadow: 0 22px 60px rgba(0,0,0,.55);
-      --radius: 18px;
-      --radius2: 28px;
-      --max: 1120px;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      --serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    :root{
+      --bg:#0b0b0b; --bg2:#0f0f10;
+      --ink:#f2f0ea; --muted:rgba(242,240,234,.72); --muted2:rgba(242,240,234,.55);
+      --line:rgba(242,240,234,.14);
+      --gold:#d6b56d; --gold2:#b89445;
+      --shadow:0 22px 60px rgba(0,0,0,.55);
+      --radius:18px; --radius2:28px; --max:1120px;
+      --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      --sans:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      --serif:ui-serif,Georgia,Cambria,"Times New Roman",Times,serif;
     }
-
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: var(--sans);
-      background: radial-gradient(1000px 600px at 10% -10%, rgba(214,181,109,.12), transparent 60%),
-                  radial-gradient(900px 500px at 90% 0%, rgba(214,181,109,.10), transparent 55%),
-                  linear-gradient(180deg, var(--bg) 0%, #070707 100%);
-      color: var(--ink);
-      letter-spacing: .1px;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:var(--sans); color:var(--ink); letter-spacing:.1px;
+      background:
+        radial-gradient(1000px 600px at 10% -10%, rgba(214,181,109,.12), transparent 60%),
+        radial-gradient(900px 500px at 90% 0%, rgba(214,181,109,.10), transparent 55%),
+        linear-gradient(180deg, var(--bg) 0%, #070707 100%);
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
+    a{color:inherit; text-decoration:none}
+    a:hover{color:var(--gold)}
+    .container{width:min(var(--max), calc(100% - 44px)); margin:0 auto}
 
-    a { color: inherit; text-decoration: none; }
-    a:hover { color: var(--gold); }
-
-    .container { width: min(var(--max), calc(100% - 44px)); margin: 0 auto; }
+    /* Skip link (accessibilité) */
+    .skip{
+      position:absolute; left:-9999px; top:10px;
+      background:rgba(0,0,0,.85); border:1px solid var(--line);
+      padding:10px 12px; border-radius:12px;
+    }
+    .skip:focus{left:16px; z-index:999}
 
     /* Header */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(12px);
-      background: rgba(11,11,11,.62);
-      border-bottom: 1px solid var(--line);
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:blur(12px);
+      background:rgba(11,11,11,.62);
+      border-bottom:1px solid var(--line);
     }
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:18px; padding:14px 0}
+    .brand{display:flex; align-items:baseline; gap:10px; white-space:nowrap}
+    .brand .name{font-family:var(--serif); font-size:18px; letter-spacing:.6px}
+    .brand .tag{font-family:var(--mono); font-size:12px; color:var(--muted2); border:1px solid var(--line); padding:4px 10px; border-radius:999px}
+    .navlinks{display:flex; align-items:center; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    .navlinks a{font-size:13px; color:var(--muted); padding:8px 10px; border-radius:999px; border:1px solid transparent}
+    .navlinks a:hover{border-color:var(--line); color:var(--ink)}
+    .nav-cta{display:flex; gap:10px; align-items:center}
 
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 14px 0;
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 14px; border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--ink); font-weight:600; font-size:13px;
+      transition:transform .08s ease, border-color .2s ease, background .2s ease;
+      cursor:pointer; user-select:none; white-space:nowrap;
     }
+    .btn:hover{border-color:rgba(214,181,109,.35); background:rgba(214,181,109,.08)}
+    .btn:active{transform:translateY(1px)}
+    .btn.gold{border-color:rgba(214,181,109,.55); background:linear-gradient(180deg, rgba(214,181,109,.20), rgba(214,181,109,.06))}
 
-    .brand {
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
-      white-space: nowrap;
-    }
-    .brand .name {
-      font-family: var(--serif);
-      font-size: 18px;
-      letter-spacing: .6px;
-    }
-    .brand .tag {
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--muted2);
-      border: 1px solid var(--line);
-      padding: 4px 10px;
-      border-radius: 999px;
-    }
-
-    .navlinks {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .navlinks a {
-      font-size: 13px;
-      color: var(--muted);
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-    }
-    .navlinks a:hover {
-      border-color: var(--line);
-      color: var(--ink);
-    }
-
-    .nav-cta {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 12px 14px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      color: var(--ink);
-      font-weight: 600;
-      font-size: 13px;
-      transition: transform .08s ease, border-color .2s ease, background .2s ease;
-      cursor: pointer;
-      user-select: none;
-      white-space: nowrap;
-    }
-    .btn:hover {
-      border-color: rgba(214,181,109,.35);
-      background: rgba(214,181,109,.08);
-      color: var(--ink);
-    }
-    .btn:active { transform: translateY(1px); }
-
-    .btn.gold {
-      border-color: rgba(214,181,109,.55);
-      background: linear-gradient(180deg, rgba(214,181,109,.20), rgba(214,181,109,.06));
-    }
-
-    .burger {
-      display: none;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      cursor: pointer;
-    }
-    .burger span {
-      display: block;
-      width: 18px;
-      height: 2px;
-      background: var(--ink);
-      margin: 4px 0;
-      opacity: .85;
-    }
+    .burger{display:none; padding:10px 12px; border-radius:12px; border:1px solid var(--line); background:rgba(255,255,255,.03); cursor:pointer}
+    .burger span{display:block; width:18px; height:2px; background:var(--ink); margin:4px 0; opacity:.85}
 
     /* Hero */
-    .hero {
-      padding: 76px 0 34px;
-    }
-/* --- Portrait Hero (vignette éditoriale) --- */
-.portrait-hero{
-  width: 260px;
-  max-width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  border-radius: 18px;
-  border: 1px solid var(--line);
-  box-shadow: 0 18px 45px rgba(0,0,0,.55);
-  margin-bottom: 22px;
-}
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 26px;
-      align-items: start;
-    }
+    .hero{padding:76px 0 34px}
+    .hero-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:26px; align-items:start}
+    .kicker{font-family:var(--mono); color:var(--muted); letter-spacing:.16em; text-transform:uppercase; font-size:11px; margin-bottom:14px}
+    h1{margin:0; font-family:var(--serif); font-size:clamp(40px, 5vw, 58px); line-height:1.05; letter-spacing:.8px}
+    .subtitle{margin-top:16px; font-size:18px; color:var(--muted); line-height:1.6; max-width:62ch}
+    .hero-actions{margin-top:22px; display:flex; gap:12px; flex-wrap:wrap}
 
-    .kicker {
-      font-family: var(--mono);
-      color: var(--muted);
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      font-size: 11px;
-      margin-bottom: 14px;
+    .card{
+      border:1px solid var(--line);
+      background:radial-gradient(900px 500px at 20% 0%, rgba(214,181,109,.12), transparent 60%), rgba(255,255,255,.03);
+      border-radius:var(--radius2);
+      padding:18px; box-shadow:var(--shadow);
     }
+    .card h3{margin:0 0 8px; font-size:13px; letter-spacing:.14em; text-transform:uppercase; font-family:var(--mono); color:rgba(214,181,109,.92)}
+    .card p{margin:0; color:var(--muted); font-size:14px; line-height:1.65}
 
-    h1 {
-      margin: 0;
-      font-family: var(--serif);
-      font-size: clamp(40px, 5vw, 58px);
-      line-height: 1.05;
-      letter-spacing: .8px;
-    }
-
-    .subtitle {
-      margin-top: 16px;
-      font-size: 18px;
-      color: var(--muted);
-      line-height: 1.6;
-      max-width: 62ch;
-    }
-
-    .hero-actions {
-      margin-top: 22px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .card {
-      border: 1px solid var(--line);
-      background: radial-gradient(900px 500px at 20% 0%, rgba(214,181,109,.12), transparent 60%),
-                  rgba(255,255,255,.03);
-      border-radius: var(--radius2);
-      padding: 18px;
-      box-shadow: var(--shadow);
-    }
-
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 13px;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      font-family: var(--mono);
-      color: rgba(214,181,109,.92);
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.65;
-    }
-
-    .signature {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px solid var(--line);
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: baseline;
-    }
-
-    .sig-left {
-      font-family: var(--serif);
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .sig-right {
-      text-align: right;
-      font-family: var(--serif);
-      font-size: 16px;
-      color: var(--gold);
-      letter-spacing: .4px;
-    }
-    .sig-right small {
-      display: block;
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--muted2);
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      margin-top: 4px;
-    }
+    .signature{margin-top:18px; padding-top:14px; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:12px; align-items:baseline}
+    .sig-left{font-family:var(--serif); font-size:14px; color:var(--muted)}
+    .sig-right{text-align:right; font-family:var(--serif); font-size:16px; color:var(--gold); letter-spacing:.4px}
+    .sig-right small{display:block; font-family:var(--mono); font-size:11px; color:var(--muted2); letter-spacing:.16em; text-transform:uppercase; margin-top:4px}
 
     /* Sections */
-    section { padding: 54px 0; border-top: 1px solid var(--line); }
-    section:first-of-type { border-top: none; }
-
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 18px;
-      margin-bottom: 18px;
-    }
-
-    .section-head h2 {
-      margin: 0;
-      font-family: var(--serif);
-      font-size: 28px;
-      letter-spacing: .3px;
-    }
-
-    .section-head .hint {
-      color: var(--muted2);
-      font-size: 13px;
-      max-width: 52ch;
-      line-height: 1.5;
-    }
-
-    .grid2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .prose {
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.85;
-      max-width: 75ch;
-    }
-
-    .prose strong { color: var(--ink); }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: rgba(214,181,109,.95);
-      border: 1px solid rgba(214,181,109,.25);
-      background: rgba(214,181,109,.08);
-      padding: 6px 10px;
-      border-radius: 999px;
-    }
-
-    /* Books */
-    .controls {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-      margin: 12px 0 18px;
-    }
-    /* --- Cartes livres --- */
-.book{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* --- Couvertures de livres --- */
-.book .cover{
-  width: 100%;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-  border-radius: 14px;
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,.02);
-  display: block;
-}
-
-/* --- Couvertures de livres --- */
-.cover{
-  width: 100%;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-  border-radius: 14px;
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,.02);
-  display: block;
-}
-    .chip {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.02);
-      color: var(--muted);
-      padding: 9px 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      cursor: pointer;
-      user-select: none;
-    }
-    .chip.active {
-      border-color: rgba(214,181,109,.55);
-      color: var(--ink);
-      background: rgba(214,181,109,.10);
-    }
-
-    .search {
-      flex: 1;
-      min-width: 220px;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 10px 12px;
-      background: rgba(255,255,255,.02);
-    }
-    .search input {
-      flex: 1;
-      border: none;
-      outline: none;
-      background: transparent;
-      color: var(--ink);
-      font-size: 13px;
-    }
-    .search input::placeholder { color: rgba(242,240,234,.38); }
-
-    .books {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-
-    .book {
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 14px;
-      background: rgba(255,255,255,.02);
-      transition: transform .08s ease, border-color .2s ease, background .2s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      min-height: 132px;
-    }
-    .book:hover {
-      border-color: rgba(214,181,109,.35);
-      background: rgba(214,181,109,.06);
-      transform: translateY(-1px);
-    }
-
-    .book .meta {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      align-items: baseline;
-    }
-
-    .book .n {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: rgba(214,181,109,.9);
-    }
-
-    .book .cat {
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--muted2);
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-
-    .book .title {
-      font-family: var(--serif);
-      font-size: 16px;
-      line-height: 1.25;
-      color: var(--ink);
-    }
-
-    .book .links {
-      margin-top: auto;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border: 1px solid var(--line);
-      padding: 8px 10px;
-      border-radius: 999px;
-      font-size: 12px;
-      color: var(--muted);
-      background: rgba(255,255,255,.01);
-    }
-    .link:hover {
-      border-color: rgba(214,181,109,.45);
-      background: rgba(214,181,109,.08);
-      color: var(--ink);
+    section{padding:54px 0; border-top:1px solid var(--line)}
+    section:first-of-type{border-top:none}
+    .section-head{display:flex; align-items:end; justify-content:space-between; gap:18px; margin-bottom:18px}
+    .section-head h2{margin:0; font-family:var(--serif); font-size:28px; letter-spacing:.3px}
+    .section-head .hint{color:var(--muted2); font-size:13px; max-width:52ch; line-height:1.5}
+    .grid2{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+    .two-col{display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:start}
+    .prose{color:var(--muted); font-size:16px; line-height:1.85; max-width:75ch}
+    .prose strong{color:var(--ink)}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+      color:rgba(214,181,109,.95);
+      border:1px solid rgba(214,181,109,.25);
+      background:rgba(214,181,109,.08);
+      padding:6px 10px; border-radius:999px;
     }
 
     /* Callout */
-    .callout {
-      border: 1px solid rgba(214,181,109,.25);
-      background: radial-gradient(900px 500px at 10% 0%, rgba(214,181,109,.14), transparent 60%),
-                  rgba(214,181,109,.06);
-      border-radius: var(--radius2);
-      padding: 18px;
+    .callout{
+      border:1px solid rgba(214,181,109,.25);
+      background:radial-gradient(900px 500px at 10% 0%, rgba(214,181,109,.14), transparent 60%), rgba(214,181,109,.06);
+      border-radius:var(--radius2);
+      padding:18px;
     }
+    .callout .title{display:flex; gap:10px; align-items:baseline; justify-content:space-between; margin-bottom:10px}
+    .callout .title h3{margin:0; font-family:var(--serif); font-size:20px}
+    .callout .title .tag{font-family:var(--mono); font-size:11px; color:rgba(214,181,109,.92); letter-spacing:.14em; text-transform:uppercase}
 
-    .callout .title {
-      display: flex;
-      gap: 10px;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 10px;
+    /* Books */
+    .controls{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin:12px 0 18px}
+    .chip{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.02);
+      color:var(--muted);
+      padding:9px 12px;
+      border-radius:999px;
+      font-size:12px;
+      cursor:pointer;
+      user-select:none;
     }
-    .callout .title h3 {
-      margin: 0;
-      font-family: var(--serif);
-      font-size: 20px;
+    .chip.active{border-color:rgba(214,181,109,.55); color:var(--ink); background:rgba(214,181,109,.10)}
+    .search{
+      flex:1; min-width:220px;
+      display:flex; gap:10px; align-items:center;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:10px 12px;
+      background:rgba(255,255,255,.02);
     }
+    .search input{flex:1; border:none; outline:none; background:transparent; color:var(--ink); font-size:13px}
+    .search input::placeholder{color:rgba(242,240,234,.38)}
 
-    .callout .title .tag {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: rgba(214,181,109,.92);
-      letter-spacing: .14em;
-      text-transform: uppercase;
+    .books{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px}
+    .book{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:14px;
+      background:rgba(255,255,255,.02);
+      transition:transform .08s ease, border-color .2s ease, background .2s ease;
+      display:flex; flex-direction:column; gap:10px;
     }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      align-items: start;
+    .book:hover{border-color:rgba(214,181,109,.35); background:rgba(214,181,109,.06); transform:translateY(-1px)}
+    .cover{
+      width:100%;
+      aspect-ratio:2 / 3;
+      object-fit:cover;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.02);
+      display:block;
     }
+    .book .title{font-family:var(--serif); font-size:16px; line-height:1.25; color:var(--ink)}
+    .book .cta{margin-top:auto; display:flex; gap:10px; flex-wrap:wrap}
+    .link{
+      display:inline-flex; align-items:center; gap:8px;
+      border:1px solid var(--line);
+      padding:8px 10px;
+      border-radius:999px;
+      font-size:12px;
+      color:var(--muted);
+      background:rgba(255,255,255,.01);
+    }
+    .link:hover{border-color:rgba(214,181,109,.45); background:rgba(214,181,109,.08); color:var(--ink)}
 
     /* Footer */
-    footer {
-      padding: 32px 0 54px;
-      border-top: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(15,15,16,.0) 0%, rgba(15,15,16,.35) 100%);
+    footer{
+      padding:32px 0 54px;
+      border-top:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(15,15,16,0) 0%, rgba(15,15,16,.35) 100%);
     }
-    .foot {
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      flex-wrap: wrap;
-      align-items: center;
-      color: var(--muted2);
-      font-size: 13px;
-    }
-    .foot .mini {
-      font-family: var(--mono);
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
+    .foot{display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; align-items:center; color:var(--muted2); font-size:13px}
+    .foot .mini{font-family:var(--mono); letter-spacing:.12em; text-transform:uppercase}
+
+    /* Utility */
+    .mt8{margin-top:8px} .mt12{margin-top:12px} .mt18{margin-top:18px} .mt24{margin-top:24px}
+    .sep{height:1px; background:var(--line); margin:18px 0}
 
     /* Responsive */
-    @media (max-width: 980px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .books { grid-template-columns: repeat(2, 1fr); }
-      .grid2 { grid-template-columns: 1fr; }
-      .two-col { grid-template-columns: 1fr; }
+    @media (max-width:980px){
+      .hero-grid{grid-template-columns:1fr}
+      .books{grid-template-columns:repeat(2, 1fr)}
+      .grid2{grid-template-columns:1fr}
+      .two-col{grid-template-columns:1fr}
     }
-
-    @media (max-width: 720px) {
-      .navlinks, .nav-cta { display: none; }
-      .burger { display: inline-block; }
-      .books { grid-template-columns: 1fr; }
-      .hero { padding: 58px 0 28px; }
+    @media (max-width:720px){
+      .navlinks,.nav-cta{display:none}
+      .burger{display:inline-block}
+      .books{grid-template-columns:1fr}
+      .hero{padding:58px 0 28px}
     }
 
     /* Mobile drawer */
-    .drawer {
-      display: none;
-      border-top: 1px solid var(--line);
-      padding: 12px 0 16px;
-    }
-    .drawer.open { display: block; }
-    .drawer a {
-      display: block;
-      padding: 10px 8px;
-      border-radius: 12px;
-      color: var(--muted);
-    }
-    .drawer a:hover { background: rgba(214,181,109,.08); color: var(--ink); }
-
-    /* Utility */
-    .mt8 { margin-top: 8px; }
-    .mt12 { margin-top: 12px; }
-    .mt18 { margin-top: 18px; }
-    .mt24 { margin-top: 24px; }
-    .sep { height: 1px; background: var(--line); margin: 18px 0; }
+    .drawer{display:none; border-top:1px solid var(--line); padding:12px 0 16px}
+    .drawer.open{display:block}
+    .drawer a{display:block; padding:10px 8px; border-radius:12px; color:var(--muted)}
+    .drawer a:hover{background:rgba(214,181,109,.08); color:var(--ink)}
   </style>
 </head>
+
 <body>
+  <a class="skip" href="#top">Aller au contenu</a>
 
-<header>
-  <div class="container">
-    <div class="nav">
-      <a class="brand" href="#top" aria-label="Retour en haut">
-        <span class="name">Franck Bometon</span>
-        <span class="tag">— Franky</span>
-      </a>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="Retour en haut">
+          <span class="name">Franck Bometon</span>
+          <span class="tag">— Franky</span>
+        </a>
 
-      <nav class="navlinks" aria-label="Navigation principale">
+        <nav class="navlinks" aria-label="Navigation principale">
+          <a href="#apropos">À propos</a>
+          <a href="#manifeste">Manifeste</a>
+          <a href="#extrait">Extrait PDF</a>
+          <a href="#livres">Œuvres</a>
+          <a href="#parcours">Parcours</a>
+          <a href="#bibliotheque">Bibliothèque</a>
+          <a href="#presse">Presse / Médias</a>
+          <a href="#newsletter">Newsletter</a>
+          <a href="#pourquoi">Pourquoi j’écris</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a class="btn" href="#extrait">Extrait gratuit</a>
+          <a class="btn gold" href="#livres">Découvrir les livres</a>
+        </div>
+
+        <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-controls="drawer" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <div class="drawer" id="drawer">
         <a href="#apropos">À propos</a>
         <a href="#manifeste">Manifeste</a>
         <a href="#extrait">Extrait PDF</a>
         <a href="#livres">Œuvres</a>
-        <a href="#parcours">Parcours</a>
-        <a href="#bibliotheque">Bibliothèque</a>
+        <a href="#commencer">Par où commencer ?</a>
+        <a href="#parcours">Parcours de lecture</a>
+        <a href="#bibliotheque">Bibliothèque par profil</a>
+        <a href="#presse">Presse / Médias</a>
+        <a href="#newsletter">Newsletter</a>
         <a href="#pourquoi">Pourquoi j’écris</a>
         <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="nav-cta">
-        <a class="btn" href="#extrait">Extrait gratuit</a>
-        <a class="btn gold" href="#livres">Découvrir les livres</a>
       </div>
-
-      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-controls="drawer" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </div>
+  </header>
 
-    <div class="drawer" id="drawer">
-      <a href="#apropos">À propos</a>
-      <a href="#manifeste">Manifeste</a>
-      <a href="#extrait">Extrait PDF</a>
-      <a href="#livres">Œuvres</a>
-      <a href="#commencer">Par où commencer ?</a>
-      <a href="#parcours">Parcours de lecture</a>
-      <a href="#bibliotheque">Bibliothèque par profil</a>
-      <a href="#pourquoi">Pourquoi j’écris</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
-</header>
+  <main id="top">
+    <!-- HERO -->
+    <div class="container hero">
+      <div class="hero-grid">
+        <div>
+          <div class="kicker">Noir & Or · Écrivain philosophe · Sciences humaines · Leadership</div>
+          <h1>Explorer l’humain<br/>sans le réduire.</h1>
+          <p class="subtitle">
+            Comprendre l’humain ne se résume ni à des recettes, ni à des grilles toutes faites.
+            Cela exige de la lucidité, de la rigueur et une attention fine aux mécanismes invisibles qui orientent
+            nos décisions, nos relations et nos formes d’autorité.
+          </p>
 
-<main id="top">
+          <div class="hero-actions">
+            <a class="btn gold" href="#extrait">📘 Télécharger l’extrait gratuit</a>
+            <a class="btn" href="#livres">📚 Voir les ouvrages</a>
+            <a class="btn" href="https://author.amazon.fr/home" target="_blank" rel="noopener">🔗 Author Central</a>
+          </div>
 
-  <!-- HERO -->
-  <div class="container hero">
-    <div class="hero-grid">
-      <div>
-        <div class="kicker">Noir & Or · Écrivain philosophe · Sciences humaines · Leadership</div>
-        <h1>Explorer l’humain<br/>sans le réduire.</h1>
-        <p class="subtitle">
-          La compréhension de l’humain ne se résume ni à des recettes, ni à des grilles toutes faites.
-          Elle exige de la lucidité, de la rigueur et une attention fine aux mécanismes invisibles qui orientent
-          nos décisions, nos relations et nos formes d’autorité.
-        </p>
+          <div class="sep"></div>
 
-        <div class="hero-actions">
-          <a class="btn gold" href="#extrait">📘 Télécharger l’extrait gratuit</a>
-          <a class="btn" href="#livres">📚 Voir les ouvrages</a>
-          <a class="btn" href="https://author.amazon.fr/home" target="_blank" rel="noopener">🔗 Author Central</a>
+          <div class="prose">
+            <span class="pill">Signature éditoriale</span>
+            <div class="mt12" style="font-family: var(--serif); font-size: 18px; color: var(--ink); line-height: 1.55;">
+              Penser clair. Observer juste. Refuser la simplification.
+            </div>
+            <div class="mt8" style="color: var(--muted2);">— Franky</div>
+          </div>
         </div>
+
+        <aside class="card" aria-label="Carte de posture">
+          <h3>Posture</h3>
+          <p>
+            Philosophie appliquée, lecture de l’humain, décision en contexte complexe.
+            Une pensée incarnée, sans simplification.
+          </p>
+
+          <div class="signature">
+            <div class="sig-left">Écrivain philosophe</div>
+            <div class="sig-right">Franky<small>Architecte du savoir</small></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- A PROPOS -->
+    <section id="apropos">
+      <div class="container">
+        <div class="section-head">
+          <h2>À propos</h2>
+          <div class="hint">Texte unique (site · Amazon · Author Central) — cohérence absolue.</div>
+        </div>
+
+        <div class="two-col">
+          <div class="prose">
+            <p>
+              <strong>Franck Bometon</strong> est auteur et essayiste, explorateur des dynamiques humaines, du leadership et des métamorphoses contemporaines.
+              À la croisée de la philosophie, des sciences humaines et de l’expérience de terrain, ses ouvrages interrogent l’autorité, l’assertivité,
+              la lecture de l’humain, l’intelligence émotionnelle et les mécanismes invisibles qui structurent nos décisions et nos relations.
+            </p>
+            <p>
+              Son travail s’adresse aux dirigeants, managers, formateurs et lecteurs exigeants qui cherchent à comprendre sans réduire, décider sans s’aveugler
+              et agir avec discernement dans des environnements complexes. Il développe une approche rigoureuse, incarnée et accessible, refusant les grilles simplistes
+              et les recettes toutes faites.
+            </p>
+            <p>
+              À travers essais, vade-mecum et récits de voyage philosophique, Franck Bometon propose une pensée vivante, lucide et profondément humaine,
+              au service d’un leadership plus conscient et d’une compréhension plus fine du monde contemporain.
+            </p>
+          </div>
+
+          <div class="callout" id="commencer">
+            <div class="title">
+              <h3>Commencer ici</h3>
+              <div class="tag">Orientation lecteur</div>
+            </div>
+            <div class="prose" style="font-size: 15px;">
+              <p><strong>Dirigeant / manager / formateur</strong> → <a href="#livres" data-preset="essais">Leadership & Autorité</a> · <a href="#livres" data-preset="essais">Assertivité</a></p>
+              <p><strong>Comprendre l’humain</strong> → <a href="#livres" data-preset="essais">Synergologie</a> · <a href="#livres" data-preset="essais">Psyché</a></p>
+              <p><strong>Outils concrets</strong> → <a href="#livres" data-preset="vademecum">Vade-mecum</a></p>
+              <p><strong>Penser en voyage</strong> → <a href="#livres" data-preset="voyages">Voyages</a></p>
+              <p><strong>Préférer la fiction</strong> → <a href="#livres" data-preset="fiction">Récits</a></p>
+            </div>
+            <div class="sep"></div>
+            <div class="prose" style="font-size:14px; color:var(--muted2);">
+              Il n’y a pas de bon ordre. Il n’y a que <strong>le vôtre</strong>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANIFESTE -->
+    <section id="manifeste">
+      <div class="container">
+        <div class="section-head">
+          <h2>Manifeste</h2>
+          <div class="hint">10 lignes. Pas de slogan. Une position.</div>
+        </div>
+
+        <div class="card" style="padding:22px;">
+          <div class="prose" style="font-size:18px; line-height:1.9; max-width:78ch;">
+            <p>Je n’écris pas pour rassurer.<br/>J’écris pour éclairer.</p>
+            <p>Je refuse les grilles simplistes et les certitudes confortables.<br/>Comprendre l’humain exige de la lenteur, de la rigueur et du courage intellectuel.</p>
+            <p>L’autorité sans lucidité devient domination.<br/>La bienveillance sans discernement devient naïveté.</p>
+            <p>Observer avant d’interpréter.<br/>Penser avant d’agir.</p>
+            <p>Respecter la complexité du réel n’est pas un luxe.<br/>C’est une responsabilité.</p>
+            <p style="margin-bottom:0; color:var(--gold); font-family:var(--serif);">— Franky</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXTRAIT -->
+    <section id="extrait">
+      <div class="container">
+        <div class="section-head">
+          <h2>Extrait gratuit (PDF)</h2>
+          <div class="hint">Un bouton unique. Zéro friction.</div>
+        </div>
+
+        <div class="callout">
+          <div class="title">
+            <h3>📘 Télécharger l’extrait</h3>
+            <div class="tag">PDF</div>
+          </div>
+
+          <div class="two-col">
+            <div class="prose" style="font-size:15px;">
+              Un aperçu rigoureux et incarné de mes travaux : décision, autorité, lecture de l’humain, complexité contemporaine.
+              <div class="mt12" style="color:var(--muted2); font-size:13px;">
+                Astuce : place le fichier dans <code>assets/extrait.pdf</code> (le bouton ci-contre pointera dessus).
+              </div>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:10px; justify-content:center;">
+              <a class="btn gold" id="pdfBtn" href="assets/extrait.pdf" target="_blank" rel="noopener">Télécharger le PDF</a>
+              <div style="color:var(--muted2); font-size:12px;">
+                Si tu changes le nom du fichier, modifie simplement l’URL dans le HTML.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVRES -->
+    <section id="livres">
+      <div class="container">
+        <div class="section-head">
+          <h2>Œuvres</h2>
+          <div class="hint">Catalogue structuré — filtre + recherche.</div>
+        </div>
+
+        <div class="controls" role="group" aria-label="Filtres des ouvrages">
+          <button class="chip active" data-filter="all">Tout</button>
+          <button class="chip" data-filter="essais">Philosophie & sciences humaines</button>
+          <button class="chip" data-filter="vademecum">Vade-mecum</button>
+          <button class="chip" data-filter="voyages">Voyages</button>
+          <button class="chip" data-filter="fiction">Fictions</button>
+
+          <div class="search" style="margin-left:auto;">
+            <span style="color:var(--muted2); font-family:var(--mono); font-size:12px;">Recherche</span>
+            <input id="q" type="search" placeholder="Tape un mot-clé (ex: assertivité, conflit, Bali…)" aria-label="Rechercher un livre" />
+          </div>
+        </div>
+
+        <div class="books" id="bookGrid" aria-live="polite"></div>
 
         <div class="sep"></div>
 
-        <div class="prose">
-          <span class="pill">Signature éditoriale</span>
-          <div class="mt12" style="font-family: var(--serif); font-size: 18px; color: var(--ink); line-height: 1.55;">
-            Penser clair. Observer juste. Refuser la simplification.
-          </div>
-          <div class="mt8" style="color: var(--muted2);">— Franky</div>
-        </div>
-      </div>
-
-      <aside class="card" aria-label="Carte de posture">
-        <h3>Posture</h3>
-        <p>
-          Philosophie appliquée, lecture de l’humain, décision en contexte complexe.
-          Une pensée incarnée, sans simplification.
-        </p>
-
-        <div class="signature">
-          <div class="sig-left">Écrivain philosophe</div>
-          <div class="sig-right">
-            Franky
-            <small>Architecte du savoir</small>
-          </div>
-        </div>
-      </aside>
-    </div>
-  </div>
-
-  <!-- A PROPOS -->
-  <section id="apropos">
-    <div class="container">
-      <div class="section-head">
-        <h2>À propos</h2>
-        <div class="hint">Texte unique (site · Amazon · Author Central) — cohérence absolue.</div>
-      </div>
-
-      <div class="two-col">
-        <div class="prose">
-          <p>
-            <strong>Franck Bometon</strong> est auteur et essayiste, explorateur des dynamiques humaines, du leadership et des métamorphoses contemporaines.
-            À la croisée de la philosophie, des sciences humaines et de l’expérience de terrain, ses ouvrages interrogent l’autorité, l’assertivité,
-            la lecture de l’humain, l’intelligence émotionnelle et les mécanismes invisibles qui structurent nos décisions et nos relations.
-          </p>
-          <p>
-            Son travail s’adresse aux dirigeants, managers, formateurs et lecteurs exigeants qui cherchent à comprendre sans réduire, décider sans s’aveugler
-            et agir avec discernement dans des environnements complexes. Il développe une approche rigoureuse, incarnée et accessible, refusant les grilles simplistes
-            et les recettes toutes faites.
-          </p>
-          <p>
-            À travers essais, vade-mecum et récits de voyage philosophique, Franck Bometon propose une pensée vivante, lucide et profondément humaine,
-            au service d’un leadership plus conscient et d’une compréhension plus fine du monde contemporain.
-          </p>
-        </div>
-
-        <div class="callout" id="commencer">
-          <div class="title">
-            <h3>Commencer ici</h3>
-            <div class="tag">Orientation lecteur</div>
-          </div>
-          <div class="prose" style="font-size: 15px;">
-            <p><strong>Dirigeant / manager / formateur</strong> → <a href="#livres" data-preset="essais">Leadership & Autorité</a> · <a href="#livres" data-preset="essais">Assertivité</a></p>
-            <p><strong>Comprendre l’humain</strong> → <a href="#livres" data-preset="essais">Synergologie</a> · <a href="#livres" data-preset="essais">Psyché</a></p>
-            <p><strong>Outils concrets</strong> → <a href="#livres" data-preset="vademecum">Vade-mecum</a></p>
-            <p><strong>Penser en voyage</strong> → <a href="#livres" data-preset="voyages">Voyages</a></p>
-            <p><strong>Préférer la fiction</strong> → <a href="#livres" data-preset="fictions">Récits</a></p>
-          </div>
-          <div class="sep"></div>
-          <div class="prose" style="font-size: 14px; color: var(--muted2);">
-            Il n’y a pas de bon ordre. Il n’y a que <strong>le vôtre</strong>.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MANIFESTE -->
-  <section id="manifeste">
-    <div class="container">
-      <div class="section-head">
-        <h2>Manifeste</h2>
-        <div class="hint">10 lignes. Pas de slogan. Une position.</div>
-      </div>
-
-      <div class="card" style="padding: 22px;">
-        <div class="prose" style="font-size: 18px; line-height: 1.9; max-width: 78ch;">
-          <p>Je n’écris pas pour rassurer.<br/>J’écris pour éclairer.</p>
-          <p>Je refuse les grilles simplistes et les certitudes confortables.<br/>Comprendre l’humain exige de la lenteur, de la rigueur et du courage intellectuel.</p>
-          <p>L’autorité sans lucidité devient domination.<br/>La bienveillance sans discernement devient naïveté.</p>
-          <p>Observer avant d’interpréter.<br/>Penser avant d’agir.</p>
-          <p>Respecter la complexité du réel n’est pas un luxe.<br/>C’est une responsabilité.</p>
-          <p style="margin-bottom:0; color: var(--gold); font-family: var(--serif);">— Franky</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXTRAIT -->
-  <section id="extrait">
-    <div class="container">
-      <div class="section-head">
-        <h2>Extrait gratuit (PDF)</h2>
-        <div class="hint">Ajoute ton lien PDF : un seul bouton, un geste.</div>
-      </div>
-
-      <div class="callout">
-        <div class="title">
-          <h3>📘 Télécharger l’extrait</h3>
-          <div class="tag">PDF</div>
-        </div>
         <div class="two-col">
-          <div class="prose" style="font-size: 15px;">
-            Un aperçu rigoureux et incarné de mes travaux : décision, autorité, lecture de l’humain, complexité contemporaine.
-            <div class="mt12" style="color: var(--muted2); font-size: 13px;">
-              Conseil : héberge le PDF sur ton site (ex. /assets/extrait.pdf) ou sur un service (Drive/Dropbox) et colle le lien ci-dessous.
+          <div class="prose" style="font-size:14px;">
+            <strong>Astuce :</strong> sur chaque page “livre”, ajoute un encart “Pour aller plus loin” → lien vers <a href="#commencer">Par où commencer ?</a>
+            et vers <a href="#parcours">Parcours de lecture</a>.
+          </div>
+
+          <div class="prose" style="font-size:14px; color:var(--muted2);">
+            Author Central : <a href="https://author.amazon.fr/home" target="_blank" rel="noopener">author.amazon.fr/home</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARCOURS -->
+    <section id="parcours">
+      <div class="container">
+        <div class="section-head">
+          <h2>Parcours de lecture</h2>
+          <div class="hint">Trois chemins. Une cartographie.</div>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Parcours I</h3>
+            <div class="prose" style="font-size:15px;">
+              <p><strong>Lucidité & compréhension de l’humain</strong></p>
+              <ul>
+                <li>La Synergologie</li>
+                <li>Le Miroir des Illusions</li>
+                <li>Sculpter la Psyché</li>
+                <li>Au-delà du Soi</li>
+              </ul>
+              <p style="color:var(--muted2); margin-bottom:0;">Objectif : affiner le regard, ralentir l’interprétation, gagner en discernement.</p>
             </div>
           </div>
 
-          <div style="display:flex; flex-direction: column; gap: 10px; justify-content:center;">
-            <a class="btn gold" id="pdfBtn" href="#" target="_blank" rel="noopener">Télécharger le PDF</a>
-            <div class="search" title="Colle ici ton lien PDF (optionnel)" style="border-radius: 16px;">
-              <span style="color: var(--muted2); font-family: var(--mono); font-size: 12px;">Lien PDF</span>
-              <input id="pdfUrl" type="url" placeholder="https://.../extrait.pdf" aria-label="Lien vers le PDF" />
+          <div class="card">
+            <h3>Parcours II</h3>
+            <div class="prose" style="font-size:15px;">
+              <p><strong>Autorité, décision & posture professionnelle</strong></p>
+              <ul>
+                <li>Leadership et Management des Organisations</li>
+                <li>Philosophie de l’Assertivité</li>
+                <li>L’Intelligence Émotionnelle</li>
+                <li>Vade-mecum (selon besoins)</li>
+              </ul>
+              <p style="color:var(--muted2); margin-bottom:0;">Objectif : décider avec lucidité, tenir la posture, rester humain sous contrainte.</p>
             </div>
-            <div style="color: var(--muted2); font-size: 12px;">Le bouton utilise automatiquement le lien saisi (sinon, pense à le définir dans le code).</div>
+          </div>
+
+          <div class="card">
+            <h3>Parcours III</h3>
+            <div class="prose" style="font-size:15px;">
+              <p><strong>Déplacement, altérité & mise à distance</strong></p>
+              <ul>
+                <li>Bali en Réflexion</li>
+                <li>Carnets de Route en Indochine</li>
+                <li>Par-delà les Frontières</li>
+                <li>Chroniques d’un Optimiste Incorrigible</li>
+              </ul>
+              <p style="color:var(--muted2); margin-bottom:0;">Objectif : respirer intellectuellement, élargir le cadre, déplacer les certitudes.</p>
+            </div>
+          </div>
+
+          <div class="callout">
+            <div class="title">
+              <h3>Ouverture universelle</h3>
+              <div class="tag">Préface courte</div>
+            </div>
+            <div class="prose" style="font-size:15px;">
+              Ce livre ne propose ni méthode miracle, ni vérité définitive. Il s’inscrit dans une démarche plus exigeante : comprendre sans réduire, penser sans simplifier, agir sans s’aveugler.
+              <div class="mt12" style="color:var(--muted2); font-size:13px;">À placer au début de chacun des ouvrages.</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- LIVRES -->
-  <section id="livres">
-    <div class="container">
-      <div class="section-head">
-        <h2>Œuvres</h2>
-        <div class="hint">Catalogue structuré — jamais en vrac. Filtre + recherche.</div>
-      </div>
-
-      <div class="controls" role="group" aria-label="Filtres des ouvrages">
-        <button class="chip active" data-filter="all">Tout</button>
-        <button class="chip" data-filter="essais">Philosophie & sciences humaines</button>
-        <button class="chip" data-filter="vademecum">Vade-mecum</button>
-        <button class="chip" data-filter="voyages">Voyages</button>
-        <button class="chip" data-filter="fictions">Fictions</button>
-
-        <div class="search" style="margin-left:auto;">
-          <span style="color: var(--muted2); font-family: var(--mono); font-size: 12px;">Recherche</span>
-          <input id="q" type="search" placeholder="Tape un mot-clé (ex: assertivité, conflit, Bali…)" aria-label="Rechercher un livre" />
-        </div>
-      </div>
-
-      <div class="books" id="bookGrid" aria-live="polite"></div>
-
-      <div class="sep"></div>
-
-      <div class="two-col">
-        <div class="prose" style="font-size: 14px;">
-          <strong>Astuce :</strong> sur chaque page “livre”, ajoute un encart “Pour aller plus loin” → lien vers <a href="#commencer">Par où commencer ?</a>
-          et vers <a href="#parcours">Parcours de lecture</a>. Cela renforce la cohérence et favorise la lecture en chaîne.
+    <!-- BIBLIOTHEQUE -->
+    <section id="bibliotheque">
+      <div class="container">
+        <div class="section-head">
+          <h2>Bibliothèque idéale selon votre profil</h2>
+          <div class="hint">Sélections raisonnées — pour lire juste, sans se perdre.</div>
         </div>
 
-        <div class="prose" style="font-size: 14px; color: var(--muted2);">
-          Le lien Author Central : <a href="https://author.amazon.fr/home" target="_blank" rel="noopener">author.amazon.fr/home</a>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="grid2">
+          <div class="card">
+            <h3>Dirigeant · Manager</h3>
+            <div class="prose" style="font-size:15px;">
+              <ul>
+                <li>Leadership et Management des Organisations</li>
+                <li>Philosophie de l’Assertivité</li>
+                <li>L’Intelligence Émotionnelle</li>
+                <li>Vade-mecum du Management Toxique</li>
+                <li>Vade-mecum de l’Harmonie dans la Discorde</li>
+              </ul>
+            </div>
+          </div>
 
-  <!-- PARCOURS -->
-  <section id="parcours">
-    <div class="container">
-      <div class="section-head">
-        <h2>Parcours de lecture</h2>
-        <div class="hint">Trois chemins. Une cartographie.</div>
-      </div>
+          <div class="card">
+            <h3>Formateur · Coach</h3>
+            <div class="prose" style="font-size:15px;">
+              <ul>
+                <li>L’Art du Coaching</li>
+                <li>Formateurs d’Aujourd’hui</li>
+                <li>La Synergologie</li>
+                <li>Sculpter la Psyché</li>
+                <li>Vade-mecum de l’Art Oratoire</li>
+              </ul>
+            </div>
+          </div>
 
-      <div class="grid2">
-        <div class="card">
-          <h3>Parcours I</h3>
-          <div class="prose" style="font-size: 15px;">
-            <p><strong>Lucidité & compréhension de l’humain</strong></p>
-            <ul>
-              <li>La Synergologie</li>
-              <li>Le Miroir des Illusions</li>
-              <li>Sculpter la Psyché</li>
-              <li>Au-delà du Soi</li>
-            </ul>
-            <p style="color: var(--muted2); margin-bottom:0;">Objectif : affiner le regard, ralentir l’interprétation, gagner en discernement.</p>
+          <div class="card">
+            <h3>Sciences humaines · Philosophie</h3>
+            <div class="prose" style="font-size:15px;">
+              <ul>
+                <li>Le Miroir des Illusions</li>
+                <li>Socrate de Retour en 2025</li>
+                <li>Au-delà du Soi</li>
+                <li>Chroniques d’un Optimiste Incorrigible</li>
+                <li>Métamorphoses du Désir</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Voyageur · Humaniste</h3>
+            <div class="prose" style="font-size:15px;">
+              <ul>
+                <li>Bali en Réflexion</li>
+                <li>Carnets de Route en Indochine</li>
+                <li>Java, Sumatra, Célèbes</li>
+                <li>Par-delà les Frontières</li>
+                <li>Chroniques d’un Globe-Trotter</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Fiction</h3>
+            <div class="prose" style="font-size:15px;">
+              <ul>
+                <li>Meurtre sur le Green</li>
+                <li>Le Souffle de la Guerre</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout">
+            <div class="title">
+              <h3>Composer ma bibliothèque</h3>
+              <div class="tag">Option newsletter</div>
+            </div>
+            <div class="prose" style="font-size:15px;">
+              Une lettre rare (pas du bruit), avec extraits, notes de lecture, et repères de lucidité.
+              <div class="mt12" style="color:var(--muted2); font-size:13px;">Inscription ci-dessous (RGPD-friendly).</div>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="card">
-          <h3>Parcours II</h3>
-          <div class="prose" style="font-size: 15px;">
-            <p><strong>Autorité, décision & posture professionnelle</strong></p>
-            <ul>
-              <li>Leadership et Management des Organisations</li>
-              <li>Philosophie de l’Assertivité</li>
-              <li>L’Intelligence Émotionnelle</li>
-              <li>Vade-mecum (selon besoins)</li>
-            </ul>
-            <p style="color: var(--muted2); margin-bottom:0;">Objectif : décider avec lucidité, tenir la posture, rester humain sous contrainte.</p>
-          </div>
+    <!-- PRESSE / MEDIAS -->
+    <section id="presse">
+      <div class="container">
+        <div class="section-head">
+          <h2>Presse / Médias</h2>
+          <div class="hint">Bio + visuels HD + logos + liens. Prêt à l’usage.</div>
         </div>
 
-        <div class="card">
-          <h3>Parcours III</h3>
-          <div class="prose" style="font-size: 15px;">
-            <p><strong>Déplacement, altérité & mise à distance</strong></p>
-            <ul>
-              <li>Bali en Réflexion</li>
-              <li>Carnets de Route en Indochine</li>
-              <li>Par-delà les Frontières</li>
-              <li>Chroniques d’un Optimiste Incorrigible</li>
-            </ul>
-            <p style="color: var(--muted2); margin-bottom:0;">Objectif : respirer intellectuellement, élargir le cadre, déplacer les certitudes.</p>
+        <div class="two-col">
+          <div class="card">
+            <h3>Bio (version presse)</h3>
+            <div class="prose" style="font-size:15px;">
+              <p>
+                Franck Bometon (Franky) est auteur et essayiste. Il explore la décision, l’autorité et la lecture de l’humain en contexte complexe,
+                à la croisée de la philosophie appliquée, des sciences humaines et de l’expérience de terrain.
+                Ses ouvrages s’adressent aux dirigeants, managers, formateurs et lecteurs exigeants qui cherchent à comprendre sans réduire,
+                décider sans s’aveugler et agir avec discernement.
+              </p>
+              <p style="color:var(--muted2); margin-bottom:0;">
+                Contact presse : <a class="link" href="mailto:fbometon@aol.com">fbometon@aol.com</a>
+              </p>
+            </div>
           </div>
+
+          <div class="callout">
+            <div class="title">
+              <h3>Kit médias (téléchargements)</h3>
+              <div class="tag">ZIP / PDF</div>
+            </div>
+            <div class="prose" style="font-size:15px;">
+              <ul>
+                <li><a class="link" href="assets/presse/bio-presse-fr.pdf" target="_blank" rel="noopener">Bio presse (PDF)</a></li>
+                <li><a class="link" href="assets/presse/photos-hd.zip" target="_blank" rel="noopener">Photos HD (ZIP)</a></li>
+                <li><a class="link" href="assets/presse/logos.zip" target="_blank" rel="noopener">Logos (ZIP)</a></li>
+                <li><a class="link" href="assets/presse/kit-medias-franky.zip" target="_blank" rel="noopener">Kit complet (ZIP)</a></li>
+              </ul>
+              <div class="mt12" style="color:var(--muted2); font-size:13px;">
+                Place tes fichiers dans <code>assets/presse/</code> avec ces noms (ou adapte les liens).
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section id="newsletter">
+      <div class="container">
+        <div class="section-head">
+          <h2>Newsletter</h2>
+          <div class="hint">Ultra sobre. Double opt-in. Consentement explicite.</div>
         </div>
 
         <div class="callout">
           <div class="title">
-            <h3>Ouverture universelle</h3>
-            <div class="tag">Préface courte</div>
+            <h3>Recevoir la lettre rare</h3>
+            <div class="tag">RGPD</div>
           </div>
-          <div class="prose" style="font-size: 15px;">
-            Ce livre ne propose ni méthode miracle, ni vérité définitive. Il s’inscrit dans une démarche plus exigeante : comprendre sans réduire, penser sans simplifier, agir sans s’aveugler.
-            <div class="mt12" style="color: var(--muted2); font-size: 13px;">À placer au début de chacun des ouvrages.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- BIBLIOTHEQUE -->
-  <section id="bibliotheque">
-    <div class="container">
-      <div class="section-head">
-        <h2>Bibliothèque idéale selon votre profil</h2>
-        <div class="hint">Sélections raisonnées — pour lire juste, sans se perdre.</div>
-      </div>
-
-      <div class="grid2">
-        <div class="card">
-          <h3>Dirigeant · Manager</h3>
-          <div class="prose" style="font-size: 15px;">
-            <ul>
-              <li>Leadership et Management des Organisations</li>
-              <li>Philosophie de l’Assertivité</li>
-              <li>L’Intelligence Émotionnelle</li>
-              <li>Vade-mecum du Management Toxique</li>
-              <li>Vade-mecum de l’Harmonie dans la Discorde</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Formateur · Coach</h3>
-          <div class="prose" style="font-size: 15px;">
-            <ul>
-              <li>L’Art du Coaching</li>
-              <li>Formateurs d’Aujourd’hui</li>
-              <li>La Synergologie</li>
-              <li>Sculpter la Psyché</li>
-              <li>Vade-mecum de l’Art Oratoire</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Sciences humaines · Philosophie</h3>
-          <div class="prose" style="font-size: 15px;">
-            <ul>
-              <li>Le Miroir des Illusions</li>
-              <li>Socrate de Retour en 2025</li>
-              <li>Au-delà du Soi</li>
-              <li>Chroniques d’un Optimiste Incorrigible</li>
-              <li>Métamorphoses du Désir</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Voyageur · Humaniste</h3>
-          <div class="prose" style="font-size: 15px;">
-            <ul>
-              <li>Bali en Réflexion</li>
-              <li>Carnets de Route en Indochine</li>
-              <li>Java, Sumatra, Célèbes</li>
-              <li>Par-delà les Frontières</li>
-              <li>Chroniques d’un Globe-Trotter</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Fiction</h3>
-          <div class="prose" style="font-size: 15px;">
-            <ul>
-              <li>Meurtre sur le Green</li>
-              <li>Le Souffle de la Guerre</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="callout">
-          <div class="title">
-            <h3>Composer ma bibliothèque</h3>
-            <div class="tag">Option newsletter</div>
-          </div>
-          <div class="prose" style="font-size: 15px;">
-            Ajoute un formulaire (profil → recommandations) pour construire une liste sur-mesure et offrir le PDF.
-            <div class="mt12" style="color: var(--muted2); font-size: 13px;">Si tu veux, je te fournis la version formulaire + email capture.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- POURQUOI -->
-  <section id="pourquoi">
-    <div class="container">
-      <div class="section-head">
-        <h2>Pourquoi j’écris</h2>
-        <div class="hint">Personnel sans narcissisme. Éthique sans posture.</div>
-      </div>
-
-      <div class="card" style="padding: 22px;">
-        <div class="prose">
-          <p>Je n’écris pas pour produire du contenu.<br/>J’écris parce que certaines simplifications abîment l’humain.</p>
-          <p>Dans les discours sur le management, la psychologie ou le développement personnel, j’ai trop souvent vu des grilles rapides remplacer l’attention, des certitudes prendre la place de la compréhension, et des outils devenir des prétextes à la domination ou à l’aveuglement.</p>
-          <p>Écrire est devenu une manière de ralentir. De remettre de la nuance là où l’époque exige des réponses immédiates. De rappeler que comprendre l’autre commence toujours par reconnaître ses propres angles morts.</p>
-          <p>Je n’écris pas contre les outils. J’écris contre leur usage sans conscience.</p>
-          <p>Mes livres sont des espaces de travail intérieur. Ils ne disent pas quoi penser. Ils invitent à observer plus finement, à décider avec lucidité et à agir avec responsabilité.</p>
-          <p style="margin-bottom:0; color: var(--gold); font-family: var(--serif);">— Franky</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <div class="hint">Ajoute ton email et/ou un formulaire — sobre.</div>
-      </div>
-
-      <div class="two-col">
-        <div class="callout">
-          <div class="title">
-            <h3>Écrire à Franky</h3>
-            <div class="tag">Email</div>
-          </div>
-          <div class="prose" style="font-size: 15px;">
-            Remplace l’adresse ci-dessous par la tienne.
-            <div class="mt12">
-             <a class="btn gold" href="mailto:fbometon@aol.com">fbometon@aol.com</a>
+          <div class="two-col">
+            <div class="prose" style="font-size:15px;">
+              Notes de lecture, extraits, repères de lucidité — sans spam, sans rythme imposé.
+              <div class="mt12" style="color:var(--muted2); font-size:13px;">
+                Tu peux te désinscrire à tout moment. Aucune donnée revendue. Jamais.
+              </div>
             </div>
-            <div class="mt12" style="color: var(--muted2); font-size: 13px;">
-              Pour une page “Presse / Médias” et un kit (bio + photos + liens), dis-moi : <strong>"Presse"</strong>.
+
+            <!-- IMPORTANT: site statique => remplace action par le formulaire de ton outil (Brevo/MailerLite/Substack/ConvertKit) -->
+            <form id="nlForm" class="card" action="#" method="post" style="box-shadow:none;">
+              <label style="display:block; font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:rgba(214,181,109,.92);">
+                Email
+              </label>
+              <div class="mt8" style="display:flex; gap:10px; align-items:center;">
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="votre@email.fr"
+                  style="flex:1; border:1px solid var(--line); border-radius:12px; padding:12px 12px; background:rgba(255,255,255,.02); color:var(--ink); outline:none;"
+                />
+              </div>
+
+              <div class="mt12" style="display:flex; gap:10px; align-items:flex-start; color:var(--muted2); font-size:13px; line-height:1.5;">
+                <input id="consent" type="checkbox" required style="margin-top:3px;" />
+                <label for="consent">
+                  J’accepte de recevoir des emails de Franck Bometon (Franky). Je peux me désinscrire à tout moment.
+                </label>
+              </div>
+
+              <div class="mt12" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+                <button class="btn gold" type="submit">S’inscrire</button>
+                <a class="link" href="assets/politique-confidentialite.html">Politique de confidentialité</a>
+              </div>
+
+              <div class="mt12" style="color:var(--muted2); font-size:12px;">
+                ⚠️ Tant que <code>action="#"</code>, ce formulaire ne peut pas envoyer (normal : GitHub Pages = site statique).
+                Dès que tu choisis l’outil emailing, on branche le vrai formulaire en 2 minutes.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POURQUOI -->
+    <section id="pourquoi">
+      <div class="container">
+        <div class="section-head">
+          <h2>Pourquoi j’écris</h2>
+          <div class="hint">Personnel sans narcissisme. Éthique sans posture.</div>
+        </div>
+
+        <div class="card" style="padding:22px;">
+          <div class="prose">
+            <p>Je n’écris pas pour produire du contenu.<br/>J’écris parce que certaines simplifications abîment l’humain.</p>
+            <p>Dans les discours sur le management, la psychologie ou le développement personnel, j’ai trop souvent vu des grilles rapides remplacer l’attention, des certitudes prendre la place de la compréhension, et des outils devenir des prétextes à la domination ou à l’aveuglement.</p>
+            <p>Écrire est devenu une manière de ralentir. De remettre de la nuance là où l’époque exige des réponses immédiates. De rappeler que comprendre l’autre commence toujours par reconnaître ses propres angles morts.</p>
+            <p>Je n’écris pas contre les outils. J’écris contre leur usage sans conscience.</p>
+            <p>Mes livres sont des espaces de travail intérieur. Ils ne disent pas quoi penser. Ils invitent à observer plus finement, à décider avec lucidité et à agir avec responsabilité.</p>
+            <p style="margin-bottom:0; color:var(--gold); font-family:var(--serif);">— Franky</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <div class="hint">Sobre. Direct. Efficace.</div>
+        </div>
+
+        <div class="two-col">
+          <div class="callout">
+            <div class="title">
+              <h3>Écrire à Franky</h3>
+              <div class="tag">Email</div>
+            </div>
+            <div class="prose" style="font-size:15px;">
+              <div class="mt12">
+                <a class="btn gold" href="mailto:fbometon@aol.com">fbometon@aol.com</a>
+              </div>
+              <div class="mt12" style="color:var(--muted2); font-size:13px;">
+                Pour une demande média : indique <strong>“Presse”</strong> en objet.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Réseaux (optionnel)</h3>
+            <div class="prose" style="font-size:15px;">
+              Ajoute tes liens (LinkedIn, Instagram, YouTube…).
+              <div class="mt12" style="display:flex; gap:10px; flex-wrap:wrap;">
+                <a class="link" href="#" rel="nofollow">LinkedIn</a>
+                <a class="link" href="#" rel="nofollow">Instagram</a>
+                <a class="link" href="#" rel="nofollow">YouTube</a>
+              </div>
+              <div class="sep"></div>
+              <div style="font-family:var(--serif); color:var(--ink);">Penser clair. Observer juste. Refuser la simplification.</div>
+              <div style="color:var(--muted2);">— Franky</div>
             </div>
           </div>
         </div>
-
-        <div class="card">
-          <h3>Réseaux (optionnel)</h3>
-          <div class="prose" style="font-size: 15px;">
-            Tu peux ajouter ici tes liens (LinkedIn, Instagram, etc.).
-            <div class="mt12" style="display:flex; gap:10px; flex-wrap: wrap;">
-              <a class="link" href="#">LinkedIn</a>
-              <a class="link" href="#">Instagram</a>
-              <a class="link" href="#">YouTube</a>
-            </div>
-            <div class="sep"></div>
-            <div style="font-family: var(--serif); color: var(--ink);">Penser clair. Observer juste. Refuser la simplification.</div>
-            <div style="color: var(--muted2);">— Franky</div>
-          </div>
-        </div>
       </div>
-
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <div class="foot">
-      <div>
-        <div class="mini">Noir & Or · Signature Franky</div>
-        <div class="mt8">© <span id="year"></span> Franck Bometon — Franky. Tous droits réservés.</div>
-      </div>
-      <div style="display:flex; gap:10px; flex-wrap: wrap; align-items:center;">
-        <a class="link" href="#top">Retour haut</a>
-        <a class="link" href="https://author.amazon.fr/home" target="_blank" rel="noopener">Author Central</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script>
-  // --- Mobile menu
-  const burger = document.getElementById('burger');
-  const drawer = document.getElementById('drawer');
-  burger?.addEventListener('click', () => {
-    const open = drawer.classList.toggle('open');
-    burger.setAttribute('aria-expanded', String(open));
-  });
-  drawer?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    drawer.classList.remove('open');
-    burger.setAttribute('aria-expanded', 'false');
-  }));
-
-  // --- Year
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // --- PDF link binding
-  const pdfInput = document.getElementById('pdfUrl');
-  const pdfBtn = document.getElementById('pdfBtn');
-  // TODO: set your default PDF URL here
-  const DEFAULT_PDF_URL = '#';
-  function syncPdf() {
-    const url = (pdfInput.value || '').trim();
-    pdfBtn.href = url || DEFAULT_PDF_URL;
-    pdfBtn.style.opacity = (url || DEFAULT_PDF_URL) === '#' ? .55 : 1;
-  }
-  pdfInput.addEventListener('input', syncPdf);
-  syncPdf();
-
-  // --- Book data (provided by you)
-  const BOOKS = [
-   {
-  n: 1, cat: 'essais',
-  title: "Philosophie de l'Assertivité : Oser Être, Dire et Agir",
-  url: "https://www.amazon.fr/dp/B0F21VYGJZ",
-  cover: "covers/01-philosophie-assertivite.jpg"
-},
-{
-  n: 2, cat: 'essais',
-  title: "La Synergologie : Lire l’humain sans le réduire",
-  url: "https://www.amazon.fr/dp/B0GHWBDFMR",
-  cover: "covers/02-synergologie.jpg"
-},
-{
-  n: 3, cat: 'essais',
-  title: "Leadership et Management des Organisations : Vers une Autorité Éclairée",
-  url: "https://www.amazon.fr/dp/B0F6MZMFHS",
-  cover: "covers/03-leadership-autorite-eclairee.jpg"
-},
-{
-  n: 4, cat: 'essais',
-  title: "L’Intelligence Émotionnelle : Philosophie, Pratique et Réflexion",
-  url: "https://www.amazon.fr/dp/B0DZTB7HW3",
-  cover: "covers/04-intelligence-emotionnelle.jpg"
-},
-{
-  n: 5, cat: 'essais',
-  title: "Métamorphoses du Désir : Technologie et Intimité à l’Ère Numérique",
-  url: "https://www.amazon.fr/dp/B0CX4GGTZH",
-  cover: "covers/05-metamorphoses-du-desir.jpg"
-},
-{
-  n: 6, cat: 'essais',
-  title: "Solitudes Connectées : L’Ère de l’Individualisme Numérique",
-  url: "https://www.amazon.fr/dp/B0CV81F5B5",
-  cover: "covers/06-solitudes-connectees.jpg"
-},
-{
-  n: 7, cat: 'essais',
-  title: "Le Miroir des Illusions : Philosophie de la Manipulation dans la Trame Sociale",
-  url: "https://www.amazon.fr/dp/B0CSVW4VZ6",
-  cover: "covers/07-miroir-des-illusions.jpg"
-},
-{
-  n: 8, cat: 'essais',
-  title: "Socrate de Retour en 2025 : Dialogues avec le Futur",
-  url: "https://www.amazon.fr/dp/B0CRR6K4X6",
-  cover: "covers/08-socrate-retour-2025.jpg"
-},
-{
-  n: 9, cat: 'essais',
-  title: "Chroniques d’un Optimiste Incorrigible : Sourire en Dépit du Chaos",
-  url: "https://www.amazon.fr/dp/B0CR8F69XF",
-  cover: "covers/09-optimiste-incorrigible.jpg"
-},
-{
-  n: 10, cat: 'essais',
-  title: "Au-delà du Soi : Voyages en Philosophie Réflexive",
-  url: "https://www.amazon.fr/dp/B0CP9JQWLQ",
-  cover: "covers/10-au-dela-du-soi.jpg"
-},
-{
-  n: 11, cat: 'essais',
-  title: "Sculpter la Psyché : L’Art et la Science de l’Esprit",
-  url: "https://www.amazon.fr/dp/B0CPXT5973",
-  cover: "covers/11-sculpter-la-psyche.jpg"
-},
-{
-  n: 12, cat: 'vademecum',
-  title: "L’Art du Coaching : Explorer et Transformer le Potentiel Humain",
-  url: "https://www.amazon.fr/dp/B0CPPMDFSP",
-  cover: "covers/12-art-du-coaching.jpg"
-},
-{
-  n: 13, cat: 'vademecum',
-  title: "Vade-mecum du Management Intergénérationnel et Interculturel",
-  url: "https://www.amazon.fr/dp/B0CMNRXZR5",
-  cover: "covers/13-vademecum-intergenerationnel-interculturel.jpg"
-},
-{
-  n: 14, cat: 'vademecum',
-  title: "Formateurs d’Aujourd’hui : Vers une Pédagogie Réflexive et Engagée",
-  url: "https://www.amazon.fr/dp/B0CP1PLQ27",
-  cover: "covers/14-formateurs-aujourdhui.jpg"
-},
-{
-  n: 15, cat: 'vademecum',
-  title: "L’Artisanat du Leadership : Traité en Miniatures",
-  url: "https://www.amazon.fr/dp/B0CKXBJ5L5",
-  cover: "covers/15-artisanat-du-leadership.jpg"
-},
-{
-  n: 16, cat: 'vademecum',
-  title: "Vade Mecum du Management Toxique : Comprendre et Prévenir les RPS",
-  url: "https://www.amazon.fr/dp/B0CMPVJH8R",
-  cover: "covers/16-management-toxique-rps.jpg"
-},
-{
-  n: 17, cat: 'vademecum',
-  title: "Vade-mecum de l’Art Oratoire",
-  url: "https://www.amazon.fr/dp/B0CMJMRLK7",
-  cover: "covers/17-art-oratoire.jpg"
-},
-{
-  n: 18, cat: 'vademecum',
-  title: "Vade-mecum des Mécanismes de Défense",
-  url: "https://www.amazon.fr/dp/B0CMCLBFK6",
-  cover: "covers/18-mecanismes-de-defense.jpg"
-},
-{
-  n: 19, cat: 'vademecum',
-  title: "Vade-mecum de l’Harmonie dans la Discorde",
-  url: "https://www.amazon.fr/dp/B0CLYJRPTQ",
-  cover: "covers/19-harmonie-dans-la-discorde.jpg"
-},
-{
-  n: 20, cat: 'vademecum',
-  title: "Vade-mecum de la Métamorphose Managériale",
-  url: "https://www.amazon.fr/dp/B0CLXXL3RC",
-  cover: "covers/20-metamorphose-manageriale.jpg"
-},
-{
-  n: 21, cat: 'vademecum',
-  title: "Vade-mecum de Management : Guide Érudit des Pratiques Managériales",
-  url: "https://www.amazon.fr/dp/B0CKSPYQ6W",
-  cover: "covers/21-guide-erudit-pratiques-manageriales.jpg"
-},
-{
-  n: 22, cat: 'vademecum',
-  title: "Le Vade-mecum de la Bienveillance Managériale",
-  url: "https://www.amazon.fr/dp/B0CLND85CY",
-  cover: "covers/22-bienveillance-manageriale.jpg"
-},
-{
-  n: 23, cat: 'vademecum',
-  title: "Le Management en Évolution",
-  url: "https://www.amazon.fr/dp/B0CH2D7Q4Y",
-  cover: "covers/23-management-en-evolution.jpg"
-},
-{
-  n: 24, cat: 'voyages',
-  title: "Java, Sumatra, Célèbes : Empreintes d’un Archipel Infini",
-  url: "https://www.amazon.fr/dp/B0DSBN2YNQ",
-  cover: "covers/24-java-sumatra-celebes.jpg"
-},
-{
-  n: 25, cat: 'voyages',
-  title: "L’Île des Mystères : Chroniques d’un Explorateur à Bornéo",
-  url: "https://www.amazon.fr/dp/B0DGLB8C9P",
-  cover: "covers/25-ile-des-mysteres-borneo.jpg"
-},
-{
-  n: 26, cat: 'voyages',
-  title: "Bali en Réflexion",
-  url: "https://www.amazon.fr/dp/B0DCFZLFFN",
-  cover: "covers/26-bali-en-reflexion.jpg"
-},
-{
-  n: 27, cat: 'voyages',
-  title: "Carnets de Route en Indochine",
-  url: "https://www.amazon.fr/dp/B0D9VF81WB",
-  cover: "covers/27-indochine-laos-cambodge-vietnam.jpg"
-},
-{
-  n: 28, cat: 'voyages',
-  title: "Pérégrinations en Thaïlande et Birmanie",
-  url: "https://www.amazon.fr/dp/B0D9GRJ225",
-  cover: "covers/28-thailande-birmanie.jpg"
-},
-{
-  n: 29, cat: 'voyages',
-  title: "Par-delà les Frontières",
-  url: "https://www.amazon.fr/dp/B0D2X83JHT",
-  cover: "covers/29-par-dela-les-frontieres.jpg"
-},
-{
-  n: 30, cat: 'voyages',
-  title: "Voyage Initiatique au Népal et en Inde",
-  url: "https://www.amazon.fr/dp/B0D41ZM17X",
-  cover: "covers/30-nepal-inde.jpg"
-},
-{
-  n: 31, cat: 'voyages',
-  title: "Chroniques d’un Globe-Trotter",
-  url: "https://www.amazon.fr/dp/B0D29HXLHD",
-  cover: "covers/31-chroniques-globe-trotter.jpg"
-},
-{
-  n: 32, cat: 'fiction',
-  title: "Meurtre sur le Green",
-  url: "https://www.amazon.fr/dp/B0CK3H5F36",
-  cover: "covers/32-meurtre-sur-le-green.jpg"
-},
-{
-  n: 33, cat: 'fiction',
-  title: "Le Souffle de la Guerre",
-  url: "https://www.amazon.fr/dp/B0CQY2H9FM",
-  cover: "covers/33-souffle-de-la-guerre.jpg"
-}
-];
-
-  const grid = document.getElementById('bookGrid');
-  const q = document.getElementById('q');
-  const chips = Array.from(document.querySelectorAll('.chip'));
-  let activeFilter = 'all';
-
-  function normalize(s) {
-    return (s || '').toLowerCase()
-      .normalize('NFD').replace(/\p{Diacritic}/gu, '');
-  }
-
-  function render() {
-    const term = normalize(q.value);
-    const filtered = BOOKS.filter(b => {
-      const okCat = activeFilter === 'all' ? true : b.cat === activeFilter;
-      const okTerm = !term ? true : normalize(b.title).includes(term);
-      return okCat && okTerm;
-    });
-
-    grid.innerHTML = filtered.map(b => {
-      const catLabel = b.cat === 'essais' ? 'Philosophie & SH' : (b.cat === 'vademecum' ? 'Vade-mecum' : (b.cat === 'voyages' ? 'Voyages' : 'Fictions'));
-return `
-  <article class="book">
-    <img class="cover"
-         src="${b.cover || 'covers/placeholder.jpg'}"
-         alt="Couverture — ${b.title}"
-         loading="lazy">
-
-    <div class="title">${b.title}</div>
-    <a href="${b.url}" target="_blank" rel="noopener">
-      Voir sur Amazon
-    </a>
-  </article>
-`;
-    }).join('');
-
-    if (filtered.length === 0) {
-      grid.innerHTML = `
-        <div class="callout" style="grid-column: 1/-1;">
-          <div class="title"><h3>Aucun résultat</h3><div class="tag">Recherche</div></div>
-          <div class="prose" style="font-size: 15px;">Essaie un autre mot-clé ou change de filtre.</div>
-        </div>
-      `;
-    }
-  }
-
-  chips.forEach(chip => chip.addEventListener('click', () => {
-    chips.forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    activeFilter = chip.dataset.filter;
-    render();
-  }));
-
-  q.addEventListener('input', render);
-
-  // Presets from “Commencer ici” links
-  document.querySelectorAll('[data-preset]').forEach(a => {
-    a.addEventListener('click', () => {
-      const preset = a.getAttribute('data-preset');
-      const targetChip = chips.find(c => c.dataset.filter === preset);
-      if (targetChip) {
-        chips.forEach(c => c.classList.remove('active'));
-        targetChip.classList.add('active');
-        activeFilter = preset;
-        q.value = '';
-        render();
-      }
-    });
-  });
-
-  render();
-</script>
-
-  <main class="hero">
-    <img class="portrait-hero"
-         src="assets/franck-hero.jpg"
-         alt="Franck Bometon — auteur et essayiste">
-
-    <h1>Franck Bometon</h1>
-    <p>Explorer l’humain sans le réduire.</p>
+    </section>
   </main>
 
+  <footer>
+    <div class="container">
+      <div class="foot">
+        <div>
+          <div class="mini">Noir & Or · Signature Franky</div>
+          <div class="mt8">© <span id="year"></span> Franck Bometon — Franky. Tous droits réservés.</div>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+          <a class="link" href="#top">Retour haut</a>
+          <a class="link" href="#presse">Presse</a>
+          <a class="link" href="#newsletter">Newsletter</a>
+          <a class="link" href="https://author.amazon.fr/home" target="_blank" rel="noopener">Author Central</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // --- Mobile menu
+    const burger = document.getElementById('burger');
+    const drawer = document.getElementById('drawer');
+    burger?.addEventListener('click', () => {
+      const open = drawer.classList.toggle('open');
+      burger.setAttribute('aria-expanded', String(open));
+    });
+    drawer?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      drawer.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    }));
+
+    // --- Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // --- Books
+    const BOOKS = [
+      { n: 1, cat: 'essais', title: "Philosophie de l'Assertivité : Oser Être, Dire et Agir", url: "https://www.amazon.fr/dp/B0F21VYGJZ", cover: "covers/01-philosophie-assertivite.jpg" },
+      { n: 2, cat: 'essais', title: "La Synergologie : Lire l’humain sans le réduire", url: "https://www.amazon.fr/dp/B0GHWBDFMR", cover: "covers/02-synergologie.jpg" },
+      { n: 3, cat: 'essais', title: "Leadership et Management des Organisations : Vers une Autorité Éclairée", url: "https://www.amazon.fr/dp/B0F6MZMFHS", cover: "covers/03-leadership-autorite-eclairee.jpg" },
+      { n: 4, cat: 'essais', title: "L’Intelligence Émotionnelle : Philosophie, Pratique et Réflexion", url: "https://www.amazon.fr/dp/B0DZTB7HW3", cover: "covers/04-intelligence-emotionnelle.jpg" },
+      { n: 5, cat: 'essais', title: "Métamorphoses du Désir : Technologie et Intimité à l’Ère Numérique", url: "https://www.amazon.fr/dp/B0CX4GGTZH", cover: "covers/05-metamorphoses-du-desir.jpg" },
+      { n: 6, cat: 'essais', title: "Solitudes Connectées : L’Ère de l’Individualisme Numérique", url: "https://www.amazon.fr/dp/B0CV81F5B5", cover: "covers/06-solitudes-connectees.jpg" },
+      { n: 7, cat: 'essais', title: "Le Miroir des Illusions : Philosophie de la Manipulation dans la Trame Sociale", url: "https://www.amazon.fr/dp/B0CSVW4VZ6", cover: "covers/07-miroir-des-illusions.jpg" },
+      { n: 8, cat: 'essais', title: "Socrate de Retour en 2025 : Dialogues avec le Futur", url: "https://www.amazon.fr/dp/B0CRR6K4X6", cover: "covers/08-socrate-retour-2025.jpg" },
+      { n: 9, cat: 'essais', title: "Chroniques d’un Optimiste Incorrigible : Sourire en Dépit du Chaos", url: "https://www.amazon.fr/dp/B0CR8F69XF", cover: "covers/09-optimiste-incorrigible.jpg" },
+      { n: 10, cat: 'essais', title: "Au-delà du Soi : Voyages en Philosophie Réflexive", url: "https://www.amazon.fr/dp/B0CP9JQWLQ", cover: "covers/10-au-dela-du-soi.jpg" },
+      { n: 11, cat: 'essais', title: "Sculpter la Psyché : L’Art et la Science de l’Esprit", url: "https://www.amazon.fr/dp/B0CPXT5973", cover: "covers/11-sculpter-la-psyche.jpg" },
+      { n: 12, cat: 'vademecum', title: "L’Art du Coaching : Explorer et Transformer le Potentiel Humain", url: "https://www.amazon.fr/dp/B0CPPMDFSP", cover: "covers/12-art-du-coaching.jpg" },
+      { n: 13, cat: 'vademecum', title: "Vade-mecum du Management Intergénérationnel et Interculturel", url: "https://www.amazon.fr/dp/B0CMNRXZR5", cover: "covers/13-vademecum-intergenerationnel-interculturel.jpg" },
+      { n: 14, cat: 'vademecum', title: "Formateurs d’Aujourd’hui : Vers une Pédagogie Réflexive et Engagée", url: "https://www.amazon.fr/dp/B0CP1PLQ27", cover: "covers/14-formateurs-aujourdhui.jpg" },
+      { n: 15, cat: 'vademecum', title: "L’Artisanat du Leadership : Traité en Miniatures", url: "https://www.amazon.fr/dp/B0CKXBJ5L5", cover: "covers/15-artisanat-du-leadership.jpg" },
+      { n: 16, cat: 'vademecum', title: "Vade Mecum du Management Toxique : Comprendre et Prévenir les RPS", url: "https://www.amazon.fr/dp/B0CMPVJH8R", cover: "covers/16-management-toxique-rps.jpg" },
+      { n: 17, cat: 'vademecum', title: "Vade-mecum de l’Art Oratoire", url: "https://www.amazon.fr/dp/B0CMJMRLK7", cover: "covers/17-art-oratoire.jpg" },
+      { n: 18, cat: 'vademecum', title: "Vade-mecum des Mécanismes de Défense", url: "https://www.amazon.fr/dp/B0CMCLBFK6", cover: "covers/18-mecanismes-de-defense.jpg" },
+      { n: 19, cat: 'vademecum', title: "Vade-mecum de l’Harmonie dans la Discorde", url: "https://www.amazon.fr/dp/B0CLYJRPTQ", cover: "covers/19-harmonie-dans-la-discorde.jpg" },
+      { n: 20, cat: 'vademecum', title: "Vade-mecum de la Métamorphose Managériale", url: "https://www.amazon.fr/dp/B0CLXXL3RC", cover: "covers/20-metamorphose-manageriale.jpg" },
+      { n: 21, cat: 'vademecum', title: "Vade-mecum de Management : Guide Érudit des Pratiques Managériales", url: "https://www.amazon.fr/dp/B0CKSPYQ6W", cover: "covers/21-guide-erudit-pratiques-manageriales.jpg" },
+      { n: 22, cat: 'vademecum', title: "Le Vade-mecum de la Bienveillance Managériale", url: "https://www.amazon.fr/dp/B0CLND85CY", cover: "covers/22-bienveillance-manageriale.jpg" },
+      { n: 23, cat: 'vademecum', title: "Le Management en Évolution", url: "https://www.amazon.fr/dp/B0CH2D7Q4Y", cover: "covers/23-management-en-evolution.jpg" },
+      { n: 24, cat: 'voyages', title: "Java, Sumatra, Célèbes : Empreintes d’un Archipel Infini", url: "https://www.amazon.fr/dp/B0DSBN2YNQ", cover: "covers/24-java-sumatra-celebes.jpg" },
+      { n: 25, cat: 'voyages', title: "L’Île des Mystères : Chroniques d’un Explorateur à Bornéo", url: "https://www.amazon.fr/dp/B0DGLB8C9P", cover: "covers/25-ile-des-mysteres-borneo.jpg" },
+      { n: 26, cat: 'voyages', title: "Bali en Réflexion", url: "https://www.amazon.fr/dp/B0DCFZLFFN", cover: "covers/26-bali-en-reflexion.jpg" },
+      { n: 27, cat: 'voyages', title: "Carnets de Route en Indochine", url: "https://www.amazon.fr/dp/B0D9VF81WB", cover: "covers/27-indochine-laos-cambodge-vietnam.jpg" },
+      { n: 28, cat: 'voyages', title: "Pérégrinations en Thaïlande et Birmanie", url: "https://www.amazon.fr/dp/B0D9GRJ225", cover: "covers/28-thailande-birmanie.jpg" },
+      { n: 29, cat: 'voyages', title: "Par-delà les Frontières", url: "https://www.amazon.fr/dp/B0D2X83JHT", cover: "covers/29-par-dela-les-frontieres.jpg" },
+      { n: 30, cat: 'voyages', title: "Voyage Initiatique au Népal et en Inde", url: "https://www.amazon.fr/dp/B0D41ZM17X", cover: "covers/30-nepal-inde.jpg" },
+      { n: 31, cat: 'voyages', title: "Chroniques d’un Globe-Trotter", url: "https://www.amazon.fr/dp/B0D29HXLHD", cover: "covers/31-chroniques-globe-trotter.jpg" },
+      { n: 32, cat: 'fiction', title: "Meurtre sur le Green", url: "https://www.amazon.fr/dp/B0CK3H5F36", cover: "covers/32-meurtre-sur-le-green.jpg" },
+      { n: 33, cat: 'fiction', title: "Le Souffle de la Guerre", url: "https://www.amazon.fr/dp/B0CQY2H9FM", cover: "covers/33-souffle-de-la-guerre.jpg" }
+    ];
+
+    const grid = document.getElementById('bookGrid');
+    const q = document.getElementById('q');
+    const chips = Array.from(document.querySelectorAll('.chip'));
+    let activeFilter = 'all';
+
+    function normalize(s){
+      return (s || '').toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '');
+    }
+
+    function render(){
+      const term = normalize(q.value);
+      const filtered = BOOKS.filter(b => {
+        const okCat = activeFilter === 'all' ? true : b.cat === activeFilter;
+        const okTerm = !term ? true : normalize(b.title).includes(term);
+        return okCat && okTerm;
+      });
+
+      grid.innerHTML = filtered.map(b => `
+        <article class="book">
+          <img class="cover" src="${b.cover || 'covers/placeholder.jpg'}" alt="Couverture — ${b.title}" loading="lazy">
+          <div class="title">${b.title}</div>
+          <div class="cta">
+            <a class="link" href="${b.url}" target="_blank" rel="noopener">Voir sur Amazon</a>
+          </div>
+        </article>
+      `).join('');
+
+      if(filtered.length === 0){
+        grid.innerHTML = `
+          <div class="callout" style="grid-column:1/-1;">
+            <div class="title"><h3>Aucun résultat</h3><div class="tag">Recherche</div></div>
+            <div class="prose" style="font-size:15px;">Essaie un autre mot-clé ou change de filtre.</div>
+          </div>
+        `;
+      }
+    }
+
+    chips.forEach(chip => chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      activeFilter = chip.dataset.filter;
+      render();
+    }));
+    q.addEventListener('input', render);
+
+    document.querySelectorAll('[data-preset]').forEach(a => {
+      a.addEventListener('click', () => {
+        const preset = a.getAttribute('data-preset');
+        const targetChip = chips.find(c => c.dataset.filter === preset);
+        if(targetChip){
+          chips.forEach(c => c.classList.remove('active'));
+          targetChip.classList.add('active');
+          activeFilter = preset;
+          q.value = '';
+          render();
+        }
+      });
+    });
+
+    render();
+  </script>
 </body>
 </html>
