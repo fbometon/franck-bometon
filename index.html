@@ -1250,7 +1250,7 @@
      return `
   <article class="book">
     <img class="cover"
-         src="${b.cover}"
+        src="${b.cover || 'covers/placeholder.jpg'}"
          alt="Couverture — ${b.title}"
          loading="lazy" />
          
