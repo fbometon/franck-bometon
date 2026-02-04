@@ -159,7 +159,17 @@
     .hero {
       padding: 76px 0 34px;
     }
-
+/* --- Portrait Hero (vignette éditoriale) --- */
+.portrait-hero{
+  width: 260px;
+  max-width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 45px rgba(0,0,0,.55);
+  margin-bottom: 22px;
+}
     .hero-grid {
       display: grid;
       grid-template-columns: 1.2fr .8fr;
