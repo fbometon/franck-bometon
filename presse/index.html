@@ -1,1 +1,487 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0b0b" />
 
+  <title>Presse / Médias — Franck Bometon (Franky)</title>
+  <meta name="description" content="Espace presse : bio, photos, logos, ouvrages, contact — Franck Bometon (Franky)." />
+  <link rel="canonical" href="https://franck-bometon.fr/presse/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Presse / Médias — Franck Bometon (Franky)" />
+  <meta property="og:description" content="Bio, photos, logos, ouvrages, contact — Espace presse." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://franck-bometon.fr/presse/" />
+  <meta property="og:image" content="https://franck-bometon.fr/assets/og.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Presse / Médias — Franck Bometon (Franky)" />
+  <meta name="twitter:description" content="Bio, photos, logos, ouvrages, contact — Espace presse." />
+  <meta name="twitter:image" content="https://franck-bometon.fr/assets/og.jpg" />
+
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --bg2:#0f0f10;
+      --ink:#f2f0ea;
+      --muted:rgba(242,240,234,.72);
+      --muted2:rgba(242,240,234,.55);
+      --line:rgba(242,240,234,.14);
+      --gold:#d6b56d;
+      --shadow:0 22px 60px rgba(0,0,0,.55);
+      --radius:18px;
+      --radius2:28px;
+      --max:1120px;
+      --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      --sans:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      --serif:ui-serif,Georgia,Cambria,"Times New Roman",Times,serif;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      background:
+        radial-gradient(1000px 600px at 10% -10%, rgba(214,181,109,.12), transparent 60%),
+        radial-gradient(900px 500px at 90% 0%, rgba(214,181,109,.10), transparent 55%),
+        linear-gradient(180deg,var(--bg) 0%, #070707 100%);
+      color:var(--ink);
+      letter-spacing:.1px;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    a{color:inherit;text-decoration:none}
+    a:hover{color:var(--gold)}
+    .container{width:min(var(--max),calc(100% - 44px));margin:0 auto}
+
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(12px);
+      background:rgba(11,11,11,.62);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;gap:18px;
+      padding:14px 0;
+    }
+    .brand{display:flex;align-items:baseline;gap:10px;white-space:nowrap}
+    .brand .name{font-family:var(--serif);font-size:18px;letter-spacing:.6px}
+    .brand .tag{
+      font-family:var(--mono);font-size:12px;color:var(--muted2);
+      border:1px solid var(--line);padding:4px 10px;border-radius:999px;
+    }
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 14px;border-radius:999px;border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--ink);font-weight:600;font-size:13px;
+      transition:transform .08s ease,border-color .2s ease,background .2s ease;
+      cursor:pointer;user-select:none;white-space:nowrap;
+    }
+    .btn:hover{border-color:rgba(214,181,109,.35);background:rgba(214,181,109,.08);color:var(--ink)}
+    .btn:active{transform:translateY(1px)}
+    .btn.gold{
+      border-color:rgba(214,181,109,.55);
+      background:linear-gradient(180deg,rgba(214,181,109,.20),rgba(214,181,109,.06));
+    }
+
+    .hero{padding:52px 0 18px}
+    .kicker{
+      font-family:var(--mono);color:var(--muted);
+      letter-spacing:.16em;text-transform:uppercase;font-size:11px;margin:0 0 14px;
+    }
+    h1{
+      margin:0;font-family:var(--serif);
+      font-size:clamp(36px,4.6vw,52px);
+      line-height:1.05;letter-spacing:.8px;
+    }
+    .subtitle{
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.85;
+      max-width:85ch;
+      margin:14px 0 0;
+    }
+    .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+
+    section{padding:38px 0;border-top:1px solid var(--line)}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:16px}
+    .section-head h2{margin:0;font-family:var(--serif);font-size:26px;letter-spacing:.3px}
+    .section-head .hint{color:var(--muted2);font-size:13px;max-width:62ch;line-height:1.5}
+
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width:980px){ .grid3{grid-template-columns:1fr} .grid2{grid-template-columns:1fr} }
+
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
+      background:rgba(255,255,255,.02);
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+    .card h3{margin:0 0 10px;font-family:var(--serif);font-size:20px}
+
+    .prose{color:var(--muted);font-size:15px;line-height:1.85;max-width:88ch}
+    .prose strong{color:var(--ink)}
+    .small{font-size:12px;color:var(--muted2);line-height:1.55}
+
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+      color:rgba(214,181,109,.95);
+      border:1px solid rgba(214,181,109,.25);
+      background:rgba(214,181,109,.08);
+      padding:6px 10px;border-radius:999px;
+    }
+
+    .sep{height:1px;background:var(--line);margin:18px 0}
+
+    .asset{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.02);
+      padding:14px;
+      display:flex;flex-direction:column;gap:10px;
+    }
+    .asset .meta{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+    .asset .name{font-family:var(--serif);color:var(--ink);font-size:16px}
+    .asset .tag{font-family:var(--mono);font-size:11px;color:var(--muted2);letter-spacing:.12em;text-transform:uppercase}
+    .asset .desc{color:var(--muted);font-size:13px;line-height:1.6}
+    .asset .actions{display:flex;gap:10px;flex-wrap:wrap}
+
+    footer{
+      padding:32px 0 54px;border-top:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(15,15,16,0) 0%, rgba(15,15,16,.35) 100%);
+    }
+    .foot{
+      display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center;
+      color:var(--muted2);font-size:13px;
+    }
+    .foot .mini{font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase}
+    ul{margin:10px 0 0 18px}
+    li{margin:6px 0}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="/" aria-label="Retour à l’accueil">
+          <span class="name">Franck Bometon</span>
+          <span class="tag">— Franky</span>
+        </a>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+          <a class="btn" href="/#livres">Œuvres</a>
+          <a class="btn" href="/#contact">Contact</a>
+          <a class="btn gold" href="mailto:fbometon@aol.com">Presse : écrire</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container hero">
+      <div class="kicker">Noir & Or · espace presse</div>
+      <h1>Presse / Médias</h1>
+      <p class="subtitle">
+        Bio officielle, éléments de langage, ressources visuelles et liens utiles.
+        Pour toute demande d’interview, conférence, chronique ou dossier : <strong>fbometon@aol.com</strong>.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn gold" href="mailto:fbometon@aol.com?subject=Presse%20%E2%80%94%20Demande%20d%E2%80%99information">Contacter (presse)</a>
+        <a class="btn" href="/assets/presse/presskit-franck-bometon.zip" target="_blank" rel="noopener noreferrer">Télécharger le press kit (ZIP)</a>
+        <a class="btn" href="/#top">Retour au site</a>
+      </div>
+
+      <div class="sep"></div>
+
+      <div class="prose">
+        <span class="pill">Formule</span>
+        <div style="margin-top:10px;font-family:var(--serif);font-size:18px;color:var(--ink);line-height:1.55;">
+          Penser clair. Observer juste. Refuser la simplification.
+        </div>
+        <div style="margin-top:6px;color:var(--muted2);">— Franky</div>
+      </div>
+    </div>
+
+    <!-- BIO -->
+    <section id="bio">
+      <div class="container">
+        <div class="section-head">
+          <h2>Bio</h2>
+          <div class="hint">3 formats : courte, standard, longue — utilisables telles quelles.</div>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Bio courte (≈ 280 caractères)</h3>
+            <div class="prose">
+              Franck Bometon (Franky) est auteur et essayiste. Il explore la compréhension de l’humain, la décision et l’autorité en contexte complexe, à la croisée de la philosophie appliquée et des sciences humaines : observer avant d’interpréter, penser avant d’agir.
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Bio standard (≈ 120–160 mots)</h3>
+            <div class="prose">
+              Franck Bometon (Franky) est auteur et essayiste. Il travaille sur la lucidité en contexte complexe : dynamiques relationnelles, décision, autorité, biais et métamorphoses contemporaines. À la croisée de la philosophie appliquée, des sciences humaines et de l’expérience de terrain, ses livres proposent une pensée rigoureuse et accessible : distinguer faits, hypothèses et récits, observer avant d’interpréter, et tenir une posture juste sous contrainte. Ses ouvrages s’adressent aux dirigeants, managers, formateurs et lecteurs exigeants qui cherchent à comprendre sans réduire, décider sans s’aveugler et agir avec discernement.
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px;">
+          <h3>Bio longue (≈ 250–350 mots)</h3>
+          <div class="prose">
+            Franck Bometon (Franky) est auteur et essayiste. Son travail porte sur une question centrale : comment comprendre l’humain sans le réduire, et décider sans s’aveugler — particulièrement lorsque les contextes sont contraints, complexes ou incertains.
+            <br/><br/>
+            À la croisée de la philosophie appliquée, des sciences humaines et de l’expérience de terrain, il propose une démarche de lucidité : observer avant d’interpréter, distinguer les faits des hypothèses, et refuser les récits trop confortables. Ses ouvrages abordent l’autorité, le leadership, les biais cognitifs, la régulation émotionnelle, la lecture de l’humain et les transformations contemporaines (technologie, désir, solitude, liens sociaux).
+            <br/><br/>
+            Le style Franky revendique la sobriété : peu d’effets, une exigence de précision, et une éthique de l’observation. Ce n’est pas une promesse de méthode miracle, mais une cartographie : repères conceptuels, outils concrets, mises en situation, et posture intérieure.
+            <br/><br/>
+            Ses livres s’adressent aux dirigeants, managers, formateurs et lecteurs exigeants qui souhaitent renforcer leur discernement, améliorer la qualité relationnelle, et maintenir une décision juste dans un monde qui pousse à simplifier.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANGLES / THEMES -->
+    <section id="angles">
+      <div class="container">
+        <div class="section-head">
+          <h2>Angles & thèmes</h2>
+          <div class="hint">Repères utiles pour un article, une interview, une chronique.</div>
+        </div>
+
+        <div class="grid3">
+          <div class="card">
+            <h3>Décision & lucidité</h3>
+            <div class="prose">
+              Biais cognitifs, lecture des situations, distinction faits/hypothèses, prudence pratique.
+            </div>
+          </div>
+          <div class="card">
+            <h3>Autorité & leadership</h3>
+            <div class="prose">
+              Autorité éclairée, posture, confiance, régulation, verticalité/horizontalité.
+            </div>
+          </div>
+          <div class="card">
+            <h3>Comprendre l’humain</h3>
+            <div class="prose">
+              Dynamiques relationnelles, signaux faibles, interprétation vs observation, éthique de la lecture.
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px;">
+          <h3>3 questions d’entretien (prêtes)</h3>
+          <div class="prose">
+            <ul>
+              <li>Qu’est-ce que “comprendre sans réduire” change concrètement dans la décision et la relation ?</li>
+              <li>À quel moment l’autorité bascule-t-elle en domination — et comment l’éviter ?</li>
+              <li>Pourquoi la distinction faits / hypothèses / récits est-elle devenue une compétence de survie ?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESSOURCES -->
+    <section id="ressources">
+      <div class="container">
+        <div class="section-head">
+          <h2>Ressources (photos, logos, kit)</h2>
+          <div class="hint">Téléchargements directs. Le ZIP regroupe tout (si tu l’ajoutes).</div>
+        </div>
+
+        <div class="grid3">
+          <div class="asset">
+            <div class="meta">
+              <div class="name">Portrait (HD)</div>
+              <div class="tag">PNG/JPG</div>
+            </div>
+            <div class="desc">Photo portrait presse, fond neutre, haute résolution.</div>
+            <div class="actions">
+              <a class="btn" href="/assets/presse/portrait-franck-bometon-hd.jpg" target="_blank" rel="noopener noreferrer">Ouvrir</a>
+              <a class="btn gold" href="/assets/presse/portrait-franck-bometon-hd.jpg" download>Télécharger</a>
+            </div>
+          </div>
+
+          <div class="asset">
+            <div class="meta">
+              <div class="name">Logo Noir & Or</div>
+              <div class="tag">SVG/PNG</div>
+            </div>
+            <div class="desc">Logo / signature “Noir & Or” (version claire et sombre).</div>
+            <div class="actions">
+              <a class="btn" href="/assets/presse/logo-noir-or.svg" target="_blank" rel="noopener noreferrer">Ouvrir</a>
+              <a class="btn gold" href="/assets/presse/logo-noir-or.svg" download>Télécharger</a>
+            </div>
+          </div>
+
+          <div class="asset">
+            <div class="meta">
+              <div class="name">Press kit complet</div>
+              <div class="tag">ZIP</div>
+            </div>
+            <div class="desc">Bio + photos + logos + sélection d’ouvrages + liens.</div>
+            <div class="actions">
+              <a class="btn gold" href="/assets/presse/presskit-franck-bometon.zip" target="_blank" rel="noopener noreferrer">Télécharger</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="sep"></div>
+
+        <div class="prose small">
+          Si un lien renvoie 404, c’est simplement que le fichier n’est pas encore présent dans <code>/assets/presse/</code>.
+          Ajoute les fichiers listés en bas de page et tout devient opérationnel.
+        </div>
+      </div>
+    </section>
+
+    <!-- OUVRAGES -->
+    <section id="ouvrages">
+      <div class="container">
+        <div class="section-head">
+          <h2>Ouvrages (sélection)</h2>
+          <div class="hint">Liens directs Amazon (DP). Pour la liste complète : page d’accueil → Œuvres.</div>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Essais · Sciences humaines</h3>
+            <div class="prose">
+              <ul>
+                <li><a href="https://www.amazon.fr/dp/B0F21VYGJZ" target="_blank" rel="noopener noreferrer">Philosophie de l'Assertivité : Oser Être, Dire et Agir</a></li>
+                <li><a href="https://www.amazon.fr/dp/B0GHWBDFMR" target="_blank" rel="noopener noreferrer">La Synergologie : Lire l’humain sans le réduire</a></li>
+                <li><a href="https://www.amazon.fr/dp/B0F6MZMFHS" target="_blank" rel="noopener noreferrer">Leadership et Management des Organisations : Vers une Autorité Éclairée</a></li>
+                <li><a href="https://www.amazon.fr/dp/B0DZTB7HW3" target="_blank" rel="noopener noreferrer">L’Intelligence Émotionnelle : Philosophie, Pratique et Réflexion</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Essais · Contemporain</h3>
+            <div class="prose">
+              <ul>
+                <li><a href="https://www.amazon.fr/dp/B0CX4GGTZH" target="_blank" rel="noopener noreferrer">Métamorphoses du Désir : Technologie et Intimité à l’Ère Numérique</a></li>
+                <li><a href="https://www.amazon.fr/dp/B0CV81F5B5" target="_blank" rel="noopener noreferrer">Solitudes Connectées : L’Ère de l’Individualisme Numérique</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px;">
+          <h3>Page auteur</h3>
+          <div class="prose">
+            <a class="btn gold" href="https://author.amazon.fr/home" target="_blank" rel="noopener noreferrer">Author Central</a>
+            <a class="btn" href="/" >Retour au site</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact presse</h2>
+          <div class="hint">Réponse rapide : indique le média, l’objet, et le format souhaité.</div>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Écrire</h3>
+            <div class="prose">
+              <p><strong>Email :</strong> <a href="mailto:fbometon@aol.com">fbometon@aol.com</a></p>
+              <p class="small">Objet conseillé : <em>Presse — [Nom du média] — [Sujet]</em></p>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
+                <a class="btn gold" href="mailto:fbometon@aol.com?subject=Presse%20%E2%80%94%20Demande%20d%E2%80%99interview">Demander une interview</a>
+                <a class="btn" href="mailto:fbometon@aol.com?subject=Presse%20%E2%80%94%20Demande%20de%20visuels">Demander des visuels</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Réseaux</h3>
+            <div class="prose">
+              <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                <a class="btn" href="https://www.linkedin.com/in/franckbometon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="btn" href="https://www.facebook.com/franck.bometon" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a class="btn" href="https://www.instagram.com/franck_bometon/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a class="btn" href="https://www.youtube.com/@franckbometon4890" target="_blank" rel="noopener noreferrer">YouTube</a>
+              </div>
+              <div class="sep"></div>
+              <div style="font-family:var(--serif);color:var(--ink);">
+                Comprendre sans réduire est une responsabilité intellectuelle.
+              </div>
+              <div style="color:var(--muted2);">— Franky</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CHECKLIST -->
+    <section id="checklist">
+      <div class="container">
+        <div class="section-head">
+          <h2>Checklist (pour médias)</h2>
+          <div class="hint">Informations utiles pour cadrer vite — sans friction.</div>
+        </div>
+
+        <div class="card">
+          <div class="prose">
+            <ul>
+              <li><strong>Nom :</strong> Franck Bometon (Franky)</li>
+              <li><strong>Site :</strong> franck-bometon.fr</li>
+              <li><strong>Email presse :</strong> fbometon@aol.com</li>
+              <li><strong>Thèmes :</strong> lucidité, décision, autorité, biais, lecture de l’humain, complexité</li>
+              <li><strong>Visuels :</strong> portrait HD + logo (dans /assets/presse/)</li>
+            </ul>
+            <div class="sep"></div>
+            <div class="small">
+              Dernière mise à jour : <span id="last"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="foot">
+        <div>
+          <div class="mini">Noir & Or — Franky</div>
+          <div style="margin-top:8px;">© <span id="year"></span> Franck Bometon — Franky. Tous droits réservés.</div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+          <a class="btn" href="/">Accueil</a>
+          <a class="btn" href="/mentions-legales/">Mentions légales</a>
+          <a class="btn" href="/politique-confidentialite/">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Affichage simple "dernière mise à jour" côté client (sans tracking)
+    const d = new Date();
+    const pad = n => String(n).padStart(2,'0');
+    document.getElementById('last').textContent = `${pad(d.getDate())}/${pad(d.getMonth()+1)}/${d.getFullYear()}`;
+  </script>
+</body>
+</html>
