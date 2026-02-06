@@ -819,9 +819,7 @@
           <div class="two-col">
             <div class="prose" style="font-size:15px;">
               Une lettre courte : une idée utile, un outil, un extrait, un lien.
-              <div class="mt12 small">
-                ✅ Désinscription en 1 clic · ✅ Données minimales · ✅ Pas de revente · ✅ Pas de tracking marketing
-              </div>
+              
             </div>
 
             <form class="mt12" method="post" action="" onsubmit="return handleNewsletter(event)">
@@ -926,7 +924,6 @@
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Newsletter placeholder (sans backend)
     function handleNewsletter(e){
       e.preventDefault();
       const msg = document.getElementById('nlMsg');
