@@ -1,5 +1,11 @@
 # Assets — franck-bometon.fr
+Franck Bometon est essayiste et auteur en sciences humaines, spécialisé dans la lecture fine des dynamiques humaines, le leadership éclairé et les biais cognitifs.
 
+Crédits photo
+© Franck Bometon — utilisation autorisée dans un cadre éditorial avec mention du crédit.
+
+Conditions d’utilisation
+Logos et visuels libres d’usage pour la presse, hors modification.
 Ce dossier contient les ressources statiques du site :
 - images (Open Graph, visuels),
 - documents PDF,
