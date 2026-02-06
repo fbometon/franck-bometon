@@ -12,4 +12,4 @@ La page presse centralise :
 - ressources téléchargeables (photos, logo, press kit),
 - contact presse.
 
-📧 Contact presse : fbometon@aol.comssources presse
+📧 Contact presse :presse@franck-bometon.fr
