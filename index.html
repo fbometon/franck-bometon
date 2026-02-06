@@ -21,25 +21,51 @@
   <meta name="twitter:title" content="Franck Bometon — Franky | Noir & Or" />
   <meta name="twitter:description" content="Explorer l’humain sans le réduire." />
   <meta name="twitter:image" content="https://franck-bometon.fr/assets/og.jpg" />
-
-  <!-- JSON-LD (SEO) -->
- <!-- JSON-LD (SEO) -->
+<!-- JSON-LD (SEO) : Graphe premium -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Franck Bometon",
-  "alternateName": "Franky",
-  "jobTitle": "Auteur · Essayiste",
-  "description": "Explorer l’humain sans le réduire. Philosophie appliquée, sciences humaines, leadership et lucidité en contexte complexe.",
-  "url": "https://franck-bometon.fr/",
-  "image": "https://franck-bometon.fr/portrait-franck.png",
-  "sameAs": [
-    "https://author.amazon.fr/home",
-    "https://www.linkedin.com/in/franckbometon",
-    "https://www.facebook.com/franck.bometon",
-    "https://www.instagram.com/franck_bometon/",
-    "https://www.youtube.com/@franckbometon4890"
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://franck-bometon.fr/#franck-bometon",
+      "name": "Franck Bometon",
+      "alternateName": "Franky",
+      "jobTitle": "Auteur · Essayiste",
+      "description": "Explorer l’humain sans le réduire. Philosophie appliquée, sciences humaines, leadership et lucidité en contexte complexe.",
+      "url": "https://franck-bometon.fr/",
+      "image": "https://franck-bometon.fr/portrait-franck.png",
+      "sameAs": [
+        "https://author.amazon.fr/home",
+        "https://www.linkedin.com/in/franckbometon",
+        "https://www.facebook.com/franck.bometon",
+        "https://www.instagram.com/franck_bometon/",
+        "https://www.youtube.com/@franckbometon4890"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://franck-bometon.fr/#website",
+      "url": "https://franck-bometon.fr/",
+      "name": "Franck Bometon — Franky | Noir & Or",
+      "description": "Explorer l’humain sans le réduire. Philosophie, leadership, sciences humaines, vade-mecum et récits.",
+      "publisher": { "@id": "https://franck-bometon.fr/#franck-bometon" },
+      "inLanguage": "fr-FR"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://franck-bometon.fr/#homepage",
+      "url": "https://franck-bometon.fr/",
+      "name": "Franck Bometon — Franky | Noir & Or",
+      "isPartOf": { "@id": "https://franck-bometon.fr/#website" },
+      "about": { "@id": "https://franck-bometon.fr/#franck-bometon" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "@id": "https://franck-bometon.fr/#portrait",
+        "url": "https://franck-bometon.fr/portrait-franck.png"
+      },
+      "inLanguage": "fr-FR"
+    }
   ]
 }
 </script>
