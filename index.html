@@ -21,54 +21,105 @@
   <meta name="twitter:title" content="Franck Bometon — Franky | Noir & Or" />
   <meta name="twitter:description" content="Explorer l’humain sans le réduire." />
   <meta name="twitter:image" content="https://franck-bometon.fr/assets/og.jpg" />
-<!-- JSON-LD (SEO) : Graphe premium -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://franck-bometon.fr/#franck-bometon",
-      "name": "Franck Bometon",
-      "alternateName": "Franky",
-      "jobTitle": "Auteur · Essayiste",
-      "description": "Explorer l’humain sans le réduire. Philosophie appliquée, sciences humaines, leadership et lucidité en contexte complexe.",
-      "url": "https://franck-bometon.fr/",
-      "image": "https://franck-bometon.fr/portrait-franck.png",
-      "sameAs": [
-        "https://author.amazon.fr/home",
-        "https://www.linkedin.com/in/franckbometon",
-        "https://www.facebook.com/franck.bometon",
-        "https://www.instagram.com/franck_bometon/",
-        "https://www.youtube.com/@franckbometon4890"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://franck-bometon.fr/#website",
-      "url": "https://franck-bometon.fr/",
-      "name": "Franck Bometon — Franky | Noir & Or",
-      "description": "Explorer l’humain sans le réduire. Philosophie, leadership, sciences humaines, vade-mecum et récits.",
-      "publisher": { "@id": "https://franck-bometon.fr/#franck-bometon" },
-      "inLanguage": "fr-FR"
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://franck-bometon.fr/#homepage",
-      "url": "https://franck-bometon.fr/",
-      "name": "Franck Bometon — Franky | Noir & Or",
-      "isPartOf": { "@id": "https://franck-bometon.fr/#website" },
-      "about": { "@id": "https://franck-bometon.fr/#franck-bometon" },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "@id": "https://franck-bometon.fr/#portrait",
-        "url": "https://franck-bometon.fr/portrait-franck.png"
+
+  <!-- JSON-LD (SEO) : Graphe + Books -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://franck-bometon.fr/#franck-bometon",
+        "name": "Franck Bometon",
+        "alternateName": "Franky",
+        "jobTitle": "Auteur · Essayiste",
+        "description": "Explorer l’humain sans le réduire. Philosophie appliquée, sciences humaines, leadership et lucidité en contexte complexe.",
+        "url": "https://franck-bometon.fr/",
+        "image": "https://franck-bometon.fr/portrait-franck.png",
+        "sameAs": [
+          "https://author.amazon.fr/home",
+          "https://www.linkedin.com/in/franckbometon",
+          "https://www.facebook.com/franck.bometon",
+          "https://www.instagram.com/franck_bometon/",
+          "https://www.youtube.com/@franckbometon4890"
+        ]
       },
-      "inLanguage": "fr-FR"
-    }
-  ]
-}
-</script>
+      {
+        "@type": "WebSite",
+        "@id": "https://franck-bometon.fr/#website",
+        "url": "https://franck-bometon.fr/",
+        "name": "Franck Bometon — Franky | Noir & Or",
+        "description": "Explorer l’humain sans le réduire. Philosophie, leadership, sciences humaines, vade-mecum et récits.",
+        "publisher": { "@id": "https://franck-bometon.fr/#franck-bometon" },
+        "inLanguage": "fr-FR"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://franck-bometon.fr/#homepage",
+        "url": "https://franck-bometon.fr/",
+        "name": "Franck Bometon — Franky | Noir & Or",
+        "isPartOf": { "@id": "https://franck-bometon.fr/#website" },
+        "about": { "@id": "https://franck-bometon.fr/#franck-bometon" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "@id": "https://franck-bometon.fr/#portrait",
+          "url": "https://franck-bometon.fr/portrait-franck.png"
+        },
+        "inLanguage": "fr-FR"
+      },
+
+      {
+        "@type": "Book",
+        "@id": "https://franck-bometon.fr/#book-assertivite",
+        "name": "Philosophie de l'Assertivité : Oser Être, Dire et Agir",
+        "url": "https://www.amazon.fr/dp/B0F21VYGJZ",
+        "author": { "@id": "https://franck-bometon.fr/#franck-bometon" },
+        "inLanguage": "fr-FR"
+      },
+      {
+        "@type": "Book",
+        "@id": "https://franck-bometon.fr/#book-synergologie",
+        "name": "La Synergologie : Lire l’humain sans le réduire",
+        "url": "https://www.amazon.fr/dp/B0GHWBDFMR",
+        "author": { "@id": "https://franck-bometon.fr/#franck-bometon" },
+        "inLanguage": "fr-FR"
+      },
+      {
+        "@type": "Book",
+        "@id": "https://franck-bometon.fr/#book-leadership",
+        "name": "Leadership et Management des Organisations : Vers une Autorité Éclairée",
+        "url": "https://www.amazon.fr/dp/B0F6MZMFHS",
+        "author": { "@id": "https://franck-bometon.fr/#franck-bometon" },
+        "inLanguage": "fr-FR"
+      },
+      {
+        "@type": "Book",
+        "@id": "https://franck-bometon.fr/#book-intelligence-emotionnelle",
+        "name": "L’Intelligence Émotionnelle : Philosophie, Pratique et Réflexion",
+        "url": "https://www.amazon.fr/dp/B0DZTB7HW3",
+        "author": { "@id": "https://franck-bometon.fr/#franck-bometon" },
+        "inLanguage": "fr-FR"
+      },
+      {
+        "@type": "Book",
+        "@id": "https://franck-bometon.fr/#book-metamorphoses-desir",
+        "name": "Métamorphoses du Désir : Technologie et Intimité à l’Ère Numérique",
+        "url": "https://www.amazon.fr/dp/B0CX4GGTZH",
+        "author": { "@id": "https://franck-bometon.fr/#franck-bometon" },
+        "inLanguage": "fr-FR"
+      },
+      {
+        "@type": "Book",
+        "@id": "https://franck-bometon.fr/#book-solitudes-connectees",
+        "name": "Solitudes Connectées : L’Ère de l’Individualisme Numérique",
+        "url": "https://www.amazon.fr/dp/B0CV81F5B5",
+        "author": { "@id": "https://franck-bometon.fr/#franck-bometon" },
+        "inLanguage": "fr-FR"
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root{
       --bg:#0b0b0b;
@@ -433,7 +484,7 @@
           <div class="hero-actions">
             <a class="btn gold" href="#extrait">Télécharger l’extrait</a>
             <a class="btn" href="#livres">Voir les livres</a>
-            <a class="btn" href="https://author.amazon.fr/home" target="_blank" rel="noopener">Author Central</a>
+            <a class="btn" href="https://author.amazon.fr/home" target="_blank" rel="noopener">Page auteur Amazon</a>
           </div>
 
           <div class="sep"></div>
@@ -471,7 +522,7 @@
       <div class="container">
         <div class="section-head">
           <h2>À propos</h2>
-          <div class="hint">Bio cohérente (site · Amazon · Author Central).</div>
+          <div class="hint">Une pensée rigoureuse, incarnée, accessible.</div>
         </div>
 
         <div class="two-col">
@@ -493,7 +544,7 @@
           <div class="callout" id="commencer">
             <div class="title">
               <h3>Commencer ici</h3>
-              <div class="tag">Orientation lecteur</div>
+              <div class="tag">Repères</div>
             </div>
             <div class="prose" style="font-size:15px;">
               <p><strong>Dirigeant / manager / formateur</strong> → <a href="#livres" data-preset="essais">Leadership & Autorité</a> · <a href="#livres" data-preset="essais">Assertivité</a></p>
@@ -537,7 +588,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Extrait gratuit (PDF)</h2>
-          <div class="hint">Un geste simple. Une porte d’entrée.</div>
+          <div class="hint">Une porte d’entrée. Sans détour.</div>
         </div>
 
         <div class="callout">
@@ -548,16 +599,16 @@
 
           <div class="two-col">
             <div class="prose" style="font-size:15px;">
-              Un aperçu rigoureux de mes travaux : décision, autorité, lecture de l’humain, complexité contemporaine.
+              Un aperçu rigoureux : décision, autorité, lecture de l’humain, complexité contemporaine.
               <div class="mt12 small">
-                Le PDF est servi depuis <strong>/assets/extrait.pdf</strong>.
+                Le document s’ouvre dans un nouvel onglet.
               </div>
             </div>
 
             <div style="display:flex;flex-direction:column;gap:10px;justify-content:center;">
               <a class="btn gold" id="pdfBtn" href="/assets/extrait.pdf" target="_blank" rel="noopener">Télécharger le PDF</a>
               <div class="small">
-                Pour changer le PDF : remplace le fichier <strong>assets/extrait.pdf</strong> sur l’hébergement (dossier <strong>www/assets/</strong>).
+                Besoin d’un autre format ? Écris-moi via la section <a href="#contact">Contact</a>.
               </div>
             </div>
           </div>
@@ -570,7 +621,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Œuvres</h2>
-          <div class="hint">Catalogue structuré — filtre + recherche.</div>
+          <div class="hint">Filtrez, cherchez, trouvez votre point d’entrée.</div>
         </div>
 
         <div class="controls" role="group" aria-label="Filtres des ouvrages">
@@ -592,10 +643,10 @@
 
         <div class="two-col">
           <div class="prose" style="font-size:14px;">
-            <strong>Astuce :</strong> sur chaque page “livre”, ajoute un encart “Pour aller plus loin” → lien vers <a href="#commencer">Par où commencer ?</a> et <a href="#parcours">Parcours de lecture</a>.
+            Si tu veux une recommandation rapide, passe par <a href="#commencer">Commencer ici</a> ou le <a href="#parcours">Parcours de lecture</a>.
           </div>
           <div class="prose" style="font-size:14px;color:var(--muted2);">
-            Author Central : <a href="https://author.amazon.fr/home" target="_blank" rel="noopener">author.amazon.fr/home</a>
+            Page auteur Amazon : <a href="https://author.amazon.fr/home" target="_blank" rel="noopener">author.amazon.fr/home</a>
           </div>
         </div>
       </div>
@@ -654,13 +705,12 @@
 
           <div class="callout">
             <div class="title">
-              <h3>Ouverture universelle</h3>
-              <div class="tag">Préface courte</div>
+              <h3>Ouverture</h3>
+              <div class="tag">Préambule</div>
             </div>
             <div class="prose" style="font-size:15px;">
               Ce livre ne propose ni méthode miracle, ni vérité définitive. Il s’inscrit dans une démarche plus exigeante :
               comprendre sans réduire, penser sans simplifier, agir sans s’aveugler.
-              <div class="mt12 small">À placer au début de chacun des ouvrages.</div>
             </div>
           </div>
         </div>
@@ -745,7 +795,7 @@
             </div>
             <div class="prose" style="font-size:15px;">
               Dis-moi ton profil (manager, formateur, curieux, voyageur) et je te propose une séquence de lecture cohérente.
-              <div class="mt12 small">Ou rejoins la newsletter ci-dessous pour recevoir des repères (sobres, sans bruit).</div>
+              <div class="mt12 small">Ou rejoins la newsletter ci-dessous pour recevoir des repères — sobres, sans bruit.</div>
             </div>
           </div>
         </div>
@@ -757,7 +807,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Newsletter</h2>
-          <div class="hint">Ultra sobre. RGPD-friendly. Zéro spam.</div>
+          <div class="hint">Une lettre rare. Une idée nette.</div>
         </div>
 
         <div class="callout">
@@ -804,7 +854,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Contact</h2>
-          <div class="hint">Email direct, sobre.</div>
+          <div class="hint">Pour échanges, invitations, médias.</div>
         </div>
 
         <div class="two-col">
@@ -824,38 +874,14 @@
           </div>
 
           <div class="card">
-            <h3>Réseaux (optionnel)</h3>
+            <h3>Réseaux</h3>
             <div class="prose" style="font-size:15px;">
-              Ajoute tes liens quand tu veux.
-             <div class="mt12" style="display:flex;gap:10px;flex-wrap:wrap;">
-  <a class="btn"
-     href="https://www.linkedin.com/in/franckbometon"
-     target="_blank" rel="noopener noreferrer"
-     aria-label="LinkedIn">
-     LinkedIn
-  </a>
-
-  <a class="btn"
-     href="https://www.facebook.com/franck.bometon"
-     target="_blank" rel="noopener noreferrer"
-     aria-label="Facebook">
-     Facebook
-  </a>
-
-  <a class="btn"
-     href="https://www.instagram.com/franck_bometon/"
-     target="_blank" rel="noopener noreferrer"
-     aria-label="Instagram">
-     Instagram
-  </a>
-
-  <a class="btn"
-     href="https://www.youtube.com/@franckbometon4890"
-     target="_blank" rel="noopener noreferrer"
-     aria-label="YouTube">
-     YouTube
-  </a>
-</div>
+              <div class="mt12" style="display:flex;gap:10px;flex-wrap:wrap;">
+                <a class="btn" href="https://www.linkedin.com/in/franckbometon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+                <a class="btn" href="https://www.facebook.com/franck.bometon" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+                <a class="btn" href="https://www.instagram.com/franck_bometon/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                <a class="btn" href="https://www.youtube.com/@franckbometon4890" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+              </div>
               <div class="sep"></div>
               <div style="font-family:var(--serif);color:var(--ink);">Penser clair. Observer juste. Refuser la simplification.</div>
               <div style="color:var(--muted2);">— Franky</div>
@@ -870,13 +896,13 @@
     <div class="container">
       <div class="foot">
         <div>
-          <div class="mini">Noir & Or · Signature Franky</div>
+          <div class="mini">Noir & Or · Franky</div>
           <div class="mt8">© <span id="year"></span> Franck Bometon — Franky. Tous droits réservés.</div>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
           <a class="btn" href="#top">Retour haut</a>
           <a class="btn" href="/presse/">Presse / Médias</a>
-          <a class="btn" href="https://author.amazon.fr/home" target="_blank" rel="noopener">Author Central</a>
+          <a class="btn" href="https://author.amazon.fr/home" target="_blank" rel="noopener">Page auteur Amazon</a>
         </div>
       </div>
     </div>
@@ -905,7 +931,7 @@
       e.preventDefault();
       const msg = document.getElementById('nlMsg');
       msg.style.display = "block";
-      msg.innerHTML = "✅ Inscription à connecter : ajoute l’URL de ton outil emailing dans <strong>action=\"...\"</strong> (Brevo / Mailchimp / etc.).";
+      msg.innerHTML = "✅ Merci. L’inscription sera activée prochainement.";
       msg.style.border = "1px solid rgba(214,181,109,.25)";
       msg.style.padding = "10px 12px";
       msg.style.borderRadius = "16px";
