@@ -377,7 +377,37 @@
       color:var(--muted2);font-size:13px;
     }
     .foot .mini{font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase}
+/* Bouton Retour (page précédente) */
+.btn-back{
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 9999;
 
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.65rem 1rem;
+
+  border-radius:999px;
+  border:1px solid rgba(214,181,109,.55);
+  background:rgba(8,8,8,.65);
+  color:#f2efe7;
+
+  cursor:pointer;
+  text-decoration:none;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+}
+.btn-back:hover{
+  transform: translateY(-1px);
+  border-color: rgba(214,181,109,.85);
+  background:rgba(12,12,12,.75);
+}
+.btn-back:active{ transform: translateY(0); }
     /* === HERO PORTRAIT === */
     .portrait-wrap{
       width:100%;
