@@ -75,43 +75,6 @@
           "url": "https://franck-bometon.fr/portrait-franck.jpg"
         },
         "inLanguage": "fr-FR"
-      },
-
-      { "@type": "Book", "@id": "https://franck-bometon.fr/#book-assertivite",
-        "name": "Philosophie de l'Assertivité : Oser Être, Dire et Agir",
-        "url": "https://www.amazon.fr/dp/B0F21VYGJZ",
-        "author": { "@id": "https://franck-bometon.fr/#franck-bometon" },
-        "inLanguage": "fr-FR"
-      },
-      { "@type": "Book", "@id": "https://franck-bometon.fr/#book-synergologie",
-        "name": "La Synergologie : Lire l’humain sans le réduire",
-        "url": "https://www.amazon.fr/dp/B0GHWBDFMR",
-        "author": { "@id": "https://franck-bometon.fr/#franck-bometon" },
-        "inLanguage": "fr-FR"
-      },
-      { "@type": "Book", "@id": "https://franck-bometon.fr/#book-leadership",
-        "name": "Leadership et Management des Organisations : Vers une Autorité Éclairée",
-        "url": "https://www.amazon.fr/dp/B0F6MZMFHS",
-        "author": { "@id": "https://franck-bometon.fr/#franck-bometon" },
-        "inLanguage": "fr-FR"
-      },
-      { "@type": "Book", "@id": "https://franck-bometon.fr/#book-intelligence-emotionnelle",
-        "name": "L’Intelligence Émotionnelle : Philosophie, Pratique et Réflexion",
-        "url": "https://www.amazon.fr/dp/B0DZTB7HW3",
-        "author": { "@id": "https://franck-bometon.fr/#franck-bometon" },
-        "inLanguage": "fr-FR"
-      },
-      { "@type": "Book", "@id": "https://franck-bometon.fr/#book-metamorphoses-desir",
-        "name": "Métamorphoses du Désir : Technologie et Intimité à l’Ère Numérique",
-        "url": "https://www.amazon.fr/dp/B0CX4GGTZH",
-        "author": { "@id": "https://franck-bometon.fr/#franck-bometon" },
-        "inLanguage": "fr-FR"
-      },
-      { "@type": "Book", "@id": "https://franck-bometon.fr/#book-solitudes-connectees",
-        "name": "Solitudes Connectées : L’Ère de l’Individualisme Numérique",
-        "url": "https://www.amazon.fr/dp/B0CV81F5B5",
-        "author": { "@id": "https://franck-bometon.fr/#franck-bometon" },
-        "inLanguage": "fr-FR"
       }
     ]
   }
@@ -167,28 +130,18 @@
     }
 
     .posture-banner{
-      position:relative;
-      z-index:60;
+      position:relative;z-index:60;
       background:linear-gradient(90deg, rgba(11,11,11,.96), rgba(15,15,15,.96));
       border-bottom:1px solid rgba(214,181,109,.35);
     }
     .posture-inner{
-      max-width:1120px;
-      margin:0 auto;
-      padding:10px 22px;
-      display:flex;
-      align-items:center;
-      gap:14px;
-      font-family:var(--mono);
-      font-size:12px;
-      line-height:1.4;
+      max-width:1120px;margin:0 auto;padding:10px 22px;
+      display:flex;align-items:center;gap:14px;
+      font-family:var(--mono);font-size:12px;line-height:1.4;
       color:rgba(242,240,234,.85);
     }
     .posture-label{
-      color:var(--gold);
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      white-space:nowrap;
+      color:var(--gold);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;
     }
     .posture-text{flex:1;opacity:.9}
     .posture-signature{opacity:.65;white-space:nowrap}
@@ -242,10 +195,8 @@
     }
     .subtitle{
       color:var(--muted);
-      font-size:16px;
-      line-height:1.85;
-      max-width:75ch;
-      margin:14px 0 0;
+      font-size:16px;line-height:1.85;
+      max-width:75ch;margin:14px 0 0;
     }
     .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
 
@@ -347,21 +298,16 @@
 
     .formrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
     .input{
-      flex:1;min-width:240px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      padding:12px 14px;
-      background:rgba(255,255,255,.02);
-      color:var(--ink);
-      outline:none;
+      flex:1;min-width:240px;border:1px solid var(--line);
+      border-radius:999px;padding:12px 14px;
+      background:rgba(255,255,255,.02);color:var(--ink);outline:none;
     }
     .input::placeholder{color:rgba(242,240,234,.38)}
     .small{font-size:12px;color:var(--muted2);line-height:1.55}
     .check{
       display:flex;gap:10px;align-items:flex-start;
       padding:10px 12px;border-radius:16px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.02);
+      border:1px solid var(--line);background:rgba(255,255,255,.02);
     }
     .check input{margin-top:4px}
 
@@ -378,42 +324,39 @@
     .btn-back{
       position:fixed;left:18px;bottom:18px;z-index:9999;
       display:inline-flex;align-items:center;gap:.5rem;
-      padding:.65rem 1rem;
-      border-radius:999px;
+      padding:.65rem 1rem;border-radius:999px;
       border:1px solid rgba(214,181,109,.55);
       background:rgba(8,8,8,.65);
-      color:#f2efe7;
-      cursor:pointer;
+      color:#f2efe7;cursor:pointer;
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
       box-shadow: 0 8px 24px rgba(0,0,0,.25);
       transition: transform .12s ease, border-color .12s ease, background .12s ease;
     }
-    .btn-back:hover{
-      transform: translateY(-1px);
-      border-color: rgba(214,181,109,.85);
-      background:rgba(12,12,12,.75);
-    }
+    .btn-back:hover{transform: translateY(-1px);border-color: rgba(214,181,109,.85);background:rgba(12,12,12,.75)}
     .btn-back:active{ transform: translateY(0); }
 
     .portrait-wrap{
-      width:100%;
-      max-width:320px;
-      aspect-ratio:4/5;
-      overflow:hidden;
-      border-radius:18px;
-      background:#0b0b0b;
+      width:100%;max-width:320px;aspect-ratio:4/5;
+      overflow:hidden;border-radius:18px;background:#0b0b0b;
       border:1px solid var(--line);
       box-shadow: 0 18px 48px rgba(0,0,0,.45);
     }
     .portrait-wrap img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position:50% 10%;
-      display:block;
-      transform: scale(1.02);
+      width:100%;height:100%;object-fit:cover;object-position:50% 10%;
+      display:block;transform: scale(1.02);
     }
+
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .brand{display:flex;align-items:baseline;gap:8px}
+    .brand .name{font-family:var(--serif);font-size:16px;letter-spacing:.2px}
+    .brand .tag{font-family:var(--mono);font-size:11px;color:var(--muted2);letter-spacing:.12em;text-transform:uppercase}
+    .navlinks{display:flex;flex-wrap:wrap;gap:14px}
+    .navlinks a{font-size:13px;color:var(--muted)}
+    .navlinks a:hover{color:var(--ink)}
+    .nav-cta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+
+    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:16px;align-items:start}
 
     @media (max-width:980px){
       .hero-grid{grid-template-columns:1fr}
@@ -430,17 +373,6 @@
       .portrait-wrap{max-width:300px}
       .portrait-wrap img{object-position:50% 12%}
     }
-
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-    .brand{display:flex;align-items:baseline;gap:8px}
-    .brand .name{font-family:var(--serif);font-size:16px;letter-spacing:.2px}
-    .brand .tag{font-family:var(--mono);font-size:11px;color:var(--muted2);letter-spacing:.12em;text-transform:uppercase}
-    .navlinks{display:flex;flex-wrap:wrap;gap:14px}
-    .navlinks a{font-size:13px;color:var(--muted)}
-    .navlinks a:hover{color:var(--ink)}
-    .nav-cta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-
-    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:16px;align-items:start}
   </style>
 </head>
 
@@ -935,29 +867,38 @@
   </footer>
 
   <script>
-    // ===== Mobile menu =====
+    /* =============================
+       NAV MOBILE
+    ============================= */
     const burger = document.getElementById('burger');
     const drawer = document.getElementById('drawer');
 
-    burger?.addEventListener('click', () => {
-      const open = drawer.classList.toggle('open');
-      burger.setAttribute('aria-expanded', String(open));
-    });
+    if (burger && drawer) {
+      burger.addEventListener('click', () => {
+        const open = drawer.classList.toggle('open');
+        burger.setAttribute('aria-expanded', String(open));
+      });
 
-    drawer?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      drawer.classList.remove('open');
-      burger?.setAttribute('aria-expanded', 'false');
-    }));
+      drawer.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          drawer.classList.remove('open');
+          burger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
 
-    // ===== Year =====
+    /* =============================
+       YEAR
+    ============================= */
     const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // ===== Newsletter (placeholder) =====
+    /* =============================
+       NEWSLETTER (DEMO)
+    ============================= */
     function handleNewsletter(e){
       e.preventDefault();
       const msg = document.getElementById('nlMsg');
-      if (!msg) return false;
       msg.style.display = "block";
       msg.innerHTML = "✅ Merci. L’inscription sera activée prochainement.";
       msg.style.border = "1px solid rgba(214,181,109,.25)";
@@ -966,34 +907,36 @@
       msg.style.background = "rgba(214,181,109,.06)";
       return false;
     }
-    window.handleNewsletter = handleNewsletter;
 
-    // ===== Back button =====
     function goBackOrHome(){
       if (window.history.length > 1) window.history.back();
       else window.location.href = "/";
     }
-    window.goBackOrHome = goBackOrHome;
 
-    // ===== Books =====
+    /* =============================
+       BOOKS (COVERS)
+       IMPORTANT : mets tes images dans /covers/
+    ============================= */
     const BOOKS = [
-      { n:1, cat:'essais', title:"Philosophie de l'Assertivité : Oser Être, Dire et Agir", url:"https://www.amazon.fr/dp/B0F21VYGJZ", cover:"/covers/01-philosophie-assertivite.jpg" },
-      { n:2, cat:'essais', title:"La Synergologie : Lire l’humain sans le réduire", url:"https://www.amazon.fr/dp/B0GHWBDFMR", cover:"/covers/02-synergologie.jpg" },
-      { n:3, cat:'essais', title:"Leadership et Management des Organisations : Vers une Autorité Éclairée", url:"https://www.amazon.fr/dp/B0F6MZMFHS", cover:"/covers/03-leadership-autorite-eclairee.jpg" },
-      { n:4, cat:'essais', title:"L’Intelligence Émotionnelle : Philosophie, Pratique et Réflexion", url:"https://www.amazon.fr/dp/B0DZTB7HW3", cover:"/covers/04-intelligence-emotionnelle.jpg" },
-      { n:5, cat:'essais', title:"Métamorphoses du Désir : Technologie et Intimité à l’Ère Numérique", url:"https://www.amazon.fr/dp/B0CX4GGTZH", cover:"/covers/05-metamorphoses-du-desir.jpg" },
-      { n:6, cat:'essais', title:"Solitudes Connectées : L’Ère de l’Individualisme Numérique", url:"https://www.amazon.fr/dp/B0CV81F5B5", cover:"/covers/06-solitudes-connectees.jpg" },
-      { n:7, cat:'essais', title:"Le Miroir des Illusions : Philosophie de la Manipulation dans la Trame Sociale", url:"https://www.amazon.fr/dp/B0CSVW4VZ6", cover:"/covers/07-miroir-des-illusions.jpg" },
-      { n:8, cat:'essais', title:"Socrate de Retour en 2025 : Dialogues avec le Futur", url:"https://www.amazon.fr/dp/B0CRR6K4X6", cover:"/covers/08-socrate-retour-2025.jpg" },
-      { n:9, cat:'essais', title:"Chroniques d’un Optimiste Incorrigible : Sourire en Dépit du Chaos", url:"https://www.amazon.fr/dp/B0CR8F69XF", cover:"/covers/09-optimiste-incorrigible.jpg" },
-      { n:10, cat:'essais', title:"Au-delà du Soi : Voyages en Philosophie Réflexive", url:"https://www.amazon.fr/dp/B0CP9JQWLQ", cover:"/covers/10-au-dela-du-soi.jpg" },
-      { n:11, cat:'essais', title:"Sculpter la Psyché : L’Art et la Science de l’Esprit", url:"https://www.amazon.fr/dp/B0CPXT5973", cover:"/covers/11-sculpter-la-psyche.jpg" },
+      { n:1,  cat:'essais',   title:"Philosophie de l'Assertivité : Oser Être, Dire et Agir", url:"https://www.amazon.fr/dp/B0F21VYGJZ", cover:"/covers/01-philosophie-assertivite.jpg" },
+      { n:2,  cat:'essais',   title:"La Synergologie : Lire l’humain sans le réduire", url:"https://www.amazon.fr/dp/B0GHWBDFMR", cover:"/covers/02-synergologie.jpg" },
+      { n:3,  cat:'essais',   title:"Leadership et Management des Organisations : Vers une Autorité Éclairée", url:"https://www.amazon.fr/dp/B0F6MZMFHS", cover:"/covers/03-leadership-autorite-eclairee.jpg" },
+      { n:4,  cat:'essais',   title:"L’Intelligence Émotionnelle : Philosophie, Pratique et Réflexion", url:"https://www.amazon.fr/dp/B0DZTB7HW3", cover:"/covers/04-intelligence-emotionnelle.jpg" },
+      { n:5,  cat:'essais',   title:"Métamorphoses du Désir : Technologie et Intimité à l’Ère Numérique", url:"https://www.amazon.fr/dp/B0CX4GGTZH", cover:"/covers/05-metamorphoses-du-desir.jpg" },
+      { n:6,  cat:'essais',   title:"Solitudes Connectées : L’Ère de l’Individualisme Numérique", url:"https://www.amazon.fr/dp/B0CV81F5B5", cover:"/covers/06-solitudes-connectees.jpg" },
+
+      { n:7,  cat:'essais',   title:"Le Miroir des Illusions : Philosophie de la Manipulation dans la Trame Sociale", url:"https://www.amazon.fr/dp/B0CSVW4VZ6", cover:"/covers/07-miroir-des-illusions.jpg" },
+      { n:8,  cat:'essais',   title:"Socrate de Retour en 2025 : Dialogues avec le Futur", url:"https://www.amazon.fr/dp/B0CRR6K4X6", cover:"/covers/08-socrate-retour-2025.jpg" },
+      { n:9,  cat:'essais',   title:"Chroniques d’un Optimiste Incorrigible : Sourire en Dépit du Chaos", url:"https://www.amazon.fr/dp/B0CR8F69XF", cover:"/covers/09-optimiste-incorrigible.jpg" },
+      { n:10, cat:'essais',   title:"Au-delà du Soi : Voyages en Philosophie Réflexive", url:"https://www.amazon.fr/dp/B0CP9JQWLQ", cover:"/covers/10-au-dela-du-soi.jpg" },
+      { n:11, cat:'essais',   title:"Sculpter la Psyché : L’Art et la Science de l’Esprit", url:"https://www.amazon.fr/dp/B0CPXT5973", cover:"/covers/11-sculpter-la-psyche.jpg" },
 
       { n:12, cat:'vademecum', title:"L’Art du Coaching : Explorer et Transformer le Potentiel Humain", url:"https://www.amazon.fr/dp/B0CPPMDFSP", cover:"/covers/12-art-du-coaching.jpg" },
       { n:13, cat:'vademecum', title:"Vade-mecum du Management Intergénérationnel et Interculturel", url:"https://www.amazon.fr/dp/B0CMNRXZR5", cover:"/covers/13-vademecum-intergenerationnel-interculturel.jpg" },
       { n:14, cat:'vademecum', title:"Formateurs d’Aujourd’hui : Vers une Pédagogie Réflexive et Engagée", url:"https://www.amazon.fr/dp/B0CP1PLQ27", cover:"/covers/14-formateurs-aujourdhui.jpg" },
       { n:15, cat:'vademecum', title:"L’Artisanat du Leadership : Traité en Miniatures", url:"https://www.amazon.fr/dp/B0CKXBJ5L5", cover:"/covers/15-artisanat-du-leadership.jpg" },
       { n:16, cat:'vademecum', title:"Vade Mecum du Management Toxique : Comprendre et Prévenir les RPS", url:"https://www.amazon.fr/dp/B0CMPVJH8R", cover:"/covers/16-management-toxique-rps.jpg" },
+
       { n:17, cat:'vademecum', title:"Vade-mecum de l’Art Oratoire", url:"https://www.amazon.fr/dp/B0CMJMRLK7", cover:"/covers/17-art-oratoire.jpg" },
       { n:18, cat:'vademecum', title:"Vade-mecum des Mécanismes de Défense", url:"https://www.amazon.fr/dp/B0CMCLBFK6", cover:"/covers/18-mecanismes-de-defense.jpg" },
       { n:19, cat:'vademecum', title:"Vade-mecum de l’Harmonie dans la Discorde", url:"https://www.amazon.fr/dp/B0CLYJRPTQ", cover:"/covers/19-harmonie-dans-la-discorde.jpg" },
@@ -1015,7 +958,7 @@
       { n:33, cat:'fiction', title:"Le Souffle de la Guerre", url:"https://www.amazon.fr/dp/B0CQY2H9FM", cover:"/covers/33-souffle-de-la-guerre.jpg" },
 
       { n:34, cat:'essais', title:"Entre cadre et processus : quelles sont les limites du coach ?", url:"https://www.amazon.fr/Entre-cadre-processus-quelles-limites/dp/3841749429", cover:"/covers/34-entre-cadre-processus.jpg" },
-      { n:35, cat:'essais', title:"Comment gérer son stress en situation d'évaluation certificative professionnelle", url:"https://www.amazon.fr/Comment-situation-d%C3%A9valuation-certificative-professionnelle/dp/9975153364", cover:"/covers/35-stress-evaluation-certificative.jpg" }
+      { n:35, cat:'essais', title:"Comment gérer son stress en situation d’évaluation certificative professionnelle", url:"https://www.amazon.fr/Comment-situation-d%C3%A9valuation-certificative-professionnelle/dp/9975153364", cover:"/covers/35-stress-evaluation-certificative.jpg" }
     ];
 
     const grid = document.getElementById('bookGrid');
@@ -1028,9 +971,9 @@
     }
 
     function render(){
-      if (!grid) return;
+      if(!grid) return;
 
-      const term = normalize(q?.value || '');
+      const term = q ? normalize(q.value) : '';
       const filtered = BOOKS.filter(b => {
         const okCat = activeFilter === 'all' ? true : b.cat === activeFilter;
         const okTerm = !term ? true : normalize(b.title).includes(term);
@@ -1039,8 +982,7 @@
 
       grid.innerHTML = filtered.map(b => `
         <article class="book">
-          <img class="cover" src="${b.cover || '/covers/placeholder.jpg'}"
-               alt="Couverture — ${b.title}" loading="lazy">
+          <img class="cover" src="${b.cover || '/covers/placeholder.jpg'}" alt="Couverture — ${b.title}" loading="lazy">
           <div class="title">${b.title}</div>
           <a href="${b.url}" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
         </article>
@@ -1059,11 +1001,11 @@
     chips.forEach(chip => chip.addEventListener('click', () => {
       chips.forEach(c => c.classList.remove('active'));
       chip.classList.add('active');
-      activeFilter = chip.dataset.filter || 'all';
+      activeFilter = chip.dataset.filter;
       render();
     }));
 
-    q?.addEventListener('input', render);
+    if (q) q.addEventListener('input', render);
 
     document.querySelectorAll('[data-preset]').forEach(a => {
       a.addEventListener('click', () => {
