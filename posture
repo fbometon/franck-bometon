@@ -1,2 +1,222 @@
-/posture/
-└── index.html
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0b0b" />
+
+  <title>Posture intellectuelle et méthode — Franck Bometon (Franky)</title>
+
+  <meta name="description" content="Posture intellectuelle et méthode de travail de Franck Bometon (Franky) : comprendre sans réduire, observer avant d’interpréter, décider avec lucidité en contexte complexe." />
+
+  <link rel="canonical" href="https://franck-bometon.fr/posture/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Posture intellectuelle et méthode — Franck Bometon (Franky)" />
+  <meta property="og:description" content="Comprendre sans réduire. Observer avant d’interpréter. Une posture intellectuelle au service de la décision et de l’autorité éclairée." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://franck-bometon.fr/posture/" />
+  <meta property="og:image" content="https://franck-bometon.fr/og.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Posture intellectuelle et méthode — Franky" />
+  <meta name="twitter:description" content="Une démarche de lucidité : observer, distinguer, décider sans réduire la complexité humaine." />
+  <meta name="twitter:image" content="https://franck-bometon.fr/og.jpg" />
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <a href="/" aria-label="Retour à l’accueil">← Retour au site</a>
+  </div>
+</header>
+
+<main class="container" style="max-width: 880px; padding: 64px 20px;">
+
+  <h1>Posture intellectuelle et méthode de travail</h1>
+
+  <p>
+    Cette page ne présente ni une promesse, ni une méthode universelle, ni un discours d’autorité.
+    Elle explicite une <strong>posture intellectuelle</strong> : une manière de penser, d’observer
+    et de décider lorsque les situations sont complexes, incertaines ou chargées humainement.
+  </p>
+
+  <p>
+    Le fil conducteur est simple, mais exigeant :
+    <strong>comprendre sans réduire</strong>.
+    Refuser les simplifications abusives, distinguer ce qui est observé de ce qui est interprété,
+    et assumer la responsabilité intellectuelle de ses décisions.
+  </p>
+
+  <p>
+    Cette posture irrigue l’ensemble de mes ouvrages — qu’ils portent sur le leadership,
+    l’autorité, la lecture de l’humain, la décision, les biais cognitifs ou les transformations contemporaines.
+  </p>
+
+  <hr>
+
+  <h2>Comprendre sans réduire</h2>
+
+  <p>
+    Comprendre l’humain ne consiste pas à l’enfermer dans des grilles,
+    des typologies ou des diagnostics rapides.
+    Toute lecture trop sûre d’elle-même finit par produire l’inverse de ce qu’elle prétend :
+    une perte de discernement.
+  </p>
+
+  <p>
+    Réduire, c’est confondre :
+  </p>
+
+  <ul>
+    <li>les <strong>faits observables</strong> avec les interprétations,</li>
+    <li>les <strong>hypothèses</strong> avec des certitudes,</li>
+    <li>les <strong>récits explicatifs</strong> avec la réalité elle-même.</li>
+  </ul>
+
+  <p>
+    Comprendre sans réduire suppose au contraire une discipline :
+    accepter la complexité du réel,
+    reconnaître ses angles morts,
+    et maintenir une forme de prudence intellectuelle.
+  </p>
+
+  <p>
+    Cette exigence n’est pas un luxe théorique.
+    Elle devient décisive dès que l’on exerce une responsabilité —
+    managériale, institutionnelle, éducative ou relationnelle.
+  </p>
+
+  <hr>
+
+  <h2>Observer avant d’interpréter</h2>
+
+  <p>
+    Toute interprétation prématurée est une prise de pouvoir déguisée.
+    Elle ferme le réel au lieu de l’éclairer.
+  </p>
+
+  <p>
+    Observer, dans cette démarche, ne signifie pas être neutre ou passif.
+    Cela signifie <strong>suspendre momentanément le jugement</strong>
+    pour laisser apparaître les signaux pertinents.
+  </p>
+
+  <p>
+    La méthode repose sur une séquence simple :
+  </p>
+
+  <ol>
+    <li>Observer ce qui est réellement présent.</li>
+    <li>Nommer ce qui est observable sans y projeter d’intention.</li>
+    <li>Formuler des hypothèses révisables.</li>
+    <li>Décider en conscience, sans confondre hypothèse et vérité.</li>
+  </ol>
+
+  <p>
+    Cette posture est centrale dans la lecture de l’humain :
+    comportements, dynamiques relationnelles, tensions, résistances,
+    prises de décision sous stress ou sous contrainte.
+  </p>
+
+  <hr>
+
+  <h2>Distinguer faits, hypothèses et récits</h2>
+
+  <p>
+    L’une des confusions les plus fréquentes dans les organisations
+    est l’effacement progressif de cette distinction.
+  </p>
+
+  <p>
+    Les faits deviennent des opinions stabilisées,
+    les hypothèses se transforment en certitudes,
+    et les récits explicatifs prennent la place du réel.
+  </p>
+
+  <p>
+    Restaurer cette distinction permet :
+  </p>
+
+  <ul>
+    <li>d’améliorer la qualité de la décision,</li>
+    <li>de réduire les conflits interprétatifs,</li>
+    <li>de clarifier les responsabilités,</li>
+    <li>de préserver une autorité juste.</li>
+  </ul>
+
+  <p>
+    Cette démarche s’inscrit dans une tradition de prudence pratique :
+    décider sans se raconter d’histoires confortables,
+    tout en assumant l’incertitude résiduelle.
+  </p>
+
+  <hr>
+
+  <h2>Agir avec lucidité en contexte complexe</h2>
+
+  <p>
+    La complexité ne disparaît pas parce qu’on la nie.
+    Elle se retourne alors contre la décision.
+  </p>
+
+  <p>
+    Les environnements contemporains — organisations, institutions,
+    relations professionnelles — imposent des décisions rapides,
+    souvent sous information incomplète.
+  </p>
+
+  <p>
+    La posture proposée ici ne cherche pas à ralentir l’action,
+    mais à lui redonner un socle :
+    <strong>lucidité, discernement, responsabilité</strong>.
+  </p>
+
+  <p>
+    Il ne s’agit pas d’être indécis,
+    mais de décider sans rigidité,
+    sans simplification abusive,
+    et sans déni de la complexité humaine.
+  </p>
+
+  <hr>
+
+  <h2>Ce que cette démarche n’est pas</h2>
+
+  <p>
+    Cette posture n’est volontairement <strong>pas</strong> :
+  </p>
+
+  <ul>
+    <li>une méthode miracle applicable partout,</li>
+    <li>un discours motivationnel,</li>
+    <li>une grille d’analyse universelle,</li>
+    <li>un outil de domination relationnelle.</li>
+  </ul>
+
+  <p>
+    Elle n’a pas vocation à produire de la certitude,
+    mais de la <strong>justesse</strong>.
+    Elle invite à penser avant d’agir,
+    et à agir sans trahir la complexité du réel.
+  </p>
+
+  <hr>
+
+  <p style="margin-top:48px; font-size:1.1rem;">
+    <strong>Penser clair. Observer juste. Refuser la simplification.</strong><br>
+    — Franky
+  </p>
+
+</main>
+
+<footer class="container" style="padding-bottom:64px;">
+  <p style="font-size:0.85rem; opacity:.7;">
+    © Franck Bometon — Franky · <a href="/">Retour à l’accueil</a>
+  </p>
+</footer>
+
+</body>
+</html>
