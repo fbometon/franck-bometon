@@ -117,6 +117,7 @@
     a:hover{color:var(--gold)}
     .container{width:min(var(--max),calc(100% - 44px));margin:0 auto}
 
+    /* Skip link */
     .skip{
       position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
     }
@@ -129,22 +130,34 @@
       z-index:999;
     }
 
+    /* Bandeau posture */
     .posture-banner{
-      position:relative;z-index:60;
+      position:relative;
+      z-index:60;
       background:linear-gradient(90deg, rgba(11,11,11,.96), rgba(15,15,15,.96));
       border-bottom:1px solid rgba(214,181,109,.35);
     }
     .posture-inner{
-      max-width:1120px;margin:0 auto;padding:10px 22px;
-      display:flex;align-items:center;gap:14px;
-      font-family:var(--mono);font-size:12px;line-height:1.4;
+      max-width:1120px;
+      margin:0 auto;
+      padding:10px 22px;
+      display:flex;
+      align-items:center;
+      gap:14px;
+      font-family:var(--mono);
+      font-size:12px;
+      line-height:1.4;
       color:rgba(242,240,234,.85);
     }
     .posture-label{
-      color:var(--gold);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;
+      color:var(--gold);
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      white-space:nowrap;
     }
     .posture-text{flex:1;opacity:.9}
     .posture-signature{opacity:.65;white-space:nowrap}
+
     @media (max-width:720px){
       .posture-inner{flex-wrap:wrap;gap:6px;font-size:11px}
       .posture-signature{display:none}
@@ -157,6 +170,7 @@
       border-bottom:1px solid var(--line);
     }
 
+    /* Boutons */
     .btn{
       display:inline-flex;align-items:center;justify-content:center;gap:10px;
       padding:12px 14px;border-radius:999px;border:1px solid var(--line);
@@ -172,6 +186,7 @@
       background:linear-gradient(180deg,rgba(214,181,109,.20),rgba(214,181,109,.06));
     }
 
+    /* Menu mobile */
     .burger{
       display:none;padding:10px 12px;border-radius:12px;border:1px solid var(--line);
       background:rgba(255,255,255,.03);cursor:pointer;
@@ -183,6 +198,7 @@
     .drawer a{display:block;padding:10px 8px;border-radius:12px;color:var(--muted)}
     .drawer a:hover{background:rgba(214,181,109,.08);color:var(--ink)}
 
+    /* HERO */
     .hero{padding:58px 0 28px}
     .kicker{
       font-family:var(--mono);color:var(--muted);
@@ -195,11 +211,14 @@
     }
     .subtitle{
       color:var(--muted);
-      font-size:16px;line-height:1.85;
-      max-width:75ch;margin:14px 0 0;
+      font-size:16px;
+      line-height:1.85;
+      max-width:75ch;
+      margin:14px 0 0;
     }
     .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
 
+    /* Layouts */
     section{padding:54px 0;border-top:1px solid var(--line)}
     section:first-of-type{border-top:none}
     .section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:18px}
@@ -212,6 +231,7 @@
     .sep{height:1px;background:var(--line);margin:18px 0}
     .mt8{margin-top:8px}.mt12{margin-top:12px}.mt18{margin-top:18px}.mt24{margin-top:24px}
 
+    /* Card / Callout */
     .card{
       border:1px solid var(--line);
       border-radius:var(--radius2);
@@ -247,6 +267,7 @@
       padding:6px 10px;border-radius:999px;
     }
 
+    /* Signature */
     .signature{
       margin-top:18px;padding-top:14px;border-top:1px solid var(--line);
       display:flex;justify-content:space-between;gap:12px;align-items:baseline;
@@ -258,6 +279,7 @@
       letter-spacing:.16em;text-transform:uppercase;margin-top:4px;
     }
 
+    /* Books */
     .controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:12px 0 18px}
     .chip{
       border:1px solid var(--line);background:rgba(255,255,255,.02);
@@ -296,21 +318,28 @@
     }
     .book a:hover{border-color:rgba(214,181,109,.45);background:rgba(214,181,109,.08);color:var(--ink)}
 
+    /* Newsletter */
     .formrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
     .input{
-      flex:1;min-width:240px;border:1px solid var(--line);
-      border-radius:999px;padding:12px 14px;
-      background:rgba(255,255,255,.02);color:var(--ink);outline:none;
+      flex:1;min-width:240px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:12px 14px;
+      background:rgba(255,255,255,.02);
+      color:var(--ink);
+      outline:none;
     }
     .input::placeholder{color:rgba(242,240,234,.38)}
     .small{font-size:12px;color:var(--muted2);line-height:1.55}
     .check{
       display:flex;gap:10px;align-items:flex-start;
       padding:10px 12px;border-radius:16px;
-      border:1px solid var(--line);background:rgba(255,255,255,.02);
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.02);
     }
     .check input{margin-top:4px}
 
+    /* Footer */
     footer{
       padding:32px 0 54px;border-top:1px solid var(--line);
       background:linear-gradient(180deg, rgba(15,15,16,0) 0%, rgba(15,15,16,.35) 100%);
@@ -321,43 +350,49 @@
     }
     .foot .mini{font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase}
 
+    /* Bouton Retour */
     .btn-back{
       position:fixed;left:18px;bottom:18px;z-index:9999;
       display:inline-flex;align-items:center;gap:.5rem;
-      padding:.65rem 1rem;border-radius:999px;
+      padding:.65rem 1rem;
+      border-radius:999px;
       border:1px solid rgba(214,181,109,.55);
       background:rgba(8,8,8,.65);
-      color:#f2efe7;cursor:pointer;
+      color:#f2efe7;
+      cursor:pointer;
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
       box-shadow: 0 8px 24px rgba(0,0,0,.25);
       transition: transform .12s ease, border-color .12s ease, background .12s ease;
     }
-    .btn-back:hover{transform: translateY(-1px);border-color: rgba(214,181,109,.85);background:rgba(12,12,12,.75)}
+    .btn-back:hover{
+      transform: translateY(-1px);
+      border-color: rgba(214,181,109,.85);
+      background:rgba(12,12,12,.75);
+    }
     .btn-back:active{ transform: translateY(0); }
 
+    /* Portrait */
     .portrait-wrap{
-      width:100%;max-width:320px;aspect-ratio:4/5;
-      overflow:hidden;border-radius:18px;background:#0b0b0b;
+      width:100%;
+      max-width:320px;
+      aspect-ratio:4/5;
+      overflow:hidden;
+      border-radius:18px;
+      background:#0b0b0b;
       border:1px solid var(--line);
       box-shadow: 0 18px 48px rgba(0,0,0,.45);
     }
     .portrait-wrap img{
-      width:100%;height:100%;object-fit:cover;object-position:50% 10%;
-      display:block;transform: scale(1.02);
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:50% 10%;
+      display:block;
+      transform: scale(1.02);
     }
 
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-    .brand{display:flex;align-items:baseline;gap:8px}
-    .brand .name{font-family:var(--serif);font-size:16px;letter-spacing:.2px}
-    .brand .tag{font-family:var(--mono);font-size:11px;color:var(--muted2);letter-spacing:.12em;text-transform:uppercase}
-    .navlinks{display:flex;flex-wrap:wrap;gap:14px}
-    .navlinks a{font-size:13px;color:var(--muted)}
-    .navlinks a:hover{color:var(--ink)}
-    .nav-cta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-
-    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:16px;align-items:start}
-
+    /* Responsive */
     @media (max-width:980px){
       .hero-grid{grid-template-columns:1fr}
       .books{grid-template-columns:repeat(2,1fr)}
@@ -373,12 +408,26 @@
       .portrait-wrap{max-width:300px}
       .portrait-wrap img{object-position:50% 12%}
     }
+
+    /* NAV */
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .brand{display:flex;align-items:baseline;gap:8px}
+    .brand .name{font-family:var(--serif);font-size:16px;letter-spacing:.2px}
+    .brand .tag{font-family:var(--mono);font-size:11px;color:var(--muted2);letter-spacing:.12em;text-transform:uppercase}
+    .navlinks{display:flex;flex-wrap:wrap;gap:14px}
+    .navlinks a{font-size:13px;color:var(--muted)}
+    .navlinks a:hover{color:var(--ink)}
+    .nav-cta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+
+    /* HERO GRID */
+    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:16px;align-items:start}
   </style>
 </head>
 
 <body>
   <a class="skip" href="#content">Aller au contenu</a>
 
+  <!-- Bandeau posture -->
   <div class="posture-banner">
     <div class="posture-inner">
       <span class="posture-label">Posture intellectuelle</span>
@@ -413,7 +462,7 @@
           <a class="btn gold" href="#livres">Découvrir les livres</a>
         </div>
 
-        <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-controls="drawer" aria-expanded="false">
+        <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-controls="drawer" aria-expanded="false" type="button">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -432,14 +481,19 @@
     </div>
   </header>
 
-  <button class="btn-back" type="button" onclick="goBackOrHome()">← Retour</button>
+  <button class="btn-back" type="button" aria-label="Retour page précédente" onclick="goBackOrHome()">← Retour</button>
 
   <main id="top">
+    <!-- HERO -->
     <div class="container hero" id="content">
       <div class="hero-grid">
         <div>
           <div class="portrait-wrap">
-            <img src="/portrait-franck.jpg?v=1" alt="Franck Bometon, auteur et essayiste" loading="eager" decoding="async">
+            <img
+              src="/portrait-franck.jpg?v=1"
+              alt="Franck Bometon, auteur et essayiste"
+              loading="eager"
+              decoding="async">
           </div>
 
           <div class="kicker">Noir & Or · Écrivain philosophe · Sciences humaines · Leadership</div>
@@ -496,6 +550,7 @@
       </div>
     </div>
 
+    <!-- A PROPOS -->
     <section id="apropos">
       <div class="container">
         <div class="section-head">
@@ -532,6 +587,7 @@
       </div>
     </section>
 
+    <!-- MANIFESTE -->
     <section id="manifeste">
       <div class="container">
         <div class="section-head">
@@ -552,6 +608,7 @@
       </div>
     </section>
 
+    <!-- EXTRAIT -->
     <section id="extrait">
       <div class="container">
         <div class="section-head">
@@ -580,6 +637,7 @@
       </div>
     </section>
 
+    <!-- LIVRES -->
     <section id="livres">
       <div class="container">
         <div class="section-head">
@@ -615,6 +673,7 @@
       </div>
     </section>
 
+    <!-- PARCOURS -->
     <section id="parcours">
       <div class="container">
         <div class="section-head">
@@ -679,6 +738,7 @@
       </div>
     </section>
 
+    <!-- BIBLIOTHEQUE -->
     <section id="bibliotheque">
       <div class="container">
         <div class="section-head">
@@ -763,6 +823,7 @@
       </div>
     </section>
 
+    <!-- NEWSLETTER -->
     <section id="newsletter">
       <div class="container">
         <div class="section-head">
@@ -806,6 +867,7 @@
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
       <div class="container">
         <div class="section-head">
@@ -867,38 +929,16 @@
   </footer>
 
   <script>
-    /* =============================
-       NAV MOBILE
-    ============================= */
-    const burger = document.getElementById('burger');
-    const drawer = document.getElementById('drawer');
-
-    if (burger && drawer) {
-      burger.addEventListener('click', () => {
-        const open = drawer.classList.toggle('open');
-        burger.setAttribute('aria-expanded', String(open));
-      });
-
-      drawer.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-          drawer.classList.remove('open');
-          burger.setAttribute('aria-expanded', 'false');
-        });
-      });
+    // ===== Helpers =====
+    function goBackOrHome(){
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = "/";
     }
 
-    /* =============================
-       YEAR
-    ============================= */
-    const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-    /* =============================
-       NEWSLETTER (DEMO)
-    ============================= */
     function handleNewsletter(e){
       e.preventDefault();
       const msg = document.getElementById('nlMsg');
+      if(!msg) return false;
       msg.style.display = "block";
       msg.innerHTML = "✅ Merci. L’inscription sera activée prochainement.";
       msg.style.border = "1px solid rgba(214,181,109,.25)";
@@ -908,15 +948,33 @@
       return false;
     }
 
-    function goBackOrHome(){
-      if (window.history.length > 1) window.history.back();
-      else window.location.href = "/";
+    function normalize(s){
+      return (s || '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/\p{Diacritic}/gu,'');
     }
 
-    /* =============================
-       BOOKS (COVERS)
-       IMPORTANT : mets tes images dans /covers/
-    ============================= */
+    // ===== Init UI (menu + year) =====
+    (function initUI(){
+      const burger = document.getElementById('burger');
+      const drawer = document.getElementById('drawer');
+
+      burger?.addEventListener('click', () => {
+        const open = drawer.classList.toggle('open');
+        burger.setAttribute('aria-expanded', String(open));
+      });
+
+      drawer?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        drawer.classList.remove('open');
+        burger?.setAttribute('aria-expanded', 'false');
+      }));
+
+      const year = document.getElementById('year');
+      if (year) year.textContent = new Date().getFullYear();
+    })();
+
+    // ===== Book data =====
     const BOOKS = [
       { n:1,  cat:'essais',   title:"Philosophie de l'Assertivité : Oser Être, Dire et Agir", url:"https://www.amazon.fr/dp/B0F21VYGJZ", cover:"/covers/01-philosophie-assertivite.jpg" },
       { n:2,  cat:'essais',   title:"La Synergologie : Lire l’humain sans le réduire", url:"https://www.amazon.fr/dp/B0GHWBDFMR", cover:"/covers/02-synergologie.jpg" },
@@ -924,104 +982,102 @@
       { n:4,  cat:'essais',   title:"L’Intelligence Émotionnelle : Philosophie, Pratique et Réflexion", url:"https://www.amazon.fr/dp/B0DZTB7HW3", cover:"/covers/04-intelligence-emotionnelle.jpg" },
       { n:5,  cat:'essais',   title:"Métamorphoses du Désir : Technologie et Intimité à l’Ère Numérique", url:"https://www.amazon.fr/dp/B0CX4GGTZH", cover:"/covers/05-metamorphoses-du-desir.jpg" },
       { n:6,  cat:'essais',   title:"Solitudes Connectées : L’Ère de l’Individualisme Numérique", url:"https://www.amazon.fr/dp/B0CV81F5B5", cover:"/covers/06-solitudes-connectees.jpg" },
-
       { n:7,  cat:'essais',   title:"Le Miroir des Illusions : Philosophie de la Manipulation dans la Trame Sociale", url:"https://www.amazon.fr/dp/B0CSVW4VZ6", cover:"/covers/07-miroir-des-illusions.jpg" },
       { n:8,  cat:'essais',   title:"Socrate de Retour en 2025 : Dialogues avec le Futur", url:"https://www.amazon.fr/dp/B0CRR6K4X6", cover:"/covers/08-socrate-retour-2025.jpg" },
       { n:9,  cat:'essais',   title:"Chroniques d’un Optimiste Incorrigible : Sourire en Dépit du Chaos", url:"https://www.amazon.fr/dp/B0CR8F69XF", cover:"/covers/09-optimiste-incorrigible.jpg" },
       { n:10, cat:'essais',   title:"Au-delà du Soi : Voyages en Philosophie Réflexive", url:"https://www.amazon.fr/dp/B0CP9JQWLQ", cover:"/covers/10-au-dela-du-soi.jpg" },
       { n:11, cat:'essais',   title:"Sculpter la Psyché : L’Art et la Science de l’Esprit", url:"https://www.amazon.fr/dp/B0CPXT5973", cover:"/covers/11-sculpter-la-psyche.jpg" },
 
-      { n:12, cat:'vademecum', title:"L’Art du Coaching : Explorer et Transformer le Potentiel Humain", url:"https://www.amazon.fr/dp/B0CPPMDFSP", cover:"/covers/12-art-du-coaching.jpg" },
-      { n:13, cat:'vademecum', title:"Vade-mecum du Management Intergénérationnel et Interculturel", url:"https://www.amazon.fr/dp/B0CMNRXZR5", cover:"/covers/13-vademecum-intergenerationnel-interculturel.jpg" },
-      { n:14, cat:'vademecum', title:"Formateurs d’Aujourd’hui : Vers une Pédagogie Réflexive et Engagée", url:"https://www.amazon.fr/dp/B0CP1PLQ27", cover:"/covers/14-formateurs-aujourdhui.jpg" },
-      { n:15, cat:'vademecum', title:"L’Artisanat du Leadership : Traité en Miniatures", url:"https://www.amazon.fr/dp/B0CKXBJ5L5", cover:"/covers/15-artisanat-du-leadership.jpg" },
-      { n:16, cat:'vademecum', title:"Vade Mecum du Management Toxique : Comprendre et Prévenir les RPS", url:"https://www.amazon.fr/dp/B0CMPVJH8R", cover:"/covers/16-management-toxique-rps.jpg" },
+      { n:12, cat:'vademecum',title:"L’Art du Coaching : Explorer et Transformer le Potentiel Humain", url:"https://www.amazon.fr/dp/B0CPPMDFSP", cover:"/covers/12-art-du-coaching.jpg" },
+      { n:13, cat:'vademecum',title:"Vade-mecum du Management Intergénérationnel et Interculturel", url:"https://www.amazon.fr/dp/B0CMNRXZR5", cover:"/covers/13-vademecum-intergenerationnel-interculturel.jpg" },
+      { n:14, cat:'vademecum',title:"Formateurs d’Aujourd’hui : Vers une Pédagogie Réflexive et Engagée", url:"https://www.amazon.fr/dp/B0CP1PLQ27", cover:"/covers/14-formateurs-aujourdhui.jpg" },
+      { n:15, cat:'vademecum',title:"L’Artisanat du Leadership : Traité en Miniatures", url:"https://www.amazon.fr/dp/B0CKXBJ5L5", cover:"/covers/15-artisanat-du-leadership.jpg" },
+      { n:16, cat:'vademecum',title:"Vade Mecum du Management Toxique : Comprendre et Prévenir les RPS", url:"https://www.amazon.fr/dp/B0CMPVJH8R", cover:"/covers/16-management-toxique-rps.jpg" },
+      { n:17, cat:'vademecum',title:"Vade-mecum de l’Art Oratoire", url:"https://www.amazon.fr/dp/B0CMJMRLK7", cover:"/covers/17-art-oratoire.jpg" },
+      { n:18, cat:'vademecum',title:"Vade-mecum des Mécanismes de Défense", url:"https://www.amazon.fr/dp/B0CMCLBFK6", cover:"/covers/18-mecanismes-de-defense.jpg" },
+      { n:19, cat:'vademecum',title:"Vade-mecum de l’Harmonie dans la Discorde", url:"https://www.amazon.fr/dp/B0CLYJRPTQ", cover:"/covers/19-harmonie-dans-la-discorde.jpg" },
+      { n:20, cat:'vademecum',title:"Vade-mecum de la Métamorphose Managériale", url:"https://www.amazon.fr/dp/B0CLXXL3RC", cover:"/covers/20-metamorphose-manageriale.jpg" },
+      { n:21, cat:'vademecum',title:"Vade-mecum de Management : Guide Érudit des Pratiques Managériales", url:"https://www.amazon.fr/dp/B0CKSPYQ6W", cover:"/covers/21-guide-erudit-pratiques-manageriales.jpg" },
+      { n:22, cat:'vademecum',title:"Le Vade-mecum de la Bienveillance Managériale", url:"https://www.amazon.fr/dp/B0CLND85CY", cover:"/covers/22-bienveillance-manageriale.jpg" },
+      { n:23, cat:'vademecum',title:"Le Management en Évolution", url:"https://www.amazon.fr/dp/B0CH2D7Q4Y", cover:"/covers/23-management-en-evolution.jpg" },
 
-      { n:17, cat:'vademecum', title:"Vade-mecum de l’Art Oratoire", url:"https://www.amazon.fr/dp/B0CMJMRLK7", cover:"/covers/17-art-oratoire.jpg" },
-      { n:18, cat:'vademecum', title:"Vade-mecum des Mécanismes de Défense", url:"https://www.amazon.fr/dp/B0CMCLBFK6", cover:"/covers/18-mecanismes-de-defense.jpg" },
-      { n:19, cat:'vademecum', title:"Vade-mecum de l’Harmonie dans la Discorde", url:"https://www.amazon.fr/dp/B0CLYJRPTQ", cover:"/covers/19-harmonie-dans-la-discorde.jpg" },
-      { n:20, cat:'vademecum', title:"Vade-mecum de la Métamorphose Managériale", url:"https://www.amazon.fr/dp/B0CLXXL3RC", cover:"/covers/20-metamorphose-manageriale.jpg" },
-      { n:21, cat:'vademecum', title:"Vade-mecum de Management : Guide Érudit des Pratiques Managériales", url:"https://www.amazon.fr/dp/B0CKSPYQ6W", cover:"/covers/21-guide-erudit-pratiques-manageriales.jpg" },
-      { n:22, cat:'vademecum', title:"Le Vade-mecum de la Bienveillance Managériale", url:"https://www.amazon.fr/dp/B0CLND85CY", cover:"/covers/22-bienveillance-manageriale.jpg" },
-      { n:23, cat:'vademecum', title:"Le Management en Évolution", url:"https://www.amazon.fr/dp/B0CH2D7Q4Y", cover:"/covers/23-management-en-evolution.jpg" },
+      { n:24, cat:'voyages',  title:"Java, Sumatra, Célèbes : Empreintes d’un Archipel Infini", url:"https://www.amazon.fr/dp/B0DSBN2YNQ", cover:"/covers/24-java-sumatra-celebes.jpg" },
+      { n:25, cat:'voyages',  title:"L’Île des Mystères : Chroniques d’un Explorateur à Bornéo", url:"https://www.amazon.fr/dp/B0DGLB8C9P", cover:"/covers/25-ile-des-mysteres-borneo.jpg" },
+      { n:26, cat:'voyages',  title:"Bali en Réflexion", url:"https://www.amazon.fr/dp/B0DCFZLFFN", cover:"/covers/26-bali-en-reflexion.jpg" },
+      { n:27, cat:'voyages',  title:"Carnets de Route en Indochine", url:"https://www.amazon.fr/dp/B0D9VF81WB", cover:"/covers/27-indochine-laos-cambodge-vietnam.jpg" },
+      { n:28, cat:'voyages',  title:"Pérégrinations en Thaïlande et Birmanie", url:"https://www.amazon.fr/dp/B0D9GRJ225", cover:"/covers/28-thailande-birmanie.jpg" },
+      { n:29, cat:'voyages',  title:"Par-delà les Frontières", url:"https://www.amazon.fr/dp/B0D2X83JHT", cover:"/covers/29-par-dela-les-frontieres.jpg" },
+      { n:30, cat:'voyages',  title:"Voyage Initiatique au Népal et en Inde", url:"https://www.amazon.fr/dp/B0D41ZM17X", cover:"/covers/30-nepal-inde.jpg" },
+      { n:31, cat:'voyages',  title:"Chroniques d’un Globe-Trotter", url:"https://www.amazon.fr/dp/B0D29HXLHD", cover:"/covers/31-chroniques-globe-trotter.jpg" },
 
-      { n:24, cat:'voyages', title:"Java, Sumatra, Célèbes : Empreintes d’un Archipel Infini", url:"https://www.amazon.fr/dp/B0DSBN2YNQ", cover:"/covers/24-java-sumatra-celebes.jpg" },
-      { n:25, cat:'voyages', title:"L’Île des Mystères : Chroniques d’un Explorateur à Bornéo", url:"https://www.amazon.fr/dp/B0DGLB8C9P", cover:"/covers/25-ile-des-mysteres-borneo.jpg" },
-      { n:26, cat:'voyages', title:"Bali en Réflexion", url:"https://www.amazon.fr/dp/B0DCFZLFFN", cover:"/covers/26-bali-en-reflexion.jpg" },
-      { n:27, cat:'voyages', title:"Carnets de Route en Indochine", url:"https://www.amazon.fr/dp/B0D9VF81WB", cover:"/covers/27-indochine-laos-cambodge-vietnam.jpg" },
-      { n:28, cat:'voyages', title:"Pérégrinations en Thaïlande et Birmanie", url:"https://www.amazon.fr/dp/B0D9GRJ225", cover:"/covers/28-thailande-birmanie.jpg" },
-      { n:29, cat:'voyages', title:"Par-delà les Frontières", url:"https://www.amazon.fr/dp/B0D2X83JHT", cover:"/covers/29-par-dela-les-frontieres.jpg" },
-      { n:30, cat:'voyages', title:"Voyage Initiatique au Népal et en Inde", url:"https://www.amazon.fr/dp/B0D41ZM17X", cover:"/covers/30-nepal-inde.jpg" },
-      { n:31, cat:'voyages', title:"Chroniques d’un Globe-Trotter", url:"https://www.amazon.fr/dp/B0D29HXLHD", cover:"/covers/31-chroniques-globe-trotter.jpg" },
+      { n:32, cat:'fiction',  title:"Meurtre sur le Green", url:"https://www.amazon.fr/dp/B0CK3H5F36", cover:"/covers/32-meurtre-sur-le-green.jpg" },
+      { n:33, cat:'fiction',  title:"Le Souffle de la Guerre", url:"https://www.amazon.fr/dp/B0CQY2H9FM", cover:"/covers/33-souffle-de-la-guerre.jpg" },
 
-      { n:32, cat:'fiction', title:"Meurtre sur le Green", url:"https://www.amazon.fr/dp/B0CK3H5F36", cover:"/covers/32-meurtre-sur-le-green.jpg" },
-      { n:33, cat:'fiction', title:"Le Souffle de la Guerre", url:"https://www.amazon.fr/dp/B0CQY2H9FM", cover:"/covers/33-souffle-de-la-guerre.jpg" },
-
-      { n:34, cat:'essais', title:"Entre cadre et processus : quelles sont les limites du coach ?", url:"https://www.amazon.fr/Entre-cadre-processus-quelles-limites/dp/3841749429", cover:"/covers/34-entre-cadre-processus.jpg" },
-      { n:35, cat:'essais', title:"Comment gérer son stress en situation d’évaluation certificative professionnelle", url:"https://www.amazon.fr/Comment-situation-d%C3%A9valuation-certificative-professionnelle/dp/9975153364", cover:"/covers/35-stress-evaluation-certificative.jpg" }
+      { n:34, cat:'essais',   title:"Entre cadre et processus : quelles sont les limites du coach ?", url:"https://www.amazon.fr/Entre-cadre-processus-quelles-limites/dp/3841749429", cover:"/covers/34-entre-cadre-processus.jpg" },
+      { n:35, cat:'essais',   title:"Comment gérer son stress en situation d'évaluation certificative professionnelle", url:"https://www.amazon.fr/Comment-situation-d%C3%A9valuation-certificative-professionnelle/dp/9975153364", cover:"/covers/35-stress-evaluation-certificative.jpg" }
     ];
 
-    const grid = document.getElementById('bookGrid');
-    const q = document.getElementById('q');
-    const chips = Array.from(document.querySelectorAll('.chip'));
-    let activeFilter = 'all';
+    // ===== Books UI =====
+    (function initBooks(){
+      const grid = document.getElementById('bookGrid');
+      const q = document.getElementById('q');
+      const chips = Array.from(document.querySelectorAll('.chip'));
+      let activeFilter = 'all';
 
-    function normalize(s){
-      return (s || '').toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,'');
-    }
+      if(!grid || !q || chips.length === 0) return;
 
-    function render(){
-      if(!grid) return;
+      function render(){
+        const term = normalize(q.value);
+        const filtered = BOOKS.filter(b => {
+          const okCat = activeFilter === 'all' ? true : b.cat === activeFilter;
+          const okTerm = !term ? true : normalize(b.title).includes(term);
+          return okCat && okTerm;
+        });
 
-      const term = q ? normalize(q.value) : '';
-      const filtered = BOOKS.filter(b => {
-        const okCat = activeFilter === 'all' ? true : b.cat === activeFilter;
-        const okTerm = !term ? true : normalize(b.title).includes(term);
-        return okCat && okTerm;
-      });
-
-      grid.innerHTML = filtered.map(b => `
-        <article class="book">
-          <img class="cover" src="${b.cover || '/covers/placeholder.jpg'}" alt="Couverture — ${b.title}" loading="lazy">
-          <div class="title">${b.title}</div>
-          <a href="${b.url}" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
-        </article>
-      `).join('');
-
-      if(filtered.length === 0){
-        grid.innerHTML = `
-          <div class="callout" style="grid-column:1/-1;">
-            <div class="title"><h3>Aucun résultat</h3><div class="tag">Recherche</div></div>
-            <div class="prose" style="font-size:15px;">Essaie un autre mot-clé ou change de filtre.</div>
-          </div>
-        `;
-      }
-    }
-
-    chips.forEach(chip => chip.addEventListener('click', () => {
-      chips.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      activeFilter = chip.dataset.filter;
-      render();
-    }));
-
-    if (q) q.addEventListener('input', render);
-
-    document.querySelectorAll('[data-preset]').forEach(a => {
-      a.addEventListener('click', () => {
-        const preset = a.getAttribute('data-preset');
-        const targetChip = chips.find(c => c.dataset.filter === preset);
-        if(targetChip){
-          chips.forEach(c => c.classList.remove('active'));
-          targetChip.classList.add('active');
-          activeFilter = preset;
-          if (q) q.value = '';
-          render();
+        if(filtered.length === 0){
+          grid.innerHTML = `
+            <div class="callout" style="grid-column:1/-1;">
+              <div class="title"><h3>Aucun résultat</h3><div class="tag">Recherche</div></div>
+              <div class="prose" style="font-size:15px;">Essaie un autre mot-clé ou change de filtre.</div>
+            </div>
+          `;
+          return;
         }
-      });
-    });
 
-    render();
+        grid.innerHTML = filtered.map(b => `
+          <article class="book">
+            <img class="cover" src="${b.cover}" alt="Couverture — ${b.title}" loading="lazy">
+            <div class="title">${b.title}</div>
+            <a href="${b.url}" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
+          </article>
+        `).join('');
+      }
+
+      chips.forEach(chip => chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        activeFilter = chip.dataset.filter || 'all';
+        render();
+      }));
+
+      q.addEventListener('input', render);
+
+      document.querySelectorAll('[data-preset]').forEach(a => {
+        a.addEventListener('click', () => {
+          const preset = a.getAttribute('data-preset');
+          const targetChip = chips.find(c => c.dataset.filter === preset);
+          if(targetChip){
+            chips.forEach(c => c.classList.remove('active'));
+            targetChip.classList.add('active');
+            activeFilter = preset;
+            q.value = '';
+            render();
+          }
+        });
+      });
+
+      render();
+    })();
   </script>
 </body>
 </html>
