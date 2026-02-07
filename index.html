@@ -1038,103 +1038,107 @@
   }
 
   // Book data (✅ corrigé)
-  const BOOKS = [
-    { n:1, cat:'essais', title:"Philosophie de l'Assertivité : Oser Être, Dire et Agir", url:"https://www.amazon.fr/dp/B0F21VYGJZ", cover:"/covers/01-philosophie-assertivite.jpg" },
-    { n:2, cat:'essais', title:"La Synergologie : Lire l’humain sans le réduire", url:"https://www.amazon.fr/dp/B0GHWBDFMR", cover:"/covers/02-synergologie.jpg" },
-    { n:3, cat:'essais', title:"Leadership et Management des Organisations : Vers une Autorité Éclairée", url:"https://www.amazon.fr/dp/B0F6MZMFHS", cover:"/covers/03-leadership-autorite-eclairee.jpg" },
-    { n:4, cat:'essais', title:"L’Intelligence Émotionnelle : Philosophie, Pratique et Réflexion", url:"https://www.amazon.fr/dp/B0DZTB7HW3", cover:"/covers/04-intelligence-emotionnelle.jpg" },
-    { n:5, cat:'essais', title:"Métamorphoses du Désir : Technologie et Intimité à l’Ère Numérique", url:"https://www.amazon.fr/dp/B0CX4GGTZH", cover:"/covers/05-metamorphoses-du-desir.jpg" },
-    { n:6, cat:'essais', title:"Solitudes Connectées : L’Ère de l’Individualisme Numérique", url:"https://www.amazon.fr/dp/B0CV81F5B5", cover:"/covers/06-solitudes-connectees.jpg" },
-    { n:7, cat:'essais', title:"Le Miroir des Illusions : Philosophie de la Manipulation dans la Trame Sociale", url:"https://www.amazon.fr/dp/B0CSVW4VZ6", cover:"/covers/07-miroir-des-illusions.jpg" },
-    { n:8, cat:'essais', title:"Socrate de Retour en 2025 : Dialogues avec le Futur", url:"https://www.amazon.fr/dp/B0CRR6K4X6", cover:"/covers/08-socrate-retour-2025.jpg" },
-    { n:9, cat:'essais', title:"Chroniques d’un Optimiste Incorrigible : Sourire en Dépit du Chaos", url:"https://www.amazon.fr/dp/B0CR8F69XF", cover:"/covers/09-optimiste-incorrigible.jpg" },
-    { n:10, cat:'essais', title:"Au-delà du Soi : Voyages en Philosophie Réflexive", url:"https://www.amazon.fr/dp/B0CP9JQWLQ", cover:"/covers/10-au-dela-du-soi.jpg" },
-    { n:11, cat:'essais', title:"Sculpter la Psyché : L’Art et la Science de l’Esprit", url:"https://www.amazon.fr/dp/B0CPXT5973", cover:"/covers/11-sculpter-la-psyche.jpg" },
+  // Book data
+const BOOKS = [
+  { n:1, cat:'essais', title:"Philosophie de l'Assertivité : Oser Être, Dire et Agir", url:"https://www.amazon.fr/dp/B0F21VYGJZ", cover:"/covers/01-philosophie-assertivite.jpg" },
+  { n:2, cat:'essais', title:"La Synergologie : Lire l’humain sans le réduire", url:"https://www.amazon.fr/dp/B0GHWBDFMR", cover:"/covers/02-synergologie.jpg" },
+  { n:3, cat:'essais', title:"Leadership et Management des Organisations : Vers une Autorité Éclairée", url:"https://www.amazon.fr/dp/B0F6MZMFHS", cover:"/covers/03-leadership-autorite-eclairee.jpg" },
+  { n:4, cat:'essais', title:"L’Intelligence Émotionnelle : Philosophie, Pratique et Réflexion", url:"https://www.amazon.fr/dp/B0DZTB7HW3", cover:"/covers/04-intelligence-emotionnelle.jpg" },
+  { n:5, cat:'essais', title:"Métamorphoses du Désir : Technologie et Intimité à l’Ère Numérique", url:"https://www.amazon.fr/dp/B0CX4GGTZH", cover:"/covers/05-metamorphoses-du-desir.jpg" },
+  { n:6, cat:'essais', title:"Solitudes Connectées : L’Ère de l’Individualisme Numérique", url:"https://www.amazon.fr/dp/B0CV81F5B5", cover:"/covers/06-solitudes-connectees.jpg" },
+  { n:7, cat:'essais', title:"Le Miroir des Illusions : Philosophie de la Manipulation dans la Trame Sociale", url:"https://www.amazon.fr/dp/B0CSVW4VZ6", cover:"/covers/07-miroir-des-illusions.jpg" },
+  { n:8, cat:'essais', title:"Socrate de Retour en 2025 : Dialogues avec le Futur", url:"https://www.amazon.fr/dp/B0CRR6K4X6", cover:"/covers/08-socrate-retour-2025.jpg" },
+  { n:9, cat:'essais', title:"Chroniques d’un Optimiste Incorrigible : Sourire en Dépit du Chaos", url:"https://www.amazon.fr/dp/B0CR8F69XF", cover:"/covers/09-optimiste-incorrigible.jpg" },
+  { n:10, cat:'essais', title:"Au-delà du Soi : Voyages en Philosophie Réflexive", url:"https://www.amazon.fr/dp/B0CP9JQWLQ", cover:"/covers/10-au-dela-du-soi.jpg" },
+  { n:11, cat:'essais', title:"Sculpter la Psyché : L’Art et la Science de l’Esprit", url:"https://www.amazon.fr/dp/B0CPXT5973", cover:"/covers/11-sculpter-la-psyche.jpg" },
+  { n:12, cat:'vademecum', title:"L’Art du Coaching : Explorer et Transformer le Potentiel Humain", url:"https://www.amazon.fr/dp/B0CPPMDFSP", cover:"/covers/12-art-du-coaching.jpg" },
+  { n:13, cat:'vademecum', title:"Vade-mecum du Management Intergénérationnel et Interculturel", url:"https://www.amazon.fr/dp/B0CMNRXZR5", cover:"/covers/13-vademecum-intergenerationnel-interculturel.jpg" },
+  { n:14, cat:'vademecum', title:"Formateurs d’Aujourd’hui : Vers une Pédagogie Réflexive et Engagée", url:"https://www.amazon.fr/dp/B0CP1PLQ27", cover:"/covers/14-formateurs-aujourdhui.jpg" },
+  { n:15, cat:'vademecum', title:"L’Artisanat du Leadership : Traité en Miniatures", url:"https://www.amazon.fr/dp/B0CKXBJ5L5", cover:"/covers/15-artisanat-du-leadership.jpg" },
+  { n:16, cat:'vademecum', title:"Vade Mecum du Management Toxique : Comprendre et Prévenir les RPS", url:"https://www.amazon.fr/dp/B0CMPVJH8R", cover:"/covers/16-management-toxique-rps.jpg" },
+  { n:17, cat:'vademecum', title:"Vade-mecum de l’Art Oratoire", url:"https://www.amazon.fr/dp/B0CMJMRLK7", cover:"/covers/17-art-oratoire.jpg" },
+  { n:18, cat:'vademecum', title:"Vade-mecum des Mécanismes de Défense", url:"https://www.amazon.fr/dp/B0CMCLBFK6", cover:"/covers/18-mecanismes-de-defense.jpg" },
+  { n:19, cat:'vademecum', title:"Vade-mecum de l’Harmonie dans la Discorde", url:"https://www.amazon.fr/dp/B0CLYJRPTQ", cover:"/covers/19-harmonie-dans-la-discorde.jpg" },
+  { n:20, cat:'vademecum', title:"Vade-mecum de la Métamorphose Managériale", url:"https://www.amazon.fr/dp/B0CLXXL3RC", cover:"/covers/20-metamorphose-manageriale.jpg" },
+  { n:21, cat:'vademecum', title:"Vade-mecum de Management : Guide Érudit des Pratiques Managériales", url:"https://www.amazon.fr/dp/B0CKSPYQ6W", cover:"/covers/21-guide-erudit-pratiques-manageriales.jpg" },
+  { n:22, cat:'vademecum', title:"Le Vade-mecum de la Bienveillance Managériale", url:"https://www.amazon.fr/dp/B0CLND85CY", cover:"/covers/22-bienveillance-manageriale.jpg" },
+  { n:23, cat:'vademecum', title:"Le Management en Évolution", url:"https://www.amazon.fr/dp/B0CH2D7Q4Y", cover:"/covers/23-management-en-evolution.jpg" },
+  { n:24, cat:'voyages', title:"Java, Sumatra, Célèbes : Empreintes d’un Archipel Infini", url:"https://www.amazon.fr/dp/B0DSBN2YNQ", cover:"/covers/24-java-sumatra-celebes.jpg" },
+  { n:25, cat:'voyages', title:"L’Île des Mystères : Chroniques d’un Explorateur à Bornéo", url:"https://www.amazon.fr/dp/B0DGLB8C9P", cover:"/covers/25-ile-des-mysteres-borneo.jpg" },
+  { n:26, cat:'voyages', title:"Bali en Réflexion", url:"https://www.amazon.fr/dp/B0DCFZLFFN", cover:"/covers/26-bali-en-reflexion.jpg" },
+  { n:27, cat:'voyages', title:"Carnets de Route en Indochine", url:"https://www.amazon.fr/dp/B0D9VF81WB", cover:"/covers/27-indochine-laos-cambodge-vietnam.jpg" },
+  { n:28, cat:'voyages', title:"Pérégrinations en Thaïlande et Birmanie", url:"https://www.amazon.fr/dp/B0D9GRJ225", cover:"/covers/28-thailande-birmanie.jpg" },
+  { n:29, cat:'voyages', title:"Par-delà les Frontières", url:"https://www.amazon.fr/dp/B0D2X83JHT", cover:"/covers/29-par-dela-les-frontieres.jpg" },
+  { n:30, cat:'voyages', title:"Voyage Initiatique au Népal et en Inde", url:"https://www.amazon.fr/dp/B0D41ZM17X", cover:"/covers/30-nepal-inde.jpg" },
+  { n:31, cat:'voyages', title:"Chroniques d’un Globe-Trotter", url:"https://www.amazon.fr/dp/B0D29HXLHD", cover:"/covers/31-chroniques-globe-trotter.jpg" },
+  { n:32, cat:'fiction', title:"Meurtre sur le Green", url:"https://www.amazon.fr/dp/B0CK3H5F36", cover:"/covers/32-meurtre-sur-le-green.jpg" },
+  { n:33, cat:'fiction', title:"Le Souffle de la Guerre", url:"https://www.amazon.fr/dp/B0CQY2H9FM", cover:"/covers/33-souffle-de-la-guerre.jpg" },
 
-    { n:12, cat:'vademecum', title:"L’Art du Coaching : Explorer et Transformer le Potentiel Humain", url:"https://www.amazon.fr/dp/B0CPPMDFSP", cover:"/covers/12-art-du-coaching.jpg" },
-    { n:13, cat:'vademecum', title:"Vade-mecum du Management Intergénérationnel et Interculturel", url:"https://www.amazon.fr/dp/B0CMNRXZR5", cover:"/covers/13-vademecum-intergenerationnel-interculturel.jpg" },
-    { n:14, cat:'vademecum', title:"Formateurs d’Aujourd’hui : Vers une Pédagogie Réflexive et Engagée", url:"https://www.amazon.fr/dp/B0CP1PLQ27", cover:"/covers/14-formateurs-aujourdhui.jpg" },
-    { n:15, cat:'vademecum', title:"L’Artisanat du Leadership : Traité en Miniatures", url:"https://www.amazon.fr/dp/B0CKXBJ5L5", cover:"/covers/15-artisanat-du-leadership.jpg" },
-    { n:16, cat:'vademecum', title:"Vade Mecum du Management Toxique : Comprendre et Prévenir les RPS", url:"https://www.amazon.fr/dp/B0CMPVJH8R", cover:"/covers/16-management-toxique-rps.jpg" },
-    { n:17, cat:'vademecum', title:"Vade-mecum de l’Art Oratoire", url:"https://www.amazon.fr/dp/B0CMJMRLK7", cover:"/covers/17-art-oratoire.jpg" },
-    { n:18, cat:'vademecum', title:"Vade-mecum des Mécanismes de Défense", url:"https://www.amazon.fr/dp/B0CMCLBFK6", cover:"/covers/18-mecanismes-de-defense.jpg" },
-    { n:19, cat:'vademecum', title:"Vade-mecum de l’Harmonie dans la Discorde", url:"https://www.amazon.fr/dp/B0CLYJRPTQ", cover:"/covers/19-harmonie-dans-la-discorde.jpg" },
-    { n:20, cat:'vademecum', title:"Vade-mecum de la Métamorphose Managériale", url:"https://www.amazon.fr/dp/B0CLXXL3RC", cover:"/covers/20-metamorphose-manageriale.jpg" },
-    { n:21, cat:'vademecum', title:"Vade-mecum de Management : Guide Érudit des Pratiques Managériales", url:"https://www.amazon.fr/dp/B0CKSPYQ6W", cover:"/covers/21-guide-erudit-pratiques-manageriales.jpg" },
-    { n:22, cat:'vademecum', title:"Le Vade-mecum de la Bienveillance Managériale", url:"https://www.amazon.fr/dp/B0CLND85CY", cover:"/covers/22-bienveillance-manageriale.jpg" },
-    { n:23, cat:'vademecum', title:"Le Management en Évolution", url:"https://www.amazon.fr/dp/B0CH2D7Q4Y", cover:"/covers/23-management-en-evolution.jpg" },
+  // ✅ AJOUT — Livres #34 et #35
+  { n:34, cat:'essais', title:"Entre cadre et processus : quelles sont les limites du coach ?", url:"https://www.amazon.fr/Entre-cadre-processus-quelles-limites/dp/3841749429", cover:"/covers/34-entre-cadre-processus.jpg" },
+  { n:35, cat:'essais', title:"Comment gérer son stress en situation d'évaluation certificative professionnelle", url:"https://www.amazon.fr/Comment-situation-d%C3%A9valuation-certificative-professionnelle/dp/9975153364", cover:"/covers/35-stress-evaluation-certificative.jpg" }
+];
 
-    { n:24, cat:'voyages', title:"Java, Sumatra, Célèbes : Empreintes d’un Archipel Infini", url:"https://www.amazon.fr/dp/B0DSBN2YNQ", cover:"/covers/24-java-sumatra-celebes.jpg" },
-    { n:25, cat:'voyages', title:"L’Île des Mystères : Chroniques d’un Explorateur à Bornéo", url:"https://www.amazon.fr/dp/B0DGLB8C9P", cover:"/covers/25-ile-des-mysteres-borneo.jpg" },
-    { n:26, cat:'voyages', title:"Bali en Réflexion", url:"https://www.amazon.fr/dp/B0DCFZLFFN", cover:"/covers/26-bali-en-reflexion.jpg" },
-    { n:27, cat:'voyages', title:"Carnets de Route en Indochine", url:"https://www.amazon.fr/dp/B0D9VF81WB", cover:"/covers/27-indochine-laos-cambodge-vietnam.jpg" },
-    { n:28, cat:'voyages', title:"Pérégrinations en Thaïlande et Birmanie", url:"https://www.amazon.fr/dp/B0D9GRJ225", cover:"/covers/28-thailande-birmanie.jpg" },
-    { n:29, cat:'voyages', title:"Par-delà les Frontières", url:"https://www.amazon.fr/dp/B0D2X83JHT", cover:"/covers/29-par-dela-les-frontieres.jpg" },
-    { n:30, cat:'voyages', title:"Voyage Initiatique au Népal et en Inde", url:"https://www.amazon.fr/dp/B0D41ZM17X", cover:"/covers/30-nepal-inde.jpg" },
-    { n:31, cat:'voyages', title:"Chroniques d’un Globe-Trotter", url:"https://www.amazon.fr/dp/B0D29HXLHD", cover:"/covers/31-chroniques-globe-trotter.jpg" },
+const grid = document.getElementById('bookGrid');
+const q = document.getElementById('q');
+const chips = Array.from(document.querySelectorAll('.chip'));
+let activeFilter = 'all';
 
-    { n:32, cat:'fiction', title:"Meurtre sur le Green", url:"https://www.amazon.fr/dp/B0CK3H5F36", cover:"/covers/32-meurtre-sur-le-green.jpg" },
-    { n:33, cat:'fiction', title:"Le Souffle de la Guerre", url:"https://www.amazon.fr/dp/B0CQY2H9FM", cover:"/covers/33-souffle-de-la-guerre.jpg" },
+function normalize(s){
+  return (s || '').toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,'');
+}
 
-    /* ✅ AJOUT — Livres #34 et #35 */
-    { n:34, cat:'essais', title:"Entre cadre et processus : quelles sont les limites du coach ?", url:"https://www.amazon.fr/Entre-cadre-processus-quelles-limites/dp/3841749429", cover:"/covers/34-entre-cadre-processus.jpg" },
-    { n:35, cat:'essais', title:"Comment gérer son stress en situation d'évaluation certificative professionnelle", url:"https://www.amazon.fr/Comment-situation-d%C3%A9valuation-certificative-professionnelle/dp/9975153364", cover:"/covers/35-stress-evaluation_certificative.jpg" }
-  ];
+function render(){
+  const term = normalize(q.value);
+  const filtered = BOOKS.filter(b => {
+    const okCat = activeFilter === 'all' ? true : b.cat === activeFilter;
+    const okTerm = !term ? true : normalize(b.title).includes(term);
+    return okCat && okTerm;
+  });
 
-  const grid = document.getElementById('bookGrid');
-  const q = document.getElementById('q');
-  const chips = Array.from(document.querySelectorAll('.chip'));
-  let activeFilter = 'all';
+  grid.innerHTML = filtered.map(b => `
+    <article class="book">
+      <img class="cover" src="${b.cover || '/covers/placeholder.jpg'}" alt="Couverture — ${b.title}" loading="lazy">
+      <div class="title">${b.title}</div>
+      <a href="${b.url}" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
+    </article>
+  `).join('');
 
-  function normalize(s){
-    return (s || '').toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,'');
+  if(filtered.length === 0){
+    grid.innerHTML = `
+      <div class="callout" style="grid-column:1/-1;">
+        <div class="title"><h3>Aucun résultat</h3><div class="tag">Recherche</div></div>
+        <div class="prose" style="font-size:15px;">Essaie un autre mot-clé ou change de filtre.</div>
+      </div>
+    `;
   }
+}
 
-  function render(){
-    const term = normalize(q.value);
-    const filtered = BOOKS.filter(b => {
-      const okCat = activeFilter === 'all' ? true : b.cat === activeFilter;
-      const okTerm = !term ? true : normalize(b.title).includes(term);
-      return okCat && okTerm;
-    });
+chips.forEach(chip => chip.addEventListener('click', () => {
+  chips.forEach(c => c.classList.remove('active'));
+  chip.classList.add('active');
+  activeFilter = chip.dataset.filter;
+  render();
+}));
 
-    grid.innerHTML = filtered.map(b => `
-      <article class="book">
-        <img class="cover" src="${b.cover || '/covers/placeholder.jpg'}" alt="Couverture — ${b.title}" loading="lazy">
-        <div class="title">${b.title}</div>
-        <a href="${b.url}" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
-      </article>
-    `).join('');
+q.addEventListener('input', render);
 
-    if(filtered.length === 0){
-      grid.innerHTML = `
-        <div class="callout" style="grid-column:1/-1;">
-          <div class="title"><h3>Aucun résultat</h3><div class="tag">Recherche</div></div>
-          <div class="prose" style="font-size:15px;">Essaie un autre mot-clé ou change de filtre.</div>
-        </div>
-      `;
+document.querySelectorAll('[data-preset]').forEach(a => {
+  a.addEventListener('click', () => {
+    const preset = a.getAttribute('data-preset');
+    const targetChip = chips.find(c => c.dataset.filter === preset);
+    if(targetChip){
+      chips.forEach(c => c.classList.remove('active'));
+      targetChip.classList.add('active');
+      activeFilter = preset;
+      q.value = '';
+      render();
     }
-  }
+  });
+});
 
-  chips.forEach(chip => chip.addEventListener('click', () => {
-    chips.forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    activeFilter = chip.dataset.filter;
-    render();
-  }));
-
-  q.addEventListener('input', render);
-
-  document.querySelectorAll('[data-preset]').forEach(a => {
-    a.addEventListener('click', () => {
-      const preset = a.getAttribute('data-preset');
-      const targetChip = chips.find(c => c.dataset.filter === preset);
-      if(targetChip){
-        chips.forEach(c => c.classList.remove('active'));
-        targetChip.classList.add('active');
-        activeFilter = preset;
-        q.value = '';
-        render();
+// Init
+render();
       }
     });
   });
