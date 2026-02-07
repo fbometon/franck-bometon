@@ -1082,7 +1082,15 @@ Document de posture intellectuelle — librement citable, compatible presse.
         }
       });
     });
-
+function goBackOrHome(){
+  // Si l'utilisateur a un historique, retour arrière.
+  // Sinon, retour vers l'accueil.
+  if (window.history.length > 1) {
+    window.history.back();
+  } else {
+    window.location.href = "/";
+  }
+}
     // Init
     render();
   </script>
