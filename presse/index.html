@@ -4,29 +4,85 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0b0b0b" />
+  <meta name="color-scheme" content="dark light" />
 
+  <title>Presse / Médias — Franck Bometon (Franky)</title>
+  <meta name="description" content="Espace presse : bio, photos, logos, ouvrages, contact — Franck Bometon (Franky)." />
+
+  <!-- Canonical + hreflang -->
+  <link rel="canonical" href="https://franck-bometon.fr/presse/" />
+  <link rel="alternate" hreflang="fr" href="https://franck-bometon.fr/presse/" />
+  <link rel="alternate" hreflang="x-default" href="https://franck-bometon.fr/presse/" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+
+  <!-- Author / Publisher -->
+  <meta name="author" content="Franck Bometon" />
+  <meta name="publisher" content="Franck Bometon" />
+
+  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <title>Presse / Médias — Franck Bometon (Franky)</title>
-  <meta name="description" content="Espace presse : bio, photos, logos, ouvrages, contact — Franck Bometon (Franky)." />
-  <link rel="canonical" href="https://franck-bometon.fr/presse/" />
+  <!-- Perf: preconnect externes -->
+  <link rel="preconnect" href="https://www.amazon.fr" crossorigin>
+  <link rel="preconnect" href="https://author.amazon.fr" crossorigin>
+  <link rel="preconnect" href="https://www.linkedin.com" crossorigin>
+
+  <!-- (Optionnel) Perf: preload OG -->
+  <link rel="preload" as="image" href="https://franck-bometon.fr/og.jpg" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Presse / Médias — Franck Bometon (Franky)" />
   <meta property="og:description" content="Bio, photos, logos, ouvrages, contact — Espace presse." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://franck-bometon.fr/presse/" />
-  <!-- og.jpg est à la racine -->
   <meta property="og:image" content="https://franck-bometon.fr/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="fr_FR" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Presse / Médias — Franck Bometon (Franky)" />
   <meta name="twitter:description" content="Bio, photos, logos, ouvrages, contact — Espace presse." />
   <meta name="twitter:image" content="https://franck-bometon.fr/og.jpg" />
+
+  <!-- JSON-LD (SEO) : Press page + Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://franck-bometon.fr/#franck-bometon",
+        "name": "Franck Bometon",
+        "alternateName": "Franky",
+        "jobTitle": "Auteur · Essayiste",
+        "url": "https://franck-bometon.fr/",
+        "image": "https://franck-bometon.fr/portrait-franck.jpg",
+        "sameAs": [
+          "https://author.amazon.fr/home",
+          "https://www.linkedin.com/in/franckbometon",
+          "https://www.facebook.com/franck.bometon",
+          "https://www.instagram.com/franck_bometon/",
+          "https://www.youtube.com/@franckbometon4890"
+        ]
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://franck-bometon.fr/presse/#page",
+        "url": "https://franck-bometon.fr/presse/",
+        "name": "Presse / Médias — Franck Bometon (Franky)",
+        "about": { "@id": "https://franck-bometon.fr/#franck-bometon" },
+        "inLanguage": "fr-FR"
+      }
+    ]
+  }
+  </script>
 
   <style>
     :root{
@@ -48,6 +104,7 @@
 
     *{box-sizing:border-box}
     html,body{height:100%}
+
     body{
       margin:0;
       font-family:var(--sans);
@@ -64,6 +121,19 @@
     a{color:inherit;text-decoration:none}
     a:hover{color:var(--gold)}
     .container{width:min(var(--max),calc(100% - 44px));margin:0 auto}
+
+    /* Accessibilité : skip link */
+    .skip{
+      position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
+    }
+    .skip:focus{
+      left:16px;top:16px;width:auto;height:auto;
+      padding:10px 12px;border-radius:12px;
+      background:rgba(214,181,109,.14);
+      border:1px solid rgba(214,181,109,.35);
+      color:var(--ink);
+      z-index:999;
+    }
 
     header{
       position:sticky;top:0;z-index:50;
@@ -162,6 +232,16 @@
     .asset .desc{color:var(--muted);font-size:13px;line-height:1.6}
     .asset .actions{display:flex;gap:10px;flex-wrap:wrap}
 
+    code{
+      font-family:var(--mono);
+      font-size:12px;
+      padding:2px 6px;
+      border-radius:8px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:rgba(242,240,234,.92);
+    }
+
     footer{
       padding:32px 0 54px;border-top:1px solid var(--line);
       background:linear-gradient(180deg, rgba(15,15,16,0) 0%, rgba(15,15,16,.35) 100%);
@@ -171,12 +251,22 @@
       color:var(--muted2);font-size:13px;
     }
     .foot .mini{font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase}
+
     ul{margin:10px 0 0 18px}
     li{margin:6px 0}
+
+    /* Focus visible (sobre) */
+    :focus-visible{
+      outline:2px solid rgba(214,181,109,.55);
+      outline-offset:3px;
+      border-radius:10px;
+    }
   </style>
 </head>
 
 <body>
+  <a class="skip" href="#content">Aller au contenu</a>
+
   <header>
     <div class="container">
       <div class="nav">
@@ -193,7 +283,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="content">
     <div class="container hero">
       <div class="kicker">Noir & Or · espace presse</div>
       <h1>Presse / Médias</h1>
@@ -209,7 +299,6 @@
           Télécharger le press kit (ZIP)
         </a>
 
-        <!-- NOTE : nom exact du PDF à la racine -->
         <a class="btn gold" href="/franck-bometon-note-de-postureintellectuelle.pdf" target="_blank" rel="noopener noreferrer">
           Télécharger la note de posture (PDF)
         </a>
@@ -333,7 +422,6 @@
               Texte non promotionnel, librement citable.
             </div>
             <div class="actions">
-              <!-- lien corrigé -->
               <a class="btn gold"
                  href="/franck-bometon-note-de-postureintellectuelle.pdf"
                  target="_blank"
@@ -432,7 +520,7 @@
 
         <div class="card" style="margin-top:16px;">
           <h3>Page auteur</h3>
-          <div class="prose">
+          <div class="prose" style="display:flex;gap:10px;flex-wrap:wrap;">
             <a class="btn gold" href="https://author.amazon.fr/home" target="_blank" rel="noopener noreferrer">Author Central</a>
             <a class="btn" href="/">Retour au site</a>
           </div>
@@ -494,19 +582,16 @@
             <ul>
               <li><strong>Nom :</strong> Franck Bometon (Franky)</li>
               <li><strong>Site :</strong> franck-bometon.fr</li>
-              <li><strong>Email presse :</strong> fbometon@aol.com</li>
+              <li><strong>Email presse :</strong> <a href="mailto:fbometon@aol.com">fbometon@aol.com</a></li>
               <li><strong>Thèmes :</strong> lucidité, décision, autorité, biais, lecture de l’humain, complexité</li>
-              <li><strong>Visuels :</strong> portrait HD + logo (dans /assets/presse/)</li>
+              <li><strong>Visuels :</strong> portrait HD + logo (dans <code>/assets/presse/</code>)</li>
             </ul>
             <div class="sep"></div>
-            <div class="small">
-              Dernière mise à jour : <span id="last"></span>
-            </div>
+            <div class="small">Dernière mise à jour : <span id="last"></span></div>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer>
@@ -527,7 +612,6 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Affichage simple "dernière mise à jour" côté client (sans tracking)
     const d = new Date();
     const pad = n => String(n).padStart(2,'0');
     document.getElementById('last').textContent = `${pad(d.getDate())}/${pad(d.getMonth()+1)}/${d.getFullYear()}`;
