@@ -4,10 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0b0b0b" />
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
   <title>Presse / Médias — Franck Bometon (Franky)</title>
   <meta name="description" content="Espace presse : bio, photos, logos, ouvrages, contact — Franck Bometon (Franky)." />
   <link rel="canonical" href="https://franck-bometon.fr/presse/" />
@@ -17,13 +19,14 @@
   <meta property="og:description" content="Bio, photos, logos, ouvrages, contact — Espace presse." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://franck-bometon.fr/presse/" />
-  <meta property="og:image" content="https://franck-bometon.fr/assets/og.jpg" />
+  <!-- og.jpg est à la racine -->
+  <meta property="og:image" content="https://franck-bometon.fr/og.jpg" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Presse / Médias — Franck Bometon (Franky)" />
   <meta name="twitter:description" content="Bio, photos, logos, ouvrages, contact — Espace presse." />
-  <meta name="twitter:image" content="https://franck-bometon.fr/assets/og.jpg" />
+  <meta name="twitter:image" content="https://franck-bometon.fr/og.jpg" />
 
   <style>
     :root{
@@ -171,7 +174,6 @@
     ul{margin:10px 0 0 18px}
     li{margin:6px 0}
   </style>
-  
 </head>
 
 <body>
@@ -202,22 +204,23 @@
 
       <div class="hero-actions">
         <a class="btn gold" href="mailto:fbometon@aol.com?subject=Presse%20%E2%80%94%20Demande%20d%E2%80%99information">Contacter (presse)</a>
-        <a class="btn" href="/assets/presse/presskit-franck-bometon.zip" target="_blank" rel="noopener noreferrer">Télécharger le press kit (ZIP)</a>
-        <a class="btn gold"
-<a href="/franck-bometon-note-de-postureintellectuelle.pdf" download>
-  Note de posture intellectuelle (PDF)
-</a>
-   target="_blank"
-   rel="noopener noreferrer">
-   Télécharger la note de posture (PDF)
-</a>
 
-<p class="small">
-Extrait de réflexion destiné aux journalistes, décideurs et lecteurs exigeants.
-Texte non promotionnel, librement citable.
-</p>
+        <a class="btn" href="/assets/presse/presskit-franck-bometon.zip" target="_blank" rel="noopener noreferrer">
+          Télécharger le press kit (ZIP)
+        </a>
+
+        <!-- NOTE : nom exact du PDF à la racine -->
+        <a class="btn gold" href="/franck-bometon-note-de-postureintellectuelle.pdf" target="_blank" rel="noopener noreferrer">
+          Télécharger la note de posture (PDF)
+        </a>
+
         <a class="btn" href="/#top">Retour au site</a>
       </div>
+
+      <p class="small" style="margin-top:12px;">
+        Extrait de réflexion destiné aux journalistes, décideurs et lecteurs exigeants.
+        Texte non promotionnel, librement citable.
+      </p>
 
       <div class="sep"></div>
 
@@ -311,79 +314,90 @@ Texte non promotionnel, librement citable.
       </div>
     </section>
 
-<!-- RESSOURCES -->
-<section id="ressources">
-  
-  <div class="container">
-    <div class="section-head">
-      <h2>Ressources (photos, logos, kit)</h2>
-      <div class="hint">Téléchargements directs. Le ZIP regroupe tout.</div>
-    </div>
-
-    <div class="grid3">
-      <div class="asset">
-  <div class="meta">
-    <div class="name">Note de posture intellectuelle</div>
-    <div class="tag">PDF</div>
-  </div>
-
-  <div class="desc">
-    Note de posture intellectuelle destinée aux journalistes, décideurs et lecteurs exigeants.
-    Texte non promotionnel, librement citable.
-  </div>
-
-  <div class="actions">
-    <a class="btn gold"
-     href="/franck-bometon-note-de-posture-intellectuelle.pdf"
-       target="_blank"
-       rel="noopener noreferrer">
-       Télécharger la note (PDF)
-    </a>
-  </div>
-</div>
-      <div class="asset">
-        <div class="meta">
-          <div class="name">Portrait (HD)</div>
-          <div class="tag">PNG</div>
+    <!-- RESSOURCES -->
+    <section id="ressources">
+      <div class="container">
+        <div class="section-head">
+          <h2>Ressources (photos, logos, kit)</h2>
+          <div class="hint">Téléchargements directs. Le ZIP regroupe tout.</div>
         </div>
-        <div class="desc">Photo portrait presse, fond neutre, haute résolution.</div>
-        <div class="actions">
-          <a class="btn" href="/assets/presse/portrait-franck.jpg" target="_blank" rel="noopener noreferrer">Ouvrir</a>
-<a class="btn gold" href="/assets/presse/portrait-franck.jpg" download>Télécharger</a>
+
+        <div class="grid3">
+          <div class="asset">
+            <div class="meta">
+              <div class="name">Note de posture intellectuelle</div>
+              <div class="tag">PDF</div>
+            </div>
+            <div class="desc">
+              Note de posture intellectuelle destinée aux journalistes, décideurs et lecteurs exigeants.
+              Texte non promotionnel, librement citable.
+            </div>
+            <div class="actions">
+              <!-- lien corrigé -->
+              <a class="btn gold"
+                 href="/franck-bometon-note-de-postureintellectuelle.pdf"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                 Télécharger la note (PDF)
+              </a>
+            </div>
+          </div>
+
+          <div class="asset">
+            <div class="meta">
+              <div class="name">Extrait (PDF)</div>
+              <div class="tag">PDF</div>
+            </div>
+            <div class="desc">Extrait téléchargeable (fichier à la racine du site).</div>
+            <div class="actions">
+              <a class="btn gold" href="/extrait.pdf" target="_blank" rel="noopener noreferrer">Télécharger</a>
+            </div>
+          </div>
+
+          <div class="asset">
+            <div class="meta">
+              <div class="name">Portrait (HD)</div>
+              <div class="tag">JPG</div>
+            </div>
+            <div class="desc">Photo portrait presse, fond neutre, haute résolution.</div>
+            <div class="actions">
+              <a class="btn" href="/assets/presse/portrait-franck.jpg" target="_blank" rel="noopener noreferrer">Ouvrir</a>
+              <a class="btn gold" href="/assets/presse/portrait-franck.jpg" download>Télécharger</a>
+            </div>
+          </div>
+
+          <div class="asset">
+            <div class="meta">
+              <div class="name">Logo Noir & Or</div>
+              <div class="tag">PNG</div>
+            </div>
+            <div class="desc">Logo / signature “Noir & Or” (version officielle).</div>
+            <div class="actions">
+              <a class="btn" href="/assets/presse/logo-noir-or-pristina.png" target="_blank" rel="noopener noreferrer">Ouvrir</a>
+              <a class="btn gold" href="/assets/presse/logo-noir-or-pristina.png" download>Télécharger</a>
+            </div>
+          </div>
+
+          <div class="asset">
+            <div class="meta">
+              <div class="name">Press kit complet</div>
+              <div class="tag">ZIP</div>
+            </div>
+            <div class="desc">Bio + photos + logos + sélection d’ouvrages + liens.</div>
+            <div class="actions">
+              <a class="btn gold" href="/assets/presse/presskit-franck-bometon.zip" target="_blank" rel="noopener noreferrer">Télécharger</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="sep"></div>
+
+        <div class="prose small">
+          Ressources hébergées dans <code>/assets/presse/</code>. Si tu ajoutes une version SVG ou clair/sombre du logo, on mettra à jour cette section.
         </div>
       </div>
+    </section>
 
-      <div class="asset">
-        <div class="meta">
-          <div class="name">Logo Noir & Or</div>
-          <div class="tag">PNG</div>
-        </div>
-        <div class="desc">Logo / signature “Noir & Or” (version officielle).</div>
-        <div class="actions">
-          <a class="btn" href="/assets/presse/logo-noir-or-pristina.png" target="_blank" rel="noopener noreferrer">Ouvrir</a>
-          <a class="btn gold" href="/assets/presse/logo-noir-or-pristina.png" download>Télécharger</a>
-        </div>
-      </div>
-
-      <div class="asset">
-        <div class="meta">
-          <div class="name">Press kit complet</div>
-          <div class="tag">ZIP</div>
-        </div>
-        <div class="desc">Bio + photos + logos + sélection d’ouvrages + liens.</div>
-        <div class="actions">
-          <a class="btn gold" href="/assets/presse/presskit-franck-bometon.zip" target="_blank" rel="noopener noreferrer">Télécharger</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="sep"></div>
-
-    <div class="prose small">
-      Ressources hébergées dans <code>/assets/presse/</code>. Si tu ajoutes une version SVG ou clair/sombre du logo, on mettra à jour cette section.
-    </div>
-  </div>
-</section>
     <!-- OUVRAGES -->
     <section id="ouvrages">
       <div class="container">
@@ -420,7 +434,7 @@ Texte non promotionnel, librement citable.
           <h3>Page auteur</h3>
           <div class="prose">
             <a class="btn gold" href="https://author.amazon.fr/home" target="_blank" rel="noopener noreferrer">Author Central</a>
-            <a class="btn" href="/" >Retour au site</a>
+            <a class="btn" href="/">Retour au site</a>
           </div>
         </div>
       </div>
@@ -464,7 +478,6 @@ Texte non promotionnel, librement citable.
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
