@@ -131,6 +131,61 @@
   </script>
 
   <style>
+    /* === TOP BANNER — SIGNATURE FRANKY === */
+.top-banner{
+  position: relative;
+  z-index: 60;
+  background:
+    linear-gradient(180deg, rgba(11,11,11,.92), rgba(11,11,11,.88));
+  border-bottom: 1px solid rgba(214,181,109,.25);
+}
+
+.top-banner-inner{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 10px 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+
+  font-size: 13px;
+  line-height: 1.4;
+  color: rgba(242,240,234,.85);
+}
+
+.top-banner .label{
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(214,181,109,.9);
+  border: 1px solid rgba(214,181,109,.35);
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.top-banner .text{
+  flex: 1;
+  min-width: 220px;
+}
+
+.top-banner .sig{
+  font-family: var(--serif);
+  color: rgba(214,181,109,.95);
+  letter-spacing: .3px;
+}
+
+/* Mobile */
+@media (max-width:720px){
+  .top-banner-inner{
+    font-size: 12px;
+  }
+  .top-banner .sig{
+    display: none; /* sobriété mobile */
+  }
+}
     :root{
       --bg:#0b0b0b;
       --bg2:#0f0f10;
