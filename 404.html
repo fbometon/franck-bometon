@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0b0b" />
+
+  <title>404 — Le réel a disparu | Franck Bometon — Franky</title>
+  <meta name="description" content="404. Ce lien était une hypothèse. Elle vient d’être falsifiée. Retour à l’accueil." />
+
+  <!-- Favicon (si déjà présent à la racine) -->
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="404 — Le réel a disparu" />
+  <meta property="og:description" content="Ce lien était une hypothèse. Elle vient d’être falsifiée." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://franck-bometon.fr/404" />
+  <!-- optionnel : mets ton OG si tu l’as à la racine -->
+  <meta property="og:image" content="https://franck-bometon.fr/og.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="404 — Le réel a disparu" />
+  <meta name="twitter:description" content="Ce lien était une hypothèse. Elle vient d’être falsifiée." />
+  <meta name="twitter:image" content="https://franck-bometon.fr/og.jpg" />
+
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --bg2:#0f0f10;
+      --ink:#f2f0ea;
+      --muted:rgba(242,240,234,.72);
+      --muted2:rgba(242,240,234,.55);
+      --line:rgba(242,240,234,.14);
+      --gold:#d6b56d;
+      --shadow:0 22px 60px rgba(0,0,0,.55);
+      --radius:18px;
+      --radius2:28px;
+      --max:1100px;
+      --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      --sans:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      --serif:ui-serif,Georgia,Cambria,"Times New Roman",Times,serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      background:
+        radial-gradient(1100px 700px at 12% -10%, rgba(214,181,109,.14), transparent 60%),
+        radial-gradient(900px 500px at 90% 0%, rgba(214,181,109,.10), transparent 55%),
+        linear-gradient(180deg,var(--bg) 0%, #070707 100%);
+      color:var(--ink);
+      letter-spacing:.1px;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:inherit;text-decoration:none}
+    a:hover{color:var(--gold)}
+    .container{width:min(var(--max),calc(100% - 44px));margin:0 auto}
+
+    /* Skip link */
+    .skip{
+      position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
+    }
+    .skip:focus{
+      left:16px;top:16px;width:auto;height:auto;
+      padding:10px 12px;border-radius:12px;
+      background:rgba(214,181,109,.14);
+      border:1px solid rgba(214,181,109,.35);
+      color:var(--ink);
+      z-index:999;
+    }
+
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(12px);
+      background:rgba(11,11,11,.62);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;gap:18px;
+      padding:14px 0;
+    }
+    .brand{display:flex;align-items:baseline;gap:10px;white-space:nowrap}
+    .brand .name{font-family:var(--serif);font-size:18px;letter-spacing:.6px}
+    .brand .tag{
+      font-family:var(--mono);font-size:12px;color:var(--muted2);
+      border:1px solid var(--line);padding:4px 10px;border-radius:999px;
+    }
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 14px;border-radius:999px;border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--ink);font-weight:600;font-size:13px;
+      transition:transform .08s ease,border-color .2s ease,background .2s ease;
+      cursor:pointer;user-select:none;white-space:nowrap;
+    }
+    .btn:hover{border-color:rgba(214,181,109,.35);background:rgba(214,181,109,.08);color:var(--ink)}
+    .btn:active{transform:translateY(1px)}
+    .btn.gold{
+      border-color:rgba(214,181,109,.55);
+      background:linear-gradient(180deg,rgba(214,181,109,.20),rgba(214,181,109,.06));
+    }
+
+    main{padding:46px 0 30px}
+    .hero{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:18px;
+      align-items:start;
+    }
+
+    .kicker{
+      font-family:var(--mono);
+      color:var(--muted);
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      font-size:11px;
+      margin:0 0 14px;
+    }
+    h1{
+      margin:0;
+      font-family:var(--serif);
+      font-size:clamp(40px,5vw,62px);
+      line-height:1.02;
+      letter-spacing:.8px;
+    }
+    .subtitle{
+      margin:14px 0 0;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.85;
+      max-width:72ch;
+    }
+
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
+      background:rgba(255,255,255,.02);
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+    .card h3{margin:0 0 10px;font-family:var(--serif);font-size:20px}
+    .prose{color:var(--muted);font-size:15px;line-height:1.85}
+    .small{font-size:12px;color:var(--muted2);line-height:1.55}
+
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+      color:rgba(214,181,109,.95);
+      border:1px solid rgba(214,181,109,.25);
+      background:rgba(214,181,109,.08);
+      padding:6px 10px;border-radius:999px;
+    }
+
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .sep{height:1px;background:var(--line);margin:18px 0}
+
+    .trace{
+      font-family:var(--mono);
+      font-size:12px;
+      color:rgba(242,240,234,.5);
+      border:1px solid rgba(242,240,234,.12);
+      border-radius:16px;
+      padding:10px 12px;
+      background:rgba(255,255,255,.02);
+      overflow:auto;
+    }
+
+    .quote{
+      margin-top:14px;
+      padding-top:14px;
+      border-top:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:baseline;
+    }
+    .quote .left{font-family:var(--serif);font-size:14px;color:var(--muted)}
+    .quote .right{text-align:right;font-family:var(--serif);font-size:16px;color:var(--gold);letter-spacing:.4px}
+    .quote .right small{
+      display:block;
+      font-family:var(--mono);
+      font-size:11px;
+      color:var(--muted2);
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      margin-top:4px;
+    }
+
+    footer{
+      padding:28px 0 46px;
+      border-top:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(15,15,16,0) 0%, rgba(15,15,16,.35) 100%);
+    }
+    .foot{
+      display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center;
+      color:var(--muted2);font-size:13px;
+    }
+    .foot .mini{font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase}
+
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+    }
+
+    /* Bouton retour flottant */
+    .btn-back{
+      position:fixed;left:18px;bottom:18px;z-index:9999;
+      display:inline-flex;align-items:center;gap:.5rem;
+      padding:.65rem 1rem;border-radius:999px;
+      border:1px solid rgba(214,181,109,.55);
+      background:rgba(8,8,8,.65);
+      color:#f2efe7;
+      cursor:pointer;text-decoration:none;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+      transition: transform .12s ease, border-color .12s ease, background .12s ease, opacity .12s ease;
+      opacity:0; pointer-events:none; transform:translateY(6px);
+    }
+    .btn-back.show{opacity:1; pointer-events:auto; transform:translateY(0);}
+    .btn-back:hover{
+      transform: translateY(-1px);
+      border-color: rgba(214,181,109,.85);
+      background:rgba(12,12,12,.75);
+    }
+    .btn-back:active{ transform: translateY(0); }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#content">Aller au contenu</a>
+
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="/" aria-label="Retour à l’accueil">
+          <span class="name">Franck Bometon</span>
+          <span class="tag">— Franky</span>
+        </a>
+
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+          <a class="btn" href="/#livres">Œuvres</a>
+          <a class="btn" href="/presse/">Presse</a>
+          <a class="btn gold" href="mailto:fbometon@aol.com?subject=404%20%E2%80%94%20Lien%20cass%C3%A9">Signaler un lien</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <button class="btn-back" type="button" onclick="goBackOrHome()" aria-label="Retour">
+    ← Retour
+  </button>
+
+  <main id="content">
+    <div class="container">
+      <div class="hero">
+        <!-- Col gauche -->
+        <div>
+          <div class="kicker">Noir & Or · diagnostic</div>
+          <h1>404</h1>
+
+          <p class="subtitle">
+            Le lien que vous cherchez n’existe pas (ou n’existe plus).<br/>
+            <strong>Ce lien était une hypothèse. Elle vient d’être falsifiée.</strong>
+          </p>
+
+          <div class="actions" role="group" aria-label="Actions de navigation">
+            <a class="btn gold" href="/">Retour à l’accueil</a>
+            <a class="btn" href="/presse/">Espace presse</a>
+            <a class="btn" href="/#contact">Me contacter</a>
+          </div>
+
+          <div class="sep"></div>
+
+          <div class="prose">
+            <span class="pill">Posture</span>
+            <div style="margin-top:10px;font-family:var(--serif);font-size:18px;color:var(--ink);line-height:1.55;">
+              Distinguer faits, hypothèses et récits :<br/>même une 404 peut servir la lucidité.
+            </div>
+            <div style="margin-top:6px;color:var(--muted2);">— Franky</div>
+          </div>
+        </div>
+
+        <!-- Col droite -->
+        <aside class="card" aria-label="Carte d’orientation">
+          <h3>Reprendre la trajectoire</h3>
+          <div class="prose">
+            <ul style="margin:10px 0 0 18px;">
+              <li><a href="/#commencer">Choisir un point d’entrée</a></li>
+              <li><a href="/#extrait">Télécharger un extrait (PDF)</a></li>
+              <li><a href="/#livres">Parcourir les ouvrages</a></li>
+              <li><a href="/presse/">Ressources presse & visuels</a></li>
+            </ul>
+            <div class="sep"></div>
+            <div class="small">
+              Si vous êtes arrivé ici via un article, un PDF ou un réseau social,
+              le lien source est probablement cassé ou mal copié.
+            </div>
+          </div>
+
+          <div class="sep"></div>
+
+          <div class="small">Trace (utile si vous signalez le lien) :</div>
+          <div class="trace" id="trace">Chargement…</div>
+
+          <div class="quote">
+            <div class="left">Écrivain philosophe</div>
+            <div class="right">
+              Franky
+              <small>Architecte du savoir</small>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="foot">
+        <div>
+          <div class="mini">Noir & Or · Franky</div>
+          <div style="margin-top:8px;">© <span id="year"></span> Franck Bometon — Franky. Tous droits réservés.</div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+          <a class="btn" href="/mentions-legales/">Mentions légales</a>
+          <a class="btn" href="/politique-confidentialite/">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Trace technique utile
+    const trace = document.getElementById('trace');
+    const ref = document.referrer ? document.referrer : "(aucun referrer)";
+    trace.textContent = `URL demandée : ${location.href}\nReferrer : ${ref}`;
+
+    // Bouton retour : apparaît après un peu de scroll
+    const backBtn = document.querySelector('.btn-back');
+    const toggleBack = () => backBtn?.classList.toggle('show', window.scrollY > 200);
+    window.addEventListener('scroll', toggleBack);
+    toggleBack();
+
+    function goBackOrHome(){
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = "/";
+    }
+  </script>
+</body>
+</html>
