@@ -7,17 +7,13 @@
   <meta name="color-scheme" content="dark light" />
 
   <title>Presse / Médias — Franck Bometon (Franky)</title>
-  <meta name="description" content="Espace presse : bio officielle, photos, logo, ouvrages, contact — Franck Bometon (Franky)." />
+  <meta name="description" content="Espace presse : bio officielle, photos, logo, ouvrages, affiliations, contact — Franck Bometon (Franky)." />
 
-  <!-- Canonical + hreflang -->
   <link rel="canonical" href="https://franck-bometon.fr/presse/" />
   <link rel="alternate" hreflang="fr" href="https://franck-bometon.fr/presse/" />
   <link rel="alternate" hreflang="x-default" href="https://franck-bometon.fr/presse/" />
 
-  <!-- Robots -->
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-
-  <!-- Author / Publisher -->
   <meta name="author" content="Franck Bometon" />
   <meta name="publisher" content="Franck Bometon" />
 
@@ -28,17 +24,15 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <!-- Perf: preconnect externes -->
+  <!-- Perf -->
   <link rel="preconnect" href="https://www.amazon.fr" crossorigin>
   <link rel="preconnect" href="https://author.amazon.fr" crossorigin>
   <link rel="preconnect" href="https://www.linkedin.com" crossorigin>
-
-  <!-- Perf: preload OG -->
   <link rel="preload" as="image" href="https://franck-bometon.fr/og.jpg" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Presse / Médias — Franck Bometon (Franky)" />
-  <meta property="og:description" content="Bio officielle, photos, logo, ouvrages, contact — Espace presse." />
+  <meta property="og:description" content="Bio officielle, ressources visuelles, affiliations, ouvrages, contact — Espace presse." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://franck-bometon.fr/presse/" />
   <meta property="og:image" content="https://franck-bometon.fr/og.jpg" />
@@ -46,10 +40,9 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="fr_FR" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Presse / Médias — Franck Bometon (Franky)" />
-  <meta name="twitter:description" content="Bio officielle, photos, logo, ouvrages, contact — Espace presse." />
+  <meta name="twitter:description" content="Bio officielle, ressources visuelles, affiliations, ouvrages, contact — Espace presse." />
   <meta name="twitter:image" content="https://franck-bometon.fr/og.jpg" />
 
   <!-- JSON-LD -->
@@ -101,10 +94,8 @@
       --sans:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
       --serif:ui-serif,Georgia,Cambria,"Times New Roman",Times,serif;
     }
-
     *{box-sizing:border-box}
     html,body{height:100%}
-
     body{
       margin:0;
       font-family:var(--sans);
@@ -117,15 +108,11 @@
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
     }
-
     a{color:inherit;text-decoration:none}
     a:hover{color:var(--gold)}
     .container{width:min(var(--max),calc(100% - 44px));margin:0 auto}
 
-    /* Skip link */
-    .skip{
-      position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
-    }
+    .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
     .skip:focus{
       left:16px;top:16px;width:auto;height:auto;
       padding:10px 12px;border-radius:12px;
@@ -217,10 +204,8 @@
       background:rgba(214,181,109,.08);
       padding:6px 10px;border-radius:999px;
     }
-
     .sep{height:1px;background:var(--line);margin:18px 0}
 
-    /* Bio blocks (définis) */
     .press-quote{
       margin-top:10px;
       padding:14px 16px;
@@ -233,8 +218,7 @@
       line-height:1.6;
     }
     .press-quote-sig{
-      display:inline-block;
-      margin-left:8px;
+      display:inline-block;margin-left:8px;
       color:rgba(214,181,109,.95);
       font-family:var(--serif);
       white-space:nowrap;
@@ -247,6 +231,7 @@
     }
     .press-meta{margin-top:10px;color:var(--muted2)}
 
+    /* Assets cards */
     .asset{
       border:1px solid var(--line);
       border-radius:var(--radius);
@@ -267,12 +252,19 @@
       border-radius:14px;
       overflow:hidden;
       background:rgba(255,255,255,.02);
+      display:flex;align-items:center;justify-content:center;
     }
     .thumb img{
-      width:100%;
-      height:100%;
+      width:100%;height:100%;
       object-fit:cover;
       display:block;
+    }
+    .thumb.square{aspect-ratio:1/1}
+    .thumb.square img{
+      width:auto;height:auto;
+      max-width:78%;
+      max-height:78%;
+      object-fit:contain;
     }
 
     code{
@@ -297,13 +289,7 @@
 
     ul{margin:10px 0 0 18px}
     li{margin:6px 0}
-
-    :focus-visible{
-      outline:2px solid rgba(214,181,109,.55);
-      outline-offset:3px;
-      border-radius:10px;
-    }
-
+    :focus-visible{outline:2px solid rgba(214,181,109,.55);outline-offset:3px;border-radius:10px}
     @media (prefers-reduced-motion: reduce){
       *{scroll-behavior:auto !important; transition:none !important; animation:none !important;}
     }
@@ -330,6 +316,7 @@
   </header>
 
   <main id="content">
+
     <!-- HERO -->
     <div class="container hero">
       <div class="kicker">Noir & Or · espace presse</div>
@@ -347,8 +334,7 @@
           Télécharger le press kit (ZIP)
         </a>
 
-        <!-- OPTION A : PDF à la racine -->
-        <a class="btn gold" href="/franck-bometon-note-de-posture-intellectuelle.pdf" target="_blank" rel="noopener noreferrer">
+        <a class="btn gold" href="/assets/franck-bometon-note-de-postureintellectuelle.pdf" target="_blank" rel="noopener noreferrer">
           Télécharger la note de posture (PDF)
         </a>
 
@@ -432,6 +418,7 @@
         </div>
 
         <div class="grid3">
+
           <div class="asset">
             <div class="meta">
               <div class="name">Press kit complet</div>
@@ -450,44 +437,30 @@
             </div>
             <div class="desc">Document destiné aux médias : cadrage, posture, éléments librement citables.</div>
             <div class="actions">
-              <a class="btn gold" href="/franck-bometon-note-de-posture-intellectuelle.pdf" target="_blank" rel="noopener noreferrer">Télécharger</a>
+              <a class="btn gold" href="/assets/franck-bometon-note-de-postureintellectuelle.pdf" target="_blank" rel="noopener noreferrer">Télécharger</a>
+            </div>
+          </div>
+
+          <div class="asset">
+            <div class="meta">
+              <div class="name">Badge ICF (membre)</div>
+              <div class="tag">PNG</div>
+            </div>
+            <div class="thumb square" aria-hidden="true">
+              <img src="/assets/icf-member-badge.png?v=3" alt="" loading="lazy" decoding="async">
+            </div>
+            <div class="desc">
+              Membre de l’International Coaching Federation (ICF). Engagement envers des standards professionnels et éthiques.
+            </div>
+            <div class="actions">
+              <a class="btn" href="/assets/icf-member-badge.png?v=3" target="_blank" rel="noopener noreferrer">Ouvrir</a>
+              <a class="btn gold" href="/assets/icf-member-badge.png?v=3" target="_blank" rel="noopener noreferrer">Télécharger</a>
             </div>
           </div>
 
           <div class="asset">
             <div class="meta">
               <div class="name">Logo “Noir & Or”</div>
-              <!-- ICF Member badge -->
-<article class="resource">
-  <div class="resource-head">
-    <h3>ICF Member</h3>
-    <span class="meta">PNG</span>
-  </div>
-
-  <div class="preview">
-    <img
-      src="/assets/icf-member-badge.png?v=2"
-      alt="ICF Member – International Coaching Federation"
-      loading="lazy"
-      width="160"
-      style="max-width:160px;height:auto;display:block;margin:0 auto;"
-    >
-  </div>
-
-  <p class="desc">
-    Member of the International Coaching Federation (ICF).<br>
-    This membership reflects adherence to professional and ethical standards.
-  </p>
-
-  <div class="actions">
-    <a class="btn" href="/assets/icf-member-badge.png?v=2" target="_blank" rel="noopener">
-      Ouvrir
-    </a>
-    <a class="btn gold" href="/assets/icf-member-badge.png?v=2" download>
-      Télécharger
-    </a>
-  </div>
-</article>
               <div class="tag">PNG</div>
             </div>
             <div class="thumb" aria-hidden="true">
@@ -529,11 +502,13 @@
               <a class="btn gold" href="/assets/presse/portrait-franck.jpg" target="_blank" rel="noopener noreferrer">Télécharger</a>
             </div>
           </div>
+
         </div>
 
         <div class="sep"></div>
         <div class="prose small">
-          Fichiers présents dans <code>/assets/presse/</code> : logo, portraits, presskit. La note de posture (Option A) est à la racine du site.
+          Fichiers présents dans <code>/assets/presse/</code> : logo, portraits, presskit.
+          La note de posture et le badge ICF sont à la racine <code>/assets/</code>.
         </div>
       </div>
     </section>
@@ -638,7 +613,8 @@
               <li><strong>Thèmes :</strong> lucidité, décision, autorité, biais, lecture de l’humain, complexité</li>
               <li><strong>Kit :</strong> <a href="/assets/presse/presskit-franck-bometon.zip" target="_blank" rel="noopener noreferrer">Presskit ZIP</a></li>
               <li><strong>Visuels :</strong> <a href="/assets/presse/portrait-franck-bometon-hd.png" target="_blank" rel="noopener noreferrer">Portrait HD</a> · <a href="/assets/presse/logo-noir-or-pristina.png" target="_blank" rel="noopener noreferrer">Logo</a></li>
-              <li><strong>Note de posture :</strong> <a href="/franck-bometon-note-de-posture-intellectuelle.pdf" target="_blank" rel="noopener noreferrer">PDF</a></li>
+              <li><strong>Note de posture :</strong> <a href="/assets/franck-bometon-note-de-postureintellectuelle.pdf" target="_blank" rel="noopener noreferrer">PDF</a></li>
+              <li><strong>Affiliation :</strong> <a href="/assets/icf-member-badge.png?v=3" target="_blank" rel="noopener noreferrer">Badge ICF (PNG)</a></li>
             </ul>
             <div class="sep"></div>
             <div class="small">Dernière mise à jour : <span id="last"></span></div>
@@ -646,6 +622,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer>
