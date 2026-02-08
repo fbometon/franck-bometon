@@ -93,6 +93,28 @@
   </script>
 
   <style>
+    .lang{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.lang a{
+  font-size:13px;
+  color:var(--muted);
+  padding:8px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:rgba(214,181,109,.06);
+}
+.lang a:hover{
+  color:var(--ink);
+  border-color:rgba(214,181,109,.45);
+}
+.lang a[aria-current="page"]{
+  color:var(--ink);
+  background:rgba(214,181,109,.18);
+  border-color:rgba(214,181,109,.55);
+}
     :root{
       --bg:#0b0b0b;
       --ink:#f2f0ea;
