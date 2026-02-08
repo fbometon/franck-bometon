@@ -7,7 +7,7 @@
   <meta name="color-scheme" content="dark light" />
 
   <title>Presse / Médias — Franck Bometon (Franky)</title>
-  <meta name="description" content="Espace presse : bio, photos, logos, ouvrages, contact — Franck Bometon (Franky)." />
+  <meta name="description" content="Espace presse : bio officielle, photos, logo, ouvrages, contact — Franck Bometon (Franky)." />
 
   <!-- Canonical + hreflang -->
   <link rel="canonical" href="https://franck-bometon.fr/presse/" />
@@ -34,11 +34,11 @@
   <link rel="preconnect" href="https://www.linkedin.com" crossorigin>
 
   <!-- Perf: preload OG -->
-  <link rel="preload" as="image" href="https://franck-bometon.fr/og.jpg" imagesrcset="https://franck-bometon.fr/og.jpg 1200w" />
+  <link rel="preload" as="image" href="https://franck-bometon.fr/og.jpg" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Presse / Médias — Franck Bometon (Franky)" />
-  <meta property="og:description" content="Bio, photos, logos, ouvrages, contact — Espace presse." />
+  <meta property="og:description" content="Bio officielle, photos, logo, ouvrages, contact — Espace presse." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://franck-bometon.fr/presse/" />
   <meta property="og:image" content="https://franck-bometon.fr/og.jpg" />
@@ -49,10 +49,10 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Presse / Médias — Franck Bometon (Franky)" />
-  <meta name="twitter:description" content="Bio, photos, logos, ouvrages, contact — Espace presse." />
+  <meta name="twitter:description" content="Bio officielle, photos, logo, ouvrages, contact — Espace presse." />
   <meta name="twitter:image" content="https://franck-bometon.fr/og.jpg" />
 
-  <!-- JSON-LD (SEO) : Press page + Person -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -122,7 +122,7 @@
     a:hover{color:var(--gold)}
     .container{width:min(var(--max),calc(100% - 44px));margin:0 auto}
 
-    /* Accessibilité */
+    /* Skip link */
     .skip{
       position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
     }
@@ -182,7 +182,7 @@
       color:var(--muted);
       font-size:16px;
       line-height:1.85;
-      max-width:85ch;
+      max-width:90ch;
       margin:14px 0 0;
     }
     .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
@@ -220,7 +220,7 @@
 
     .sep{height:1px;background:var(--line);margin:18px 0}
 
-    /* Bio blocks (définis : pas de classes fantômes) */
+    /* Bio blocks (définis) */
     .press-quote{
       margin-top:10px;
       padding:14px 16px;
@@ -259,6 +259,21 @@
     .asset .tag{font-family:var(--mono);font-size:11px;color:var(--muted2);letter-spacing:.12em;text-transform:uppercase}
     .asset .desc{color:var(--muted);font-size:13px;line-height:1.6}
     .asset .actions{display:flex;gap:10px;flex-wrap:wrap}
+
+    .thumb{
+      width:100%;
+      aspect-ratio:16/10;
+      border:1px solid var(--line);
+      border-radius:14px;
+      overflow:hidden;
+      background:rgba(255,255,255,.02);
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
 
     code{
       font-family:var(--mono);
@@ -315,12 +330,14 @@
   </header>
 
   <main id="content">
+    <!-- HERO -->
     <div class="container hero">
       <div class="kicker">Noir & Or · espace presse</div>
       <h1>Presse / Médias</h1>
       <p class="subtitle">
         Bio officielle, éléments de langage, ressources visuelles et liens utiles.
-        Pour toute demande d’interview, conférence, chronique ou dossier : <strong><a href="mailto:fbometon@aol.com">fbometon@aol.com</a></strong>.
+        Pour toute demande d’interview, conférence, chronique ou dossier :
+        <strong><a href="mailto:fbometon@aol.com">fbometon@aol.com</a></strong>.
       </p>
 
       <div class="hero-actions">
@@ -330,7 +347,7 @@
           Télécharger le press kit (ZIP)
         </a>
 
-        <!-- ✅ CONSEIL : renomme le fichier en /franck-bometon-note-de-posture-intellectuelle.pdf -->
+        <!-- OPTION A : PDF à la racine -->
         <a class="btn gold" href="/franck-bometon-note-de-posture-intellectuelle.pdf" target="_blank" rel="noopener noreferrer">
           Télécharger la note de posture (PDF)
         </a>
@@ -339,8 +356,8 @@
       </div>
 
       <p class="small" style="margin-top:12px;">
-        Extrait de réflexion destiné aux journalistes, décideurs et lecteurs exigeants.
-        Texte non promotionnel, librement citable.
+        Ressources destinées aux médias, décideurs et lecteurs exigeants.
+        Contenus non promotionnels, librement citables.
       </p>
 
       <div class="sep"></div>
@@ -406,91 +423,46 @@
       </div>
     </section>
 
-    <!-- ANGLES -->
-    <section id="angles">
-      <div class="container">
-        <div class="section-head">
-          <h2>Angles & thèmes</h2>
-          <div class="hint">Repères utiles pour un article, une interview, une chronique.</div>
-        </div>
-
-        <div class="grid3">
-          <div class="card">
-            <h3>Décision & lucidité</h3>
-            <div class="prose">Biais cognitifs, lecture des situations, distinction faits/hypothèses, prudence pratique.</div>
-          </div>
-          <div class="card">
-            <h3>Autorité & leadership</h3>
-            <div class="prose">Autorité éclairée, posture, confiance, régulation, verticalité/horizontalité.</div>
-          </div>
-          <div class="card">
-            <h3>Comprendre l’humain</h3>
-            <div class="prose">Dynamiques relationnelles, signaux faibles, interprétation vs observation, éthique de la lecture.</div>
-          </div>
-        </div>
-
-        <div class="card" style="margin-top:16px;">
-          <h3>3 questions d’entretien (prêtes)</h3>
-          <div class="prose">
-            <ul>
-              <li>Qu’est-ce que “comprendre sans réduire” change concrètement dans la décision et la relation ?</li>
-              <li>À quel moment l’autorité bascule-t-elle en domination — et comment l’éviter ?</li>
-              <li>Pourquoi la distinction faits / hypothèses / récits est-elle devenue une compétence de survie ?</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- RESSOURCES -->
     <section id="ressources">
       <div class="container">
         <div class="section-head">
-          <h2>Ressources (photos, logos, kit)</h2>
+          <h2>Ressources (photos, logo, kit)</h2>
           <div class="hint">Téléchargements directs. Le ZIP regroupe tout.</div>
         </div>
 
         <div class="grid3">
           <div class="asset">
             <div class="meta">
+              <div class="name">Press kit complet</div>
+              <div class="tag">ZIP</div>
+            </div>
+            <div class="desc">Bio + photos + logo + liens (pack complet).</div>
+            <div class="actions">
+              <a class="btn gold" href="/assets/presse/presskit-franck-bometon.zip" target="_blank" rel="noopener noreferrer">Télécharger</a>
+            </div>
+          </div>
+
+          <div class="asset">
+            <div class="meta">
               <div class="name">Note de posture intellectuelle</div>
               <div class="tag">PDF</div>
             </div>
-            <div class="desc">Note destinée aux journalistes, décideurs et lecteurs exigeants. Librement citable.</div>
+            <div class="desc">Document destiné aux médias : cadrage, posture, éléments librement citables.</div>
             <div class="actions">
-              <a class="btn gold" href="/franck-bometon-note-de-posture-intellectuelle.pdf" target="_blank" rel="noopener noreferrer">Télécharger (PDF)</a>
+              <a class="btn gold" href="/franck-bometon-note-de-posture-intellectuelle.pdf" target="_blank" rel="noopener noreferrer">Télécharger</a>
             </div>
           </div>
 
           <div class="asset">
             <div class="meta">
-              <div class="name">Extrait (PDF)</div>
-              <div class="tag">PDF</div>
-            </div>
-            <div class="desc">Extrait téléchargeable (fichier à la racine du site).</div>
-            <div class="actions">
-              <a class="btn gold" href="/extrait.pdf" target="_blank" rel="noopener noreferrer">Télécharger</a>
-            </div>
-          </div>
-
-          <div class="asset">
-            <div class="meta">
-              <div class="name">Portrait (HD)</div>
-              <div class="tag">JPG</div>
-            </div>
-            <div class="desc">Photo portrait presse, fond neutre, haute résolution.</div>
-            <div class="actions">
-              <a class="btn" href="/assets/presse/portrait-franck.jpg" target="_blank" rel="noopener noreferrer">Ouvrir</a>
-              <a class="btn gold" href="/assets/presse/portrait-franck.jpg" target="_blank" rel="noopener noreferrer">Télécharger</a>
-            </div>
-          </div>
-
-          <div class="asset">
-            <div class="meta">
-              <div class="name">Logo Noir & Or</div>
+              <div class="name">Logo “Noir & Or”</div>
               <div class="tag">PNG</div>
             </div>
-            <div class="desc">Logo / signature “Noir & Or” (version officielle).</div>
+            <div class="thumb" aria-hidden="true">
+              <img src="/assets/presse/logo-noir-or-pristina.png" alt="" loading="lazy" decoding="async">
+            </div>
+            <div class="desc">Logo officiel (PNG).</div>
             <div class="actions">
               <a class="btn" href="/assets/presse/logo-noir-or-pristina.png" target="_blank" rel="noopener noreferrer">Ouvrir</a>
               <a class="btn gold" href="/assets/presse/logo-noir-or-pristina.png" target="_blank" rel="noopener noreferrer">Télécharger</a>
@@ -499,20 +471,38 @@
 
           <div class="asset">
             <div class="meta">
-              <div class="name">Press kit complet</div>
-              <div class="tag">ZIP</div>
+              <div class="name">Portrait HD</div>
+              <div class="tag">PNG</div>
             </div>
-            <div class="desc">Bio + photos + logos + sélection d’ouvrages + liens.</div>
+            <div class="thumb" aria-hidden="true">
+              <img src="/assets/presse/portrait-franck-bometon-hd.png" alt="" loading="lazy" decoding="async">
+            </div>
+            <div class="desc">Portrait haute résolution (prioritaire presse).</div>
             <div class="actions">
-              <a class="btn gold" href="/assets/presse/presskit-franck-bometon.zip" target="_blank" rel="noopener noreferrer">Télécharger</a>
+              <a class="btn" href="/assets/presse/portrait-franck-bometon-hd.png" target="_blank" rel="noopener noreferrer">Ouvrir</a>
+              <a class="btn gold" href="/assets/presse/portrait-franck-bometon-hd.png" target="_blank" rel="noopener noreferrer">Télécharger</a>
+            </div>
+          </div>
+
+          <div class="asset">
+            <div class="meta">
+              <div class="name">Portrait standard</div>
+              <div class="tag">JPG</div>
+            </div>
+            <div class="thumb" aria-hidden="true">
+              <img src="/assets/presse/portrait-franck.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <div class="desc">Version légère (web).</div>
+            <div class="actions">
+              <a class="btn" href="/assets/presse/portrait-franck.jpg" target="_blank" rel="noopener noreferrer">Ouvrir</a>
+              <a class="btn gold" href="/assets/presse/portrait-franck.jpg" target="_blank" rel="noopener noreferrer">Télécharger</a>
             </div>
           </div>
         </div>
 
         <div class="sep"></div>
         <div class="prose small">
-          Ressources hébergées dans <code>/assets/presse/</code>.
-          Si tu ajoutes une version SVG du logo, je te prépare une ligne “Logo (SVG)” prête.
+          Fichiers présents dans <code>/assets/presse/</code> : logo, portraits, presskit. La note de posture (Option A) est à la racine du site.
         </div>
       </div>
     </section>
@@ -522,7 +512,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Ouvrages (sélection)</h2>
-          <div class="hint">Liens directs Amazon (DP). Pour la liste complète : accueil → Œuvres.</div>
+          <div class="hint">Liens directs Amazon. Liste complète sur la page d’accueil.</div>
         </div>
 
         <div class="grid2">
@@ -550,7 +540,7 @@
         </div>
 
         <div class="card" style="margin-top:16px;">
-          <h3>Page auteur</h3>
+          <h3>Liens rapides</h3>
           <div class="prose" style="display:flex;gap:10px;flex-wrap:wrap;">
             <a class="btn gold" href="https://author.amazon.fr/home" target="_blank" rel="noopener noreferrer">Author Central</a>
             <a class="btn" href="/">Retour au site</a>
@@ -564,7 +554,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Contact presse</h2>
-          <div class="hint">Réponse rapide : indique le média, l’objet, et le format souhaité.</div>
+          <div class="hint">Indique le média, l’objet, et le format souhaité.</div>
         </div>
 
         <div class="grid2">
@@ -590,7 +580,9 @@
                 <a class="btn" href="https://www.youtube.com/@franckbometon4890" target="_blank" rel="noopener noreferrer">YouTube</a>
               </div>
               <div class="sep"></div>
-              <div style="font-family:var(--serif);color:var(--ink);">Comprendre sans réduire est une responsabilité intellectuelle.</div>
+              <div style="font-family:var(--serif);color:var(--ink);">
+                Comprendre sans réduire est une responsabilité intellectuelle.
+              </div>
               <div style="color:var(--muted2);">— Franky</div>
             </div>
           </div>
@@ -602,8 +594,8 @@
     <section id="checklist">
       <div class="container">
         <div class="section-head">
-          <h2>Checklist (pour médias)</h2>
-          <div class="hint">Informations utiles pour cadrer vite — sans friction.</div>
+          <h2>Checklist (médias)</h2>
+          <div class="hint">Infos utiles pour cadrer vite — sans friction.</div>
         </div>
 
         <div class="card">
@@ -613,7 +605,9 @@
               <li><strong>Site :</strong> franck-bometon.fr</li>
               <li><strong>Email presse :</strong> <a href="mailto:fbometon@aol.com">fbometon@aol.com</a></li>
               <li><strong>Thèmes :</strong> lucidité, décision, autorité, biais, lecture de l’humain, complexité</li>
-              <li><strong>Visuels :</strong> portrait HD + logo (dans <code>/assets/presse/</code>)</li>
+              <li><strong>Kit :</strong> <a href="/assets/presse/presskit-franck-bometon.zip" target="_blank" rel="noopener noreferrer">Presskit ZIP</a></li>
+              <li><strong>Visuels :</strong> <a href="/assets/presse/portrait-franck-bometon-hd.png" target="_blank" rel="noopener noreferrer">Portrait HD</a> · <a href="/assets/presse/logo-noir-or-pristina.png" target="_blank" rel="noopener noreferrer">Logo</a></li>
+              <li><strong>Note de posture :</strong> <a href="/franck-bometon-note-de-posture-intellectuelle.pdf" target="_blank" rel="noopener noreferrer">PDF</a></li>
             </ul>
             <div class="sep"></div>
             <div class="small">Dernière mise à jour : <span id="last"></span></div>
