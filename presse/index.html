@@ -17,7 +17,7 @@
   <meta property="og:url" content="https://franck-bometon.fr/presse/" />
   <meta property="og:image" content="https://franck-bometon.fr/assets/og.jpg" />
 
-  <!-- Preconnect (optional) -->
+  <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -55,7 +55,6 @@
       border-radius:2px;
     }
 
-    /* Frame */
     .wrap{
       max-width:var(--max);
       margin:0 auto;
@@ -97,7 +96,6 @@
       line-height:1.4;
     }
 
-    /* Grid */
     .grid{
       display:grid;
       grid-template-columns:repeat(12,1fr);
@@ -105,7 +103,6 @@
       border:1px solid var(--line);
     }
 
-    /* Each item is a "panel" with only lines */
     .item{
       grid-column:span 6;
       padding:18px 18px 16px;
@@ -118,7 +115,6 @@
       gap:14px;
     }
 
-    /* Remove right border on last column items (even columns) */
     .item:nth-child(2n){
       border-right:none;
     }
@@ -128,7 +124,6 @@
       .item:nth-child(2n){ border-right:none; }
     }
 
-    /* Head row: title + formats */
     .head{
       display:flex;
       align-items:baseline;
@@ -165,9 +160,8 @@
       max-width:62ch;
     }
 
-    /* Optional quiet thumbnail (disabled by default) */
     .thumb{
-      display:none; /* <- set to flex if you want thumbnails everywhere */
+      display:none; /* set to flex if you want thumbnails */
       align-items:center;
       justify-content:center;
       height:84px;
@@ -181,12 +175,12 @@
       display:block;
     }
 
-    /* One action only */
     .actions{
       display:flex;
       align-items:center;
       justify-content:flex-start;
       gap:12px;
+      flex-wrap:wrap;
     }
 
     .btn{
@@ -200,10 +194,10 @@
       letter-spacing:.10em;
       text-transform:uppercase;
       background:transparent;
-      border-radius:0; /* museum: squared */
+      border-radius:0;
       cursor:pointer;
       user-select:none;
-      transition:transform .08s ease, background .18s ease, border-color .18s ease;
+      transition:transform .08s ease, background .18s ease, border-color .18s ease, opacity .18s ease;
     }
     .btn:hover{
       background:rgba(214,181,109,.06);
@@ -211,6 +205,16 @@
       transform:translateY(-1px);
     }
     .btn:active{ transform:translateY(0); }
+
+    /* Proper disabled styling */
+    .btn[aria-disabled="true"]{
+      opacity:.45;
+      cursor:not-allowed;
+      pointer-events:none;
+      border-color:rgba(214,181,109,.22);
+      background:transparent;
+      transform:none;
+    }
 
     footer{
       margin-top:22px;
@@ -255,6 +259,7 @@
     </header>
 
     <main class="grid" aria-label="Ressources presse">
+
       <!-- 1) PRESS KIT -->
       <section class="item">
         <div>
@@ -263,14 +268,12 @@
             <div class="formats"><span>ZIP</span></div>
           </div>
           <p class="desc">Dossier complet destiné aux médias : biographie, visuels, logos et liens officiels.</p>
-
-          <!-- Optional thumbnail (enable in CSS) -->
           <div class="thumb" aria-hidden="true">
             <!-- <img src="/assets/thumb-presskit.png" alt="" loading="lazy" decoding="async"> -->
           </div>
         </div>
         <div class="actions">
-          <a class="btn" href="/downloads/presskit-franck-bometon.zip" download>Télécharger</a>
+          <a class="btn" href="/assets/presskit-franck-bometon.zip" download>Télécharger</a>
         </div>
       </section>
 
@@ -282,13 +285,12 @@
             <div class="formats"><span>PDF</span></div>
           </div>
           <p class="desc">Document de cadrage présentant la posture intellectuelle et les principes éditoriaux.</p>
-
           <div class="thumb" aria-hidden="true">
             <!-- <img src="/assets/thumb-note.png" alt="" loading="lazy" decoding="async"> -->
           </div>
         </div>
         <div class="actions">
-          <a class="btn" href="/downloads/note-de-posture-intellectuelle-franck-bometon.pdf" download>Télécharger</a>
+          <a class="btn" href="/assets/note-de-posture-intellectuelle-franck-bometon.pdf" download>Télécharger</a>
         </div>
       </section>
 
@@ -300,14 +302,13 @@
             <div class="formats"><span>JPG</span><span>PNG</span></div>
           </div>
           <p class="desc">Reconnaissance officielle attestant de la conformité et de la qualité des prestations intellectuelles.</p>
-
           <div class="thumb" aria-hidden="true">
             <!-- <img src="/assets/opqf-thumb.png" alt="" loading="lazy" decoding="async"> -->
           </div>
         </div>
         <div class="actions">
-          <a class="btn" href="/downloads/qualification-opqf.jpg" download>Télécharger</a>
-          <a class="btn" href="/downloads/qualification-opqf.png" download>Télécharger (PNG)</a>
+          <a class="btn" href="/assets/qualification-opqf.jpg" download>Télécharger (JPG)</a>
+          <a class="btn" href="/assets/qualification-opqf.png" download>Télécharger (PNG)</a>
         </div>
       </section>
 
@@ -319,13 +320,12 @@
             <div class="formats"><span>PNG</span></div>
           </div>
           <p class="desc">Appartenance à l’International Coaching Federation. Engagement envers les standards professionnels et éthiques.</p>
-
           <div class="thumb" aria-hidden="true">
             <!-- <img src="/assets/icf-thumb.png" alt="" loading="lazy" decoding="async"> -->
           </div>
         </div>
         <div class="actions">
-          <a class="btn" href="/downloads/badge-icf.png" download>Télécharger</a>
+          <a class="btn" href="/assets/badge-icf.png" download>Télécharger</a>
         </div>
       </section>
 
@@ -337,13 +337,12 @@
             <div class="formats"><span>PNG</span></div>
           </div>
           <p class="desc">Identité visuelle officielle.</p>
-
           <div class="thumb" aria-hidden="true">
             <!-- <img src="/assets/logo-noir-or.png" alt="" loading="lazy" decoding="async"> -->
           </div>
         </div>
         <div class="actions">
-          <a class="btn" href="/downloads/logo-noir-or.png" download>Télécharger</a>
+          <a class="btn" href="/assets/logo-noir-or.png" download>Télécharger</a>
         </div>
       </section>
 
@@ -355,13 +354,12 @@
             <div class="formats"><span>PNG</span></div>
           </div>
           <p class="desc">Portrait officiel. Usage presse et institutionnel.</p>
-
           <div class="thumb" aria-hidden="true">
             <!-- <img src="/assets/franck-bometon-portrait-hd.png" alt="" loading="lazy" decoding="async"> -->
           </div>
         </div>
         <div class="actions">
-          <a class="btn" href="/downloads/franck-bometon-portrait-hd.png" download>Télécharger</a>
+          <a class="btn" href="/assets/franck-bometon-portrait-hd.png" download>Télécharger</a>
         </div>
       </section>
 
@@ -373,17 +371,16 @@
             <div class="formats"><span>JPG</span></div>
           </div>
           <p class="desc">Portrait courant. Usage web et supports légers.</p>
-
           <div class="thumb" aria-hidden="true">
             <!-- <img src="/assets/franck-bometon-portrait.jpg" alt="" loading="lazy" decoding="async"> -->
           </div>
         </div>
         <div class="actions">
-          <a class="btn" href="/downloads/franck-bometon-portrait.jpg" download>Télécharger</a>
+          <a class="btn" href="/assets/franck-bometon-portrait.jpg" download>Télécharger</a>
         </div>
       </section>
 
-      <!-- 8) (Optional) add more items following the same template -->
+      <!-- 8) Optional placeholder -->
       <section class="item">
         <div>
           <div class="head">
@@ -396,6 +393,7 @@
           <a class="btn" href="#" aria-disabled="true">Télécharger</a>
         </div>
       </section>
+
     </main>
 
     <footer>
@@ -412,5 +410,3 @@
   </div>
 </body>
 </html>
-     
-   
