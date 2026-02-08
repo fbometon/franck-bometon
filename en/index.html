@@ -1,1 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0b0b" />
 
+  <title>Franck Bometon — Franky | Noir & Gold</title>
+  <meta name="description" content="Franck Bometon (Franky) — exploring the human condition without reducing it. Applied philosophy, human sciences, leadership, decision-making, cognitive biases." />
+
+  <link rel="canonical" href="https://franck-bometon.fr/en/" />
+  <link rel="alternate" hreflang="fr" href="https://franck-bometon.fr/" />
+  <link rel="alternate" hreflang="en" href="https://franck-bometon.fr/en/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Franck Bometon — Franky | Noir & Gold" />
+  <meta property="og:description" content="Exploring the human condition without reducing it." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://franck-bometon.fr/en/" />
+  <meta property="og:image" content="https://franck-bometon.fr/assets/og.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --bg2:#070707;
+      --ink:#f4f2ea;
+      --muted:rgba(244,242,234,.72);
+      --line:rgba(214,181,109,.25);
+      --gold:#d6b56d;
+      --gold2:rgba(214,181,109,.18);
+      --shadow: 0 16px 40px rgba(0,0,0,.45);
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --serif: ui-serif, Georgia, "Times New Roman", Times, serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --radius: 22px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--ink);
+      background:
+        radial-gradient(1000px 600px at 10% -10%, var(--gold2), transparent 60%),
+        radial-gradient(900px 500px at 90% 0%, rgba(214,181,109,.12), transparent 55%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      letter-spacing:.1px;
+    }
+    a{color:inherit; text-decoration:none}
+    a:focus{outline:2px solid var(--gold); outline-offset:4px; border-radius:10px}
+    .wrap{min-height:100%; display:flex; flex-direction:column}
+    header{
+      position:sticky; top:0; z-index:5;
+      backdrop-filter:saturate(180%) blur(10px);
+      background:rgba(11,11,11,.72);
+      border-bottom:1px solid rgba(214,181,109,.18);
+    }
+    .nav{
+      max-width:980px;
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{
+      display:flex; flex-direction:column; gap:2px;
+      line-height:1.1;
+    }
+    .brand strong{
+      font-family:var(--serif);
+      font-weight:600;
+      letter-spacing:.2px;
+    }
+    .brand span{
+      font-size:12px;
+      color:var(--muted);
+    }
+    .lang{
+      display:flex; gap:10px; align-items:center;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .lang a{
+      padding:8px 10px;
+      border:1px solid rgba(214,181,109,.22);
+      border-radius:999px;
+      background:rgba(214,181,109,.06);
+    }
+    .lang a:hover{border-color:rgba(214,181,109,.42)}
+    main{
+      flex:1;
+      max-width:980px;
+      margin:0 auto;
+      padding:44px 18px 26px;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:26px;
+      align-items:start;
+    }
+    @media (max-width:860px){
+      .hero{grid-template-columns:1fr}
+    }
+    .card{
+      border:1px solid rgba(214,181,109,.22);
+      background:rgba(12,12,12,.62);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:22px 22px 18px;
+    }
+    .kicker{
+      display:inline-block;
+      font-size:12px;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:rgba(214,181,109,.92);
+      margin-bottom:10px;
+    }
+    h1{
+      margin:0 0 10px 0;
+      font-family:var(--serif);
+      font-weight:650;
+      letter-spacing:.2px;
+      line-height:1.06;
+      font-size:40px;
+    }
+    p{
+      margin:0 0 12px 0;
+      color:var(--muted);
+      line-height:1.55;
+      font-size:15.5px;
+    }
+    .bio{
+      border-top:1px solid rgba(214,181,109,.18);
+      margin-top:14px;
+      padding-top:14px;
+    }
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(214,181,109,.28);
+      background:rgba(214,181,109,.08);
+      color:var(--ink);
+      font-size:14px;
+    }
+    .btn:hover{border-color:rgba(214,181,109,.55)}
+    .btn.primary{
+      background:linear-gradient(180deg, rgba(214,181,109,.22), rgba(214,181,109,.08));
+      border-color:rgba(214,181,109,.55);
+    }
+    .mini{
+      font-size:12.5px;
+      color:rgba(244,242,234,.60);
+      margin-top:8px;
+    }
+    .side{
+      display:flex; flex-direction:column; gap:16px;
+    }
+    .side h2{
+      margin:0 0 8px 0;
+      font-family:var(--serif);
+      font-weight:600;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    .list{
+      display:flex; flex-direction:column; gap:10px;
+    }
+    .item{
+      padding:12px 12px;
+      border-radius:16px;
+      border:1px solid rgba(214,181,109,.16);
+      background:rgba(8,8,8,.35);
+    }
+    .item b{color:rgba(214,181,109,.95); font-weight:600}
+    footer{
+      border-top:1px solid rgba(214,181,109,.18);
+      background:rgba(11,11,11,.55);
+    }
+    .foot{
+      max-width:980px;
+      margin:0 auto;
+      padding:18px 18px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      gap:10px;
+      color:rgba(244,242,234,.58);
+      font-size:12.5px;
+    }
+    .foot a{color:rgba(214,181,109,.92)}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="nav">
+        <a class="brand" href="/en/" aria-label="Home">
+          <strong>Franck Bometon — Franky</strong>
+          <span>Noir & Gold · Author & Essayist</span>
+        </a>
+        <div class="lang" aria-label="Language">
+          <a href="/" rel="nofollow">FR</a>
+          <a href="/en/" aria-current="page">EN</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card">
+          <div class="kicker">Noir & Gold</div>
+          <h1>Exploring the human condition<br/>without reducing it.</h1>
+          <p>
+            Applied philosophy and human sciences, with a disciplined focus on decision-making,
+            cognitive biases, leadership, and the ethics of understanding.
+          </p>
+
+          <div class="bio">
+            <p>
+              <strong>Franck Bometon</strong>, also known as <strong>Franky</strong>, is an author and essayist.
+            </p>
+            <p>
+              His work is rooted in a rigorous exploration of the human sciences, applied philosophy,
+              and the understanding of human dynamics in contexts of complexity.
+            </p>
+            <p>
+              He focuses in particular on cognitive biases, the exercise of authority, decision-making,
+              leadership, and human relationships, with constant attention paid to the distinction
+              between facts, hypotheses, and interpretations.
+            </p>
+            <p>
+              Rejecting hasty simplifications and reductive analytical frameworks, his books offer
+              intellectual reference points for those who hold responsibilities in decision-making,
+              leadership, or professional support roles.
+            </p>
+            <p>
+              His approach privileges observation over interpretation, lucidity over opinion,
+              and an ethics of understanding that respects human complexity.
+            </p>
+
+            <div class="actions" role="group" aria-label="Primary actions">
+              <a class="btn primary" href="/works/" title="Books (French)">Explore the books</a>
+              <a class="btn" href="/presse/" title="Press (French)">Press / Media</a>
+              <a class="btn" href="/contact/" title="Contact (French)">Contact</a>
+            </div>
+            <div class="mini">
+              Minimal EN landing page — full content currently available in French.
+            </div>
+          </div>
+        </div>
+
+        <aside class="side">
+          <div class="card">
+            <h2>Editorial stance</h2>
+            <div class="list">
+              <div class="item"><b>Observe</b> before interpreting.</div>
+              <div class="item"><b>Separate</b> facts, hypotheses, interpretations.</div>
+              <div class="item"><b>Prefer</b> lucidity over opinion.</div>
+              <div class="item"><b>Refuse</b> reductive frameworks.</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>For</h2>
+            <div class="list">
+              <div class="item">Leaders & decision-makers</div>
+              <div class="item">Practitioners of professional support</div>
+              <div class="item">Readers who value intellectual rigor</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot">
+        <div>© <span id="y"></span> Franck Bometon — Franky · Noir & Gold</div>
+        <div>
+          <a href="/" rel="nofollow">French website</a> ·
+          <a href="/presse/">Press</a> ·
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
