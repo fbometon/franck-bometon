@@ -17,11 +17,8 @@
   <meta property="og:url" content="https://franck-bometon.fr/presse/" />
   <meta property="og:image" content="https://franck-bometon.fr/assets/og.jpg" />
 
-  <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Minimal, museum-like type -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
@@ -49,17 +46,13 @@
     }
 
     a{ color:inherit; text-decoration:none; }
-    a:focus-visible, button:focus-visible{
+    a:focus-visible{
       outline:2px solid rgba(214,181,109,.55);
       outline-offset:3px;
       border-radius:2px;
     }
 
-    .wrap{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:48px 18px 64px;
-    }
+    .wrap{ max-width:var(--max); margin:0 auto; padding:48px 18px 64px; }
 
     header{
       border-bottom:1px solid var(--line);
@@ -71,7 +64,6 @@
       gap:18px;
       flex-wrap:wrap;
     }
-
     .title{
       font-family:"Cormorant Garamond",serif;
       font-weight:500;
@@ -80,7 +72,6 @@
       letter-spacing:.2px;
       margin:0;
     }
-
     .kicker{
       margin:8px 0 0;
       font-size:12px;
@@ -88,7 +79,6 @@
       letter-spacing:.18em;
       text-transform:uppercase;
     }
-
     .meta{
       text-align:right;
       color:var(--muted);
@@ -114,14 +104,10 @@
       justify-content:space-between;
       gap:14px;
     }
-
-    .item:nth-child(2n){
-      border-right:none;
-    }
+    .item:nth-child(2n){ border-right:none; }
 
     @media (max-width: 860px){
       .item{ grid-column:span 12; border-right:none; }
-      .item:nth-child(2n){ border-right:none; }
     }
 
     .head{
@@ -130,7 +116,6 @@
       justify-content:space-between;
       gap:12px;
     }
-
     .item h2{
       margin:0;
       font-family:"Cormorant Garamond",serif;
@@ -139,7 +124,6 @@
       letter-spacing:.2px;
       line-height:1.15;
     }
-
     .formats{
       display:flex;
       gap:10px;
@@ -151,28 +135,12 @@
       color:rgba(255,255,255,.55);
       white-space:nowrap;
     }
-
     .desc{
       margin:0;
       color:var(--muted);
       font-size:13px;
       line-height:1.55;
       max-width:62ch;
-    }
-
-    .thumb{
-      display:none; /* set to flex if you want thumbnails */
-      align-items:center;
-      justify-content:center;
-      height:84px;
-      border:1px solid var(--line2);
-      margin-top:8px;
-    }
-    .thumb img{
-      max-height:64px;
-      max-width:80%;
-      opacity:.9;
-      display:block;
     }
 
     .actions{
@@ -206,13 +174,11 @@
     }
     .btn:active{ transform:translateY(0); }
 
-    /* Proper disabled styling */
     .btn[aria-disabled="true"]{
       opacity:.45;
       cursor:not-allowed;
       pointer-events:none;
       border-color:rgba(214,181,109,.22);
-      background:transparent;
       transform:none;
     }
 
@@ -229,19 +195,12 @@
       gap:18px;
       flex-wrap:wrap;
     }
-
-    .footer-links{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-    }
+    .footer-links{ display:flex; gap:14px; flex-wrap:wrap; }
     .footer-links a{
       color:rgba(214,181,109,.75);
       border-bottom:1px solid transparent;
     }
-    .footer-links a:hover{
-      border-bottom-color:rgba(214,181,109,.45);
-    }
+    .footer-links a:hover{ border-bottom-color:rgba(214,181,109,.45); }
   </style>
 </head>
 
@@ -259,6 +218,10 @@
     </header>
 
     <main class="grid" aria-label="Ressources presse">
+      <!-- Base unique -->
+      <!-- Tous les fichiers doivent être dans: /assets/presse/ -->
+      <!-- Exemple: https://franck-bometon.fr/assets/presse/portrait-franck.jpg -->
+      <!-- (confirmé fonctionnel) -->
 
       <!-- 1) PRESS KIT -->
       <section class="item">
@@ -268,12 +231,9 @@
             <div class="formats"><span>ZIP</span></div>
           </div>
           <p class="desc">Dossier complet destiné aux médias : biographie, visuels, logos et liens officiels.</p>
-          <div class="thumb" aria-hidden="true">
-            <!-- <img src="/assets/thumb-presskit.png" alt="" loading="lazy" decoding="async"> -->
-          </div>
         </div>
         <div class="actions">
-          <a class="btn" href="/assets/presskit-franck-bometon.zip" download>Télécharger</a>
+          <a class="btn" href="/assets/presse/presskit-franck-bometon.zip" download>Télécharger</a>
         </div>
       </section>
 
@@ -285,12 +245,14 @@
             <div class="formats"><span>PDF</span></div>
           </div>
           <p class="desc">Document de cadrage présentant la posture intellectuelle et les principes éditoriaux.</p>
-          <div class="thumb" aria-hidden="true">
-            <!-- <img src="/assets/thumb-note.png" alt="" loading="lazy" decoding="async"> -->
-          </div>
         </div>
         <div class="actions">
-          <a class="btn" href="/assets/note-de-posture-intellectuelle-franck-bometon.pdf" download>Télécharger</a>
+          <!-- Recommandé : ranger le PDF dans /assets/presse/ -->
+          <a class="btn" href="/assets/presse/note-de-posture-intellectuelle-franck-bometon.pdf" download>Télécharger</a>
+
+          <!-- Alternative si ton PDF est à la racine (vu sur ton site) :
+          <a class="btn" href="/franck-bometon-note-de-postureintellectuelle.pdf" download>Télécharger</a>
+          -->
         </div>
       </section>
 
@@ -302,13 +264,10 @@
             <div class="formats"><span>JPG</span><span>PNG</span></div>
           </div>
           <p class="desc">Reconnaissance officielle attestant de la conformité et de la qualité des prestations intellectuelles.</p>
-          <div class="thumb" aria-hidden="true">
-            <!-- <img src="/assets/opqf-thumb.png" alt="" loading="lazy" decoding="async"> -->
-          </div>
         </div>
         <div class="actions">
-          <a class="btn" href="/assets/qualification-opqf.jpg" download>Télécharger (JPG)</a>
-          <a class="btn" href="/assets/qualification-opqf.png" download>Télécharger (PNG)</a>
+          <a class="btn" href="/assets/presse/qualification-opqf.jpg" download>Télécharger (JPG)</a>
+          <a class="btn" href="/assets/presse/qualification-opqf.png" download>Télécharger (PNG)</a>
         </div>
       </section>
 
@@ -320,12 +279,9 @@
             <div class="formats"><span>PNG</span></div>
           </div>
           <p class="desc">Appartenance à l’International Coaching Federation. Engagement envers les standards professionnels et éthiques.</p>
-          <div class="thumb" aria-hidden="true">
-            <!-- <img src="/assets/icf-thumb.png" alt="" loading="lazy" decoding="async"> -->
-          </div>
         </div>
         <div class="actions">
-          <a class="btn" href="/assets/badge-icf.png" download>Télécharger</a>
+          <a class="btn" href="/assets/presse/badge-icf.png" download>Télécharger</a>
         </div>
       </section>
 
@@ -337,12 +293,10 @@
             <div class="formats"><span>PNG</span></div>
           </div>
           <p class="desc">Identité visuelle officielle.</p>
-          <div class="thumb" aria-hidden="true">
-            <!-- <img src="/assets/logo-noir-or.png" alt="" loading="lazy" decoding="async"> -->
-          </div>
         </div>
         <div class="actions">
-          <a class="btn" href="/assets/logo-noir-or.png" download>Télécharger</a>
+          <!-- Nom confirmé existant sur ton site -->
+          <a class="btn" href="/assets/presse/logo-noir-or-pristina.png" download>Télécharger</a>
         </div>
       </section>
 
@@ -354,12 +308,10 @@
             <div class="formats"><span>PNG</span></div>
           </div>
           <p class="desc">Portrait officiel. Usage presse et institutionnel.</p>
-          <div class="thumb" aria-hidden="true">
-            <!-- <img src="/assets/franck-bometon-portrait-hd.png" alt="" loading="lazy" decoding="async"> -->
-          </div>
         </div>
         <div class="actions">
-          <a class="btn" href="/assets/franck-bometon-portrait-hd.png" download>Télécharger</a>
+          <!-- À ajuster selon ton vrai fichier HD -->
+          <a class="btn" href="/assets/presse/portrait-franck-hd.png" download>Télécharger</a>
         </div>
       </section>
 
@@ -371,16 +323,14 @@
             <div class="formats"><span>JPG</span></div>
           </div>
           <p class="desc">Portrait courant. Usage web et supports légers.</p>
-          <div class="thumb" aria-hidden="true">
-            <!-- <img src="/assets/franck-bometon-portrait.jpg" alt="" loading="lazy" decoding="async"> -->
-          </div>
         </div>
         <div class="actions">
-          <a class="btn" href="/assets/franck-bometon-portrait.jpg" download>Télécharger</a>
+          <!-- Nom confirmé existant sur ton site -->
+          <a class="btn" href="/assets/presse/portrait-franck.jpg" download>Télécharger</a>
         </div>
       </section>
 
-      <!-- 8) Optional placeholder -->
+      <!-- 8) Placeholder -->
       <section class="item">
         <div>
           <div class="head">
@@ -393,7 +343,6 @@
           <a class="btn" href="#" aria-disabled="true">Télécharger</a>
         </div>
       </section>
-
     </main>
 
     <footer>
