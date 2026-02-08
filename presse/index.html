@@ -7,7 +7,7 @@
   <meta name="color-scheme" content="dark" />
 
   <title>Ressources — Presse / Médias — Franck Bometon</title>
-  <meta name="description" content="Ressources presse : note de posture, qualification OPQF, affiliation ICF, portraits et éléments officiels." />
+  <meta name="description" content="Ressources presse : note de posture intellectuelle, qualification OPQF, affiliation ICF, portrait officiel." />
   <link rel="canonical" href="https://franck-bometon.fr/presse/" />
 
   <!-- Open Graph -->
@@ -17,6 +17,7 @@
   <meta property="og:url" content="https://franck-bometon.fr/presse/" />
   <meta property="og:image" content="https://franck-bometon.fr/assets/og.jpg" />
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -35,6 +36,7 @@
 
     *{ box-sizing:border-box; }
     html,body{ height:100%; }
+
     body{
       margin:0;
       background:var(--bg);
@@ -51,15 +53,19 @@
       outline-offset:3px;
     }
 
-    .wrap{ max-width:var(--max); margin:0 auto; padding:48px 18px 64px; }
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:48px 18px 64px;
+    }
 
     header{
       border-bottom:1px solid var(--line);
       padding-bottom:18px;
       margin-bottom:28px;
       display:flex;
-      align-items:flex-end;
       justify-content:space-between;
+      align-items:flex-end;
       gap:18px;
       flex-wrap:wrap;
     }
@@ -68,13 +74,11 @@
       font-family:"Cormorant Garamond",serif;
       font-weight:500;
       font-size:34px;
-      line-height:1.05;
-      letter-spacing:.2px;
       margin:0;
     }
 
     .kicker{
-      margin:8px 0 0;
+      margin-top:8px;
       font-size:12px;
       color:var(--muted);
       letter-spacing:.18em;
@@ -82,25 +86,24 @@
     }
 
     .meta{
-      text-align:right;
-      color:var(--muted);
       font-size:12px;
+      color:var(--muted);
+      text-align:right;
       line-height:1.4;
     }
 
     .grid{
       display:grid;
       grid-template-columns:repeat(12,1fr);
-      gap:0;
       border:1px solid var(--line);
     }
 
     .item{
       grid-column:span 6;
-      padding:18px 18px 16px;
+      padding:18px;
       border-right:1px solid var(--line2);
       border-bottom:1px solid var(--line2);
-      min-height:160px;
+      min-height:150px;
       display:flex;
       flex-direction:column;
       justify-content:space-between;
@@ -109,133 +112,108 @@
 
     .item:nth-child(2n){ border-right:none; }
 
-    @media (max-width: 860px){
+    @media (max-width:860px){
       .item{ grid-column:span 12; border-right:none; }
     }
 
     .head{
       display:flex;
-      align-items:baseline;
       justify-content:space-between;
       gap:12px;
+      align-items:baseline;
     }
 
-    .item h2{
-      margin:0;
+    h2{
       font-family:"Cormorant Garamond",serif;
       font-weight:500;
       font-size:20px;
-      letter-spacing:.2px;
-      line-height:1.15;
+      margin:0;
     }
 
     .formats{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
       font-size:11px;
       letter-spacing:.14em;
       text-transform:uppercase;
       color:rgba(255,255,255,.55);
+      display:flex;
+      gap:10px;
       white-space:nowrap;
     }
 
     .desc{
-      margin:0;
-      color:var(--muted);
       font-size:13px;
       line-height:1.55;
+      color:var(--muted);
       max-width:62ch;
+      margin:0;
     }
 
     .actions{
       display:flex;
-      align-items:center;
-      justify-content:flex-start;
       gap:12px;
       flex-wrap:wrap;
     }
 
     .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
       padding:8px 14px;
       border:1px solid var(--goldLine);
       color:var(--gold);
       font-size:12px;
       letter-spacing:.10em;
       text-transform:uppercase;
-      background:transparent;
-      border-radius:0;
+      background:none;
       cursor:pointer;
-      user-select:none;
-      transition:transform .08s ease, background .18s ease, border-color .18s ease, opacity .18s ease;
+      transition:.15s ease;
     }
 
     .btn:hover{
       background:rgba(214,181,109,.06);
       border-color:rgba(214,181,109,.55);
-      transform:translateY(-1px);
     }
-    .btn:active{ transform:translateY(0); }
 
     .btn[aria-disabled="true"]{
       opacity:.45;
       cursor:not-allowed;
       pointer-events:none;
       border-color:rgba(214,181,109,.22);
-      transform:none;
     }
 
     footer{
-      margin-top:22px;
+      margin-top:24px;
       padding-top:18px;
       border-top:1px solid var(--line);
-      color:rgba(255,255,255,.52);
       font-size:12px;
-      line-height:1.55;
+      color:rgba(255,255,255,.52);
       display:flex;
-      align-items:flex-start;
       justify-content:space-between;
-      gap:18px;
       flex-wrap:wrap;
+      gap:18px;
     }
 
-    .footer-links{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-    }
     .footer-links a{
       color:rgba(214,181,109,.75);
-      border-bottom:1px solid transparent;
-    }
-    .footer-links a:hover{
-      border-bottom-color:rgba(214,181,109,.45);
+      margin-right:14px;
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <header>
-      <div>
-        <h1 class="title">Ressources</h1>
-        <p class="kicker">Presse / Médias</p>
-      </div>
-      <div class="meta">
-        <div>Téléchargements directs.</div>
-        <div>Fichiers destinés à un usage presse, institutionnel et éditorial.</div>
-      </div>
-    </header>
+<div class="wrap">
 
+<header>
+  <div>
+    <h1 class="title">Ressources</h1>
+    <div class="kicker">Presse / Médias</div>
+  </div>
+  <div class="meta">
+    <div>Téléchargements directs.</div>
+    <div>Usage presse, institutionnel et éditorial.</div>
+  </div>
+</header>
 
-</main>
-   <main class="grid" aria-label="Ressources presse">
+<main class="grid" aria-label="Ressources presse">
 
-  <!-- PRESS KIT (non disponible) -->
+  <!-- PRESS KIT -->
   <section class="item">
     <div>
       <div class="head">
@@ -249,7 +227,7 @@
     </div>
   </section>
 
-  <!-- NOTE DE POSTURE (PDF EXISTANT) -->
+  <!-- NOTE DE POSTURE -->
   <section class="item">
     <div>
       <div class="head">
@@ -259,33 +237,25 @@
       <p class="desc">Document de cadrage présentant la posture intellectuelle et les principes éditoriaux.</p>
     </div>
     <div class="actions">
-      <a class="btn"
-         href="/assets/franck-bometon-note-de-postureintellectuelle.pdf"
-         download>
-        Télécharger
-      </a>
+      <a class="btn" href="/assets/franck-bometon-note-de-postureintellectuelle.pdf" download>Télécharger</a>
     </div>
   </section>
 
-  <!-- OPQF (JPG EXISTANT) -->
+  <!-- OPQF -->
   <section class="item">
     <div>
       <div class="head">
         <h2>Qualification OPQF — Services intellectuels</h2>
         <div class="formats"><span>JPG</span></div>
       </div>
-      <p class="desc">Reconnaissance officielle attestant de la conformité et de la qualité des prestations intellectuelles.</p>
+      <p class="desc">Reconnaissance officielle attestant de la qualité et de la conformité des prestations intellectuelles.</p>
     </div>
     <div class="actions">
-      <a class="btn"
-         href="/assets/opqf-qualification-services-intellectuels.jpg"
-         download>
-        Télécharger
-      </a>
+      <a class="btn" href="/assets/opqf-qualification-services-intellectuels.jpg" download>Télécharger</a>
     </div>
   </section>
 
-  <!-- ICF (PNG EXISTANT) -->
+  <!-- ICF -->
   <section class="item">
     <div>
       <div class="head">
@@ -295,29 +265,11 @@
       <p class="desc">Appartenance à l’International Coaching Federation.</p>
     </div>
     <div class="actions">
-      <a class="btn"
-         href="/assets/icf-member-badge.png"
-         download>
-        Télécharger
-      </a>
+      <a class="btn" href="/assets/icf-member-badge.png" download>Télécharger</a>
     </div>
   </section>
 
-  <!-- LOGO (non présent à la racine /assets) -->
-  <section class="item">
-    <div>
-      <div class="head">
-        <h2>Logo officiel — Noir &amp; Or</h2>
-        <div class="formats"><span>PNG</span></div>
-      </div>
-      <p class="desc">Identité visuelle officielle.</p>
-    </div>
-    <div class="actions">
-      <a class="btn" href="#" aria-disabled="true">Télécharger</a>
-    </div>
-  </section>
-
-  <!-- PORTRAIT STANDARD (JPG EXISTANT) -->
+  <!-- PORTRAIT -->
   <section class="item">
     <div>
       <div class="head">
@@ -327,29 +279,24 @@
       <p class="desc">Portrait officiel. Usage web et médias.</p>
     </div>
     <div class="actions">
-      <a class="btn"
-         href="/assets/portrait-franck.jpg"
-         download>
-        Télécharger
-      </a>
+      <a class="btn" href="/assets/portrait-franck.jpg" download>Télécharger</a>
     </div>
   </section>
 
 </main>
 
-    </main>
-
-    <footer>
-      <div>
-        <div><strong style="font-weight:500;color:rgba(255,255,255,.78);">Usage</strong></div>
-        <div>Ces ressources peuvent être citées et reproduites à des fins de presse et de communication éditoriale, avec mention de la source.</div>
-      </div>
-      <div class="footer-links">
-        <a href="/" rel="home">Accueil</a>
-        <a href="/presse/">Espace presse</a>
-        <a href="mailto:contact@franck-bometon.fr">Contact</a>
-      </div>
-    </footer>
+<footer>
+  <div>
+    <strong>Usage</strong><br>
+    Ces ressources peuvent être citées ou reproduites à des fins de presse avec mention de la source.
   </div>
+  <div class="footer-links">
+    <a href="/">Accueil</a>
+    <a href="/presse/">Espace presse</a>
+    <a href="mailto:contact@franck-bometon.fr">Contact</a>
+  </div>
+</footer>
+
+</div>
 </body>
 </html>
