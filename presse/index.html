@@ -22,18 +22,19 @@
   <meta name="publisher" content="Franck Bometon" />
 
   <!-- Favicons -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <!-- Perf: preconnect externes -->
   <link rel="preconnect" href="https://www.amazon.fr" crossorigin>
   <link rel="preconnect" href="https://author.amazon.fr" crossorigin>
   <link rel="preconnect" href="https://www.linkedin.com" crossorigin>
 
-  <!-- (Optionnel) Perf: preload OG -->
-  <link rel="preload" as="image" href="https://franck-bometon.fr/og.jpg" />
+  <!-- Perf: preload OG -->
+  <link rel="preload" as="image" href="https://franck-bometon.fr/og.jpg" imagesrcset="https://franck-bometon.fr/og.jpg 1200w" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Presse / Médias — Franck Bometon (Franky)" />
@@ -87,7 +88,6 @@
   <style>
     :root{
       --bg:#0b0b0b;
-      --bg2:#0f0f10;
       --ink:#f2f0ea;
       --muted:rgba(242,240,234,.72);
       --muted2:rgba(242,240,234,.55);
@@ -122,7 +122,7 @@
     a:hover{color:var(--gold)}
     .container{width:min(var(--max),calc(100% - 44px));margin:0 auto}
 
-    /* Accessibilité : skip link */
+    /* Accessibilité */
     .skip{
       position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
     }
@@ -138,6 +138,7 @@
     header{
       position:sticky;top:0;z-index:50;
       backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
       background:rgba(11,11,11,.62);
       border-bottom:1px solid var(--line);
     }
@@ -219,6 +220,33 @@
 
     .sep{height:1px;background:var(--line);margin:18px 0}
 
+    /* Bio blocks (définis : pas de classes fantômes) */
+    .press-quote{
+      margin-top:10px;
+      padding:14px 16px;
+      border-radius:16px;
+      border:1px solid rgba(214,181,109,.25);
+      background:rgba(214,181,109,.06);
+      color:rgba(242,240,234,.92);
+      font-family:var(--serif);
+      font-size:18px;
+      line-height:1.6;
+    }
+    .press-quote-sig{
+      display:inline-block;
+      margin-left:8px;
+      color:rgba(214,181,109,.95);
+      font-family:var(--serif);
+      white-space:nowrap;
+    }
+    .press-availability{
+      margin:12px 0 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.75;
+    }
+    .press-meta{margin-top:10px;color:var(--muted2)}
+
     .asset{
       border:1px solid var(--line);
       border-radius:var(--radius);
@@ -255,15 +283,15 @@
     ul{margin:10px 0 0 18px}
     li{margin:6px 0}
 
-    /* Focus visible (sobre) */
     :focus-visible{
       outline:2px solid rgba(214,181,109,.55);
       outline-offset:3px;
       border-radius:10px;
     }
 
-    /* Bloc bio unique : lisibilité + cohérence */
-    .press-meta{margin-top:10px;color:var(--muted2)}
+    @media (prefers-reduced-motion: reduce){
+      *{scroll-behavior:auto !important; transition:none !important; animation:none !important;}
+    }
   </style>
 </head>
 
@@ -292,7 +320,7 @@
       <h1>Presse / Médias</h1>
       <p class="subtitle">
         Bio officielle, éléments de langage, ressources visuelles et liens utiles.
-        Pour toute demande d’interview, conférence, chronique ou dossier : <strong>fbometon@aol.com</strong>.
+        Pour toute demande d’interview, conférence, chronique ou dossier : <strong><a href="mailto:fbometon@aol.com">fbometon@aol.com</a></strong>.
       </p>
 
       <div class="hero-actions">
@@ -302,7 +330,8 @@
           Télécharger le press kit (ZIP)
         </a>
 
-        <a class="btn gold" href="/franck-bometon-note-de-postureintellectuelle.pdf" target="_blank" rel="noopener noreferrer">
+        <!-- ✅ CONSEIL : renomme le fichier en /franck-bometon-note-de-posture-intellectuelle.pdf -->
+        <a class="btn gold" href="/franck-bometon-note-de-posture-intellectuelle.pdf" target="_blank" rel="noopener noreferrer">
           Télécharger la note de posture (PDF)
         </a>
 
@@ -325,7 +354,7 @@
       </div>
     </div>
 
-    <!-- BIO (version unique exhaustive) -->
+    <!-- BIO -->
     <section id="bio">
       <div class="container">
         <div class="section-head">
@@ -335,29 +364,41 @@
 
         <div class="card">
           <div class="prose">
-  <span class="pill">Citation</span>
-  <div class="press-quote">
-    “Observer avant d’interpréter. Distinguer les faits des hypothèses. Refuser la simplification.”
-    <span class="press-quote-sig">— Franky</span>
-  </div>
+            <span class="pill">Citation</span>
+            <div class="press-quote">
+              “Observer avant d’interpréter. Distinguer les faits des hypothèses. Refuser la simplification.”
+              <span class="press-quote-sig">— Franky</span>
+            </div>
 
-  <div class="sep"></div>
+            <div class="sep"></div>
 
-  <span class="pill">Disponibilités</span>
-  <p class="press-availability">
-    <strong>Formats :</strong> interview · chronique · conférence · table ronde · podcast · tribune.
-    <br/>
-    <strong>Thématiques :</strong> décision en complexité · biais cognitifs · autorité & leadership · lecture de l’humain · posture et discernement.
-  </p>
+            <span class="pill">Disponibilités</span>
+            <p class="press-availability">
+              <strong>Formats :</strong> interview · chronique · conférence · table ronde · podcast · tribune.<br/>
+              <strong>Thématiques :</strong> décision en complexité · biais cognitifs · autorité & leadership · lecture de l’humain · posture et discernement.
+            </p>
 
-  <div class="sep"></div>
-</div>
-          <div class="prose">
-            <p><strong>Franck Bometon (Franky)</strong> est auteur et essayiste. Il travaille sur une question centrale : <strong>comment comprendre l’humain sans le réduire, et décider sans s’aveugler</strong> — surtout lorsque les contextes deviennent <strong>complexes, incertains ou contraints</strong>. À la croisée de la <strong>philosophie appliquée</strong>, des <strong>sciences humaines</strong> et de l’expérience de terrain, il développe une approche de la lucidité fondée sur une exigence simple : <strong>observer avant d’interpréter</strong>, <strong>distinguer les faits des hypothèses</strong>, et résister aux récits trop confortables.</p>
+            <div class="sep"></div>
 
-            <p>Ses ouvrages explorent la <strong>décision</strong>, l’<strong>autorité</strong>, le <strong>leadership</strong>, les <strong>biais cognitifs</strong>, la <strong>régulation émotionnelle</strong> et la <strong>dynamique relationnelle</strong> ; ils interrogent également les <strong>métamorphoses contemporaines</strong> (technologie, désir, solitude, liens sociaux) avec une même ligne éthique : <strong>comprendre sans enfermer</strong>. Le style “Franky” revendique la sobriété et la précision : peu d’effets, beaucoup de clarté, et une attention constante aux <strong>signaux faibles</strong> comme aux angles morts de l’observateur.</p>
+            <p><strong>Franck Bometon (Franky)</strong> est auteur et essayiste. Il travaille sur une question centrale :
+              <strong>comment comprendre l’humain sans le réduire, et décider sans s’aveugler</strong> — surtout lorsque les contextes deviennent
+              <strong>complexes, incertains ou contraints</strong>.
+              À la croisée de la <strong>philosophie appliquée</strong>, des <strong>sciences humaines</strong> et de l’expérience de terrain,
+              il développe une approche de la lucidité fondée sur une exigence simple :
+              <strong>observer avant d’interpréter</strong>, <strong>distinguer les faits des hypothèses</strong>, et résister aux récits trop confortables.
+            </p>
 
-            <p>Ses textes s’adressent aux <strong>dirigeants</strong>, <strong>managers</strong>, <strong>formateurs</strong>, <strong>professionnels de l’accompagnement</strong> et aux lecteurs exigeants qui veulent <strong>penser juste</strong>, <strong>agir avec discernement</strong> et tenir une posture responsable dans la complexité.</p>
+            <p>Ses ouvrages explorent la <strong>décision</strong>, l’<strong>autorité</strong>, le <strong>leadership</strong>, les <strong>biais cognitifs</strong>,
+              la <strong>régulation émotionnelle</strong> et la <strong>dynamique relationnelle</strong> ; ils interrogent également les
+              <strong>métamorphoses contemporaines</strong> (technologie, désir, solitude, liens sociaux) avec une même ligne éthique :
+              <strong>comprendre sans enfermer</strong>.
+              Le style “Franky” revendique la sobriété et la précision : peu d’effets, beaucoup de clarté, et une attention constante aux
+              <strong>signaux faibles</strong> comme aux angles morts de l’observateur.
+            </p>
+
+            <p>Ses textes s’adressent aux <strong>dirigeants</strong>, <strong>managers</strong>, <strong>formateurs</strong>, <strong>professionnels de l’accompagnement</strong>
+              et aux lecteurs exigeants qui veulent <strong>penser juste</strong>, <strong>agir avec discernement</strong> et tenir une posture responsable dans la complexité.
+            </p>
 
             <p class="press-meta"><strong>Site :</strong> <a href="https://franck-bometon.fr/" rel="author">franck-bometon.fr</a></p>
           </div>
@@ -365,7 +406,7 @@
       </div>
     </section>
 
-    <!-- ANGLES / THEMES -->
+    <!-- ANGLES -->
     <section id="angles">
       <div class="container">
         <div class="section-head">
@@ -376,21 +417,15 @@
         <div class="grid3">
           <div class="card">
             <h3>Décision & lucidité</h3>
-            <div class="prose">
-              Biais cognitifs, lecture des situations, distinction faits/hypothèses, prudence pratique.
-            </div>
+            <div class="prose">Biais cognitifs, lecture des situations, distinction faits/hypothèses, prudence pratique.</div>
           </div>
           <div class="card">
             <h3>Autorité & leadership</h3>
-            <div class="prose">
-              Autorité éclairée, posture, confiance, régulation, verticalité/horizontalité.
-            </div>
+            <div class="prose">Autorité éclairée, posture, confiance, régulation, verticalité/horizontalité.</div>
           </div>
           <div class="card">
             <h3>Comprendre l’humain</h3>
-            <div class="prose">
-              Dynamiques relationnelles, signaux faibles, interprétation vs observation, éthique de la lecture.
-            </div>
+            <div class="prose">Dynamiques relationnelles, signaux faibles, interprétation vs observation, éthique de la lecture.</div>
           </div>
         </div>
 
@@ -421,17 +456,9 @@
               <div class="name">Note de posture intellectuelle</div>
               <div class="tag">PDF</div>
             </div>
-            <div class="desc">
-              Note de posture intellectuelle destinée aux journalistes, décideurs et lecteurs exigeants.
-              Texte non promotionnel, librement citable.
-            </div>
+            <div class="desc">Note destinée aux journalistes, décideurs et lecteurs exigeants. Librement citable.</div>
             <div class="actions">
-              <a class="btn gold"
-                 href="/franck-bometon-note-de-postureintellectuelle.pdf"
-                 target="_blank"
-                 rel="noopener noreferrer">
-                 Télécharger la note (PDF)
-              </a>
+              <a class="btn gold" href="/franck-bometon-note-de-posture-intellectuelle.pdf" target="_blank" rel="noopener noreferrer">Télécharger (PDF)</a>
             </div>
           </div>
 
@@ -454,7 +481,7 @@
             <div class="desc">Photo portrait presse, fond neutre, haute résolution.</div>
             <div class="actions">
               <a class="btn" href="/assets/presse/portrait-franck.jpg" target="_blank" rel="noopener noreferrer">Ouvrir</a>
-              <a class="btn gold" href="/assets/presse/portrait-franck.jpg" download>Télécharger</a>
+              <a class="btn gold" href="/assets/presse/portrait-franck.jpg" target="_blank" rel="noopener noreferrer">Télécharger</a>
             </div>
           </div>
 
@@ -466,7 +493,7 @@
             <div class="desc">Logo / signature “Noir & Or” (version officielle).</div>
             <div class="actions">
               <a class="btn" href="/assets/presse/logo-noir-or-pristina.png" target="_blank" rel="noopener noreferrer">Ouvrir</a>
-              <a class="btn gold" href="/assets/presse/logo-noir-or-pristina.png" download>Télécharger</a>
+              <a class="btn gold" href="/assets/presse/logo-noir-or-pristina.png" target="_blank" rel="noopener noreferrer">Télécharger</a>
             </div>
           </div>
 
@@ -483,9 +510,9 @@
         </div>
 
         <div class="sep"></div>
-
         <div class="prose small">
-          Ressources hébergées dans <code>/assets/presse/</code>. Si tu ajoutes une version SVG ou clair/sombre du logo, on mettra à jour cette section.
+          Ressources hébergées dans <code>/assets/presse/</code>.
+          Si tu ajoutes une version SVG du logo, je te prépare une ligne “Logo (SVG)” prête.
         </div>
       </div>
     </section>
@@ -495,7 +522,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Ouvrages (sélection)</h2>
-          <div class="hint">Liens directs Amazon (DP). Pour la liste complète : page d’accueil → Œuvres.</div>
+          <div class="hint">Liens directs Amazon (DP). Pour la liste complète : accueil → Œuvres.</div>
         </div>
 
         <div class="grid2">
@@ -563,9 +590,7 @@
                 <a class="btn" href="https://www.youtube.com/@franckbometon4890" target="_blank" rel="noopener noreferrer">YouTube</a>
               </div>
               <div class="sep"></div>
-              <div style="font-family:var(--serif);color:var(--ink);">
-                Comprendre sans réduire est une responsabilité intellectuelle.
-              </div>
+              <div style="font-family:var(--serif);color:var(--ink);">Comprendre sans réduire est une responsabilité intellectuelle.</div>
               <div style="color:var(--muted2);">— Franky</div>
             </div>
           </div>
@@ -615,10 +640,17 @@
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const d = new Date();
-    const pad = n => String(n).padStart(2,'0');
-    document.getElementById('last').textContent = `${pad(d.getDate())}/${pad(d.getMonth()+1)}/${d.getFullYear()}`;
+    (function(){
+      const year = document.getElementById('year');
+      if (year) year.textContent = new Date().getFullYear();
+
+      const last = document.getElementById('last');
+      if (last){
+        const d = new Date();
+        const pad = n => String(n).padStart(2,'0');
+        last.textContent = `${pad(d.getDate())}/${pad(d.getMonth()+1)}/${d.getFullYear()}`;
+      }
+    })();
   </script>
 </body>
 </html>
