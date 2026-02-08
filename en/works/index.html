@@ -1,1 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0b0b" />
 
+  <title>Works — Franck Bometon (Franky) | Noir & Gold</title>
+  <meta name="description" content="Selected works by Franck Bometon (Franky). Currently published in French, presented here in English for international readers." />
+
+  <link rel="canonical" href="https://franck-bometon.fr/en/works/" />
+  <link rel="alternate" hreflang="fr" href="https://franck-bometon.fr/" />
+  <link rel="alternate" hreflang="en" href="https://franck-bometon.fr/en/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Works — Franck Bometon (Franky) | Noir & Gold" />
+  <meta property="og:description" content="Selected works (French editions), presented in English for international readers." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://franck-bometon.fr/en/works/" />
+  <meta property="og:image" content="https://franck-bometon.fr/assets/og.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --bg2:#070707;
+      --ink:#f4f2ea;
+      --muted:rgba(244,242,234,.72);
+      --line:rgba(214,181,109,.25);
+      --gold:#d6b56d;
+      --gold2:rgba(214,181,109,.18);
+      --shadow: 0 16px 40px rgba(0,0,0,.45);
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --serif: ui-serif, Georgia, "Times New Roman", Times, serif;
+      --radius: 22px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--ink);
+      background:
+        radial-gradient(1000px 600px at 10% -10%, var(--gold2), transparent 60%),
+        radial-gradient(900px 500px at 90% 0%, rgba(214,181,109,.12), transparent 55%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      letter-spacing:.1px;
+    }
+    a{color:inherit; text-decoration:none}
+    a:focus{outline:2px solid var(--gold); outline-offset:4px; border-radius:10px}
+    header{
+      position:sticky; top:0; z-index:5;
+      backdrop-filter:saturate(180%) blur(10px);
+      background:rgba(11,11,11,.72);
+      border-bottom:1px solid rgba(214,181,109,.18);
+    }
+    .nav{
+      max-width:980px;
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{
+      display:flex; flex-direction:column; gap:2px;
+      line-height:1.1;
+    }
+    .brand strong{
+      font-family:var(--serif);
+      font-weight:600;
+      letter-spacing:.2px;
+    }
+    .brand span{
+      font-size:12px;
+      color:var(--muted);
+    }
+    .lang{
+      display:flex; gap:10px; align-items:center;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .lang a{
+      padding:8px 10px;
+      border:1px solid rgba(214,181,109,.22);
+      border-radius:999px;
+      background:rgba(214,181,109,.06);
+    }
+    .lang a:hover{border-color:rgba(214,181,109,.42)}
+    main{
+      max-width:980px;
+      margin:0 auto;
+      padding:34px 18px 38px;
+    }
+    .top{
+      display:flex; flex-wrap:wrap; gap:10px;
+      align-items:center; justify-content:space-between;
+      margin-bottom:18px;
+    }
+    .kicker{
+      display:inline-block;
+      font-size:12px;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:rgba(214,181,109,.92);
+    }
+    h1{
+      margin:10px 0 8px 0;
+      font-family:var(--serif);
+      font-weight:650;
+      letter-spacing:.2px;
+      line-height:1.06;
+      font-size:34px;
+    }
+    p{
+      margin:0 0 12px 0;
+      color:var(--muted);
+      line-height:1.55;
+      font-size:15.5px;
+    }
+    .note{
+      border:1px solid rgba(214,181,109,.18);
+      background:rgba(12,12,12,.55);
+      border-radius:18px;
+      padding:14px 14px;
+      margin:14px 0 18px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+    }
+    @media (max-width:860px){
+      .grid{grid-template-columns:1fr}
+    }
+    .card{
+      border:1px solid rgba(214,181,109,.22);
+      background:rgba(12,12,12,.62);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px 18px 16px;
+    }
+    .card h2{
+      margin:0 0 6px 0;
+      font-family:var(--serif);
+      font-weight:620;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    .meta{
+      font-size:12.5px;
+      color:rgba(214,181,109,.86);
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+    ul{
+      margin:0 0 12px 18px;
+      color:var(--muted);
+      line-height:1.5;
+      font-size:14.5px;
+    }
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:10px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:9px 13px;
+      border-radius:999px;
+      border:1px solid rgba(214,181,109,.28);
+      background:rgba(214,181,109,.08);
+      color:var(--ink);
+      font-size:13.5px;
+    }
+    .btn:hover{border-color:rgba(214,181,109,.55)}
+    .btn.primary{
+      background:linear-gradient(180deg, rgba(214,181,109,.22), rgba(214,181,109,.08));
+      border-color:rgba(214,181,109,.55);
+    }
+    footer{
+      border-top:1px solid rgba(214,181,109,.18);
+      background:rgba(11,11,11,.55);
+    }
+    .foot{
+      max-width:980px;
+      margin:0 auto;
+      padding:18px 18px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      gap:10px;
+      color:rgba(244,242,234,.58);
+      font-size:12.5px;
+    }
+    .foot a{color:rgba(214,181,109,.92)}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <a class="brand" href="/en/" aria-label="Home">
+        <strong>Franck Bometon — Franky</strong>
+        <span>Noir & Gold · Author & Essayist</span>
+      </a>
+      <div class="lang" aria-label="Language">
+        <a href="/" rel="nofollow">FR</a>
+        <a href="/en/" aria-current="false">EN</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="top">
+      <div>
+        <div class="kicker">Works</div>
+        <h1>Selected works</h1>
+        <p>
+          The following books are currently published in <strong>French</strong>.
+          This page provides an English overview for international readers.
+        </p>
+      </div>
+
+      <div class="actions" role="group" aria-label="Top actions">
+        <a class="btn" href="/en/">Back to EN home</a>
+        <a class="btn primary" href="/works/" title="French works page">French works page</a>
+      </div>
+    </div>
+
+    <div class="note">
+      <p style="margin:0;">
+        If you are a journalist or institutional contact, you may prefer the <a href="/presse/">Press / Media</a> page.
+        For general inquiries, use <a href="/contact/">Contact</a>.
+      </p>
+    </div>
+
+    <section class="grid">
+
+      <!-- BOOK 1 -->
+      <article class="card">
+        <div class="meta">French edition</div>
+        <h2>Leadership and Management of Organizations — Toward Enlightened Authority</h2>
+        <p>
+          A framework for leadership and decision-making in complex environments, grounded in lucidity,
+          ethics, and the responsible exercise of authority.
+        </p>
+        <ul>
+          <li>Authority: balance between verticality and horizontality</li>
+          <li>Decision-making under uncertainty</li>
+          <li>Ethics, posture, and legitimacy</li>
+        </ul>
+        <div class="actions">
+          <a class="btn primary" href="/works/" title="See the French catalog">View on the French catalog</a>
+          <a class="btn" href="https://www.amazon.fr" rel="nofollow noopener" target="_blank" title="Amazon (French store)">Amazon (FR)</a>
+        </div>
+      </article>
+
+      <!-- BOOK 2 -->
+      <article class="card">
+        <div class="meta">French edition</div>
+        <h2>Synergology — Reading Human Signals Without Reducing Them</h2>
+        <p>
+          An approach that insists on observation before interpretation, aiming to reduce projection,
+          bias, and interpretive shortcuts in human reading.
+        </p>
+        <ul>
+          <li>Observation discipline</li>
+          <li>Bias awareness and epistemic responsibility</li>
+          <li>Respect for complexity in human interaction</li>
+        </ul>
+        <div class="actions">
+          <a class="btn primary" href="/works/" title="See the French catalog">View on the French catalog</a>
+          <a class="btn" href="https://www.amazon.fr" rel="nofollow noopener" target="_blank" title="Amazon (French store)">Amazon (FR)</a>
+        </div>
+      </article>
+
+      <!-- BOOK 3 -->
+      <article class="card">
+        <div class="meta">French edition</div>
+        <h2>Philosophy of Assertiveness — Daring to Be, Speak, and Act</h2>
+        <p>
+          A pragmatic and philosophical exploration of assertiveness: speaking clearly, acting with
+          measure, and staying aligned without domination.
+        </p>
+        <ul>
+          <li>Clarity without violence</li>
+          <li>Boundaries and responsibility</li>
+          <li>Practical tools for everyday situations</li>
+        </ul>
+        <div class="actions">
+          <a class="btn primary" href="/works/" title="See the French catalog">View on the French catalog</a>
+          <a class="btn" href="https://www.amazon.fr" rel="nofollow noopener" target="_blank" title="Amazon (French store)">Amazon (FR)</a>
+        </div>
+      </article>
+
+      <!-- BOOK 4 -->
+      <article class="card">
+        <div class="meta">French edition</div>
+        <h2>Emotional Intelligence — Philosophy, Practice, Reflection</h2>
+        <p>
+          A lucid approach to emotions: recognizing them without surrendering to them,
+          and using them as signals rather than verdicts.
+        </p>
+        <ul>
+          <li>Emotional regulation in pressure contexts</li>
+          <li>Practical reflection and grounded tools</li>
+          <li>Human relations and discernment</li>
+        </ul>
+        <div class="actions">
+          <a class="btn primary" href="/works/" title="See the French catalog">View on the French catalog</a>
+          <a class="btn" href="https://www.amazon.fr" rel="nofollow noopener" target="_blank" title="Amazon (French store)">Amazon (FR)</a>
+        </div>
+      </article>
+
+      <!-- BOOK 5 -->
+      <article class="card">
+        <div class="meta">French edition</div>
+        <h2>Metamorphoses of Desire — Technology and Intimacy in the Digital Age</h2>
+        <p>
+          A philosophical reading of contemporary intimacy: technology, desire, identity, and the new
+          grammars of connection.
+        </p>
+        <ul>
+          <li>Desire and digital mediation</li>
+          <li>Intimacy, identity, and cultural shifts</li>
+          <li>Critical thinking without moral panic</li>
+        </ul>
+        <div class="actions">
+          <a class="btn primary" href="/works/" title="See the French catalog">View on the French catalog</a>
+          <a class="btn" href="https://www.amazon.fr" rel="nofollow noopener" target="_blank" title="Amazon (French store)">Amazon (FR)</a>
+        </div>
+      </article>
+
+      <!-- PLACEHOLDER / EXTENSION -->
+      <article class="card">
+        <div class="meta">Note</div>
+        <h2>Looking for a specific title?</h2>
+        <p>
+          The complete catalog is available in French. If you are looking for a particular book,
+          the French works page is the reference point.
+        </p>
+        <ul>
+          <li>Full catalog: French works page</li>
+          <li>Press requests: Press / Media</li>
+          <li>Professional inquiries: Contact</li>
+        </ul>
+        <div class="actions">
+          <a class="btn primary" href="/works/">French works page</a>
+          <a class="btn" href="/presse/">Press / Media</a>
+          <a class="btn" href="/contact/">Contact</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div>© <span id="y"></span> Franck Bometon — Franky · Noir & Gold</div>
+      <div>
+        <a href="/en/">EN home</a> ·
+        <a href="/">French website</a> ·
+        <a href="/presse/">Press</a> ·
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
