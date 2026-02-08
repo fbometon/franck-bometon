@@ -94,8 +94,10 @@
       --sans:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
       --serif:ui-serif,Georgia,Cambria,"Times New Roman",Times,serif;
     }
+
     *{box-sizing:border-box}
     html,body{height:100%}
+
     body{
       margin:0;
       font-family:var(--sans);
@@ -108,6 +110,7 @@
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
     }
+
     a{color:inherit;text-decoration:none}
     a:hover{color:var(--gold)}
     .container{width:min(var(--max),calc(100% - 44px));margin:0 auto}
@@ -140,11 +143,12 @@
       border:1px solid var(--line);padding:4px 10px;border-radius:999px;
     }
 
+    /* Boutons (un peu plus fins) */
     .btn{
       display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      padding:12px 14px;border-radius:999px;border:1px solid var(--line);
+      padding:10px 12px;border-radius:999px;border:1px solid var(--line);
       background:rgba(255,255,255,.03);
-      color:var(--ink);font-weight:600;font-size:13px;
+      color:var(--ink);font-weight:600;font-size:12.5px;
       transition:transform .08s ease,border-color .2s ease,background .2s ease;
       cursor:pointer;user-select:none;white-space:nowrap;
     }
@@ -231,27 +235,29 @@
     }
     .press-meta{margin-top:10px;color:var(--muted2)}
 
-    /* Assets cards */
+    /* ===== Assets cards (compact & harmonisé) ===== */
     .asset{
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      background:rgba(255,255,255,.02);
-      padding:14px;
+      border:1px solid rgba(242,240,234,.12);
+      border-radius:16px;
+      background:rgba(255,255,255,.018);
+      padding:12px;
       display:flex;flex-direction:column;gap:10px;
     }
     .asset .meta{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
-    .asset .name{font-family:var(--serif);color:var(--ink);font-size:16px}
-    .asset .tag{font-family:var(--mono);font-size:11px;color:var(--muted2);letter-spacing:.12em;text-transform:uppercase}
-    .asset .desc{color:var(--muted);font-size:13px;line-height:1.6}
+    .asset .name{font-family:var(--serif);color:var(--ink);font-size:15px}
+    .asset .tag{font-family:var(--mono);font-size:10.5px;color:var(--muted2);letter-spacing:.12em;text-transform:uppercase}
+    .asset .desc{color:var(--muted);font-size:12.75px;line-height:1.55}
     .asset .actions{display:flex;gap:10px;flex-wrap:wrap}
 
+    /* Vignettes plus petites + cadres plus fins */
     .thumb{
       width:100%;
-      aspect-ratio:16/10;
-      border:1px solid var(--line);
-      border-radius:14px;
+      aspect-ratio:16/9;
+      max-height:160px;
+      border:1px solid rgba(242,240,234,.11);
+      border-radius:12px;
       overflow:hidden;
-      background:rgba(255,255,255,.02);
+      background:rgba(255,255,255,.012);
       display:flex;align-items:center;justify-content:center;
     }
     .thumb img{
@@ -259,12 +265,34 @@
       object-fit:cover;
       display:block;
     }
-    .thumb.square{aspect-ratio:1/1}
+
+    /* Badge carré : compact, centré */
+    .thumb.square{
+      aspect-ratio:1/1;
+      max-height:160px;
+    }
     .thumb.square img{
       width:auto;height:auto;
-      max-width:78%;
-      max-height:78%;
+      max-width:72%;
+      max-height:72%;
       object-fit:contain;
+    }
+
+    /* Logo : éviter le “plein cadre” */
+    .thumb.logo img{
+      width:auto;height:auto;
+      max-width:88%;
+      max-height:88%;
+      object-fit:contain;
+      padding:10px;
+      background:rgba(0,0,0,.22);
+      border-radius:10px;
+    }
+
+    /* Portraits : un peu plus hauts que logo/badge */
+    .thumb.portrait{
+      aspect-ratio:4/3;
+      max-height:190px;
     }
 
     code{
@@ -272,13 +300,13 @@
       font-size:12px;
       padding:2px 6px;
       border-radius:8px;
-      border:1px solid var(--line);
+      border:1px solid rgba(242,240,234,.14);
       background:rgba(255,255,255,.03);
       color:rgba(242,240,234,.92);
     }
 
     footer{
-      padding:32px 0 54px;border-top:1px solid var(--line);
+      padding:32px 0 54px;border-top:1px solid rgba(242,240,234,.14);
       background:linear-gradient(180deg, rgba(15,15,16,0) 0%, rgba(15,15,16,.35) 100%);
     }
     .foot{
@@ -463,7 +491,7 @@
               <div class="name">Logo “Noir & Or”</div>
               <div class="tag">PNG</div>
             </div>
-            <div class="thumb" aria-hidden="true">
+            <div class="thumb logo" aria-hidden="true">
               <img src="/assets/presse/logo-noir-or-pristina.png" alt="" loading="lazy" decoding="async">
             </div>
             <div class="desc">Logo officiel (PNG).</div>
@@ -478,7 +506,7 @@
               <div class="name">Portrait HD</div>
               <div class="tag">PNG</div>
             </div>
-            <div class="thumb" aria-hidden="true">
+            <div class="thumb portrait" aria-hidden="true">
               <img src="/assets/presse/portrait-franck-bometon-hd.png" alt="" loading="lazy" decoding="async">
             </div>
             <div class="desc">Portrait haute résolution (prioritaire presse).</div>
@@ -493,7 +521,7 @@
               <div class="name">Portrait standard</div>
               <div class="tag">JPG</div>
             </div>
-            <div class="thumb" aria-hidden="true">
+            <div class="thumb portrait" aria-hidden="true">
               <img src="/assets/presse/portrait-franck.jpg" alt="" loading="lazy" decoding="async">
             </div>
             <div class="desc">Version légère (web).</div>
