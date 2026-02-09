@@ -7,7 +7,7 @@
   <meta name="color-scheme" content="dark" />
 
   <title>Ressources — Presse / Médias — Franck Bometon</title>
-  <meta name="description" content="Ressources presse : note de posture intellectuelle, qualification OPQF, affiliation ICF, portrait officiel." />
+  <meta name="description" content="Ressources presse : press kit, note de posture intellectuelle, qualification OPQF, affiliation ICF, portrait officiel." />
   <link rel="canonical" href="https://franck-bometon.fr/presse/" />
 
   <!-- Open Graph -->
@@ -15,7 +15,7 @@
   <meta property="og:description" content="Documents et visuels officiels à destination des médias." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://franck-bometon.fr/presse/" />
-  <meta property="og:image" content="https://franck-bometon.fr/assets/og.jpg" />
+  <meta property="og:image" content="https://franck-bometon.fr/og.jpg" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,10 +48,6 @@
     }
 
     a{ color:inherit; text-decoration:none; }
-    a:focus-visible{
-      outline:2px solid rgba(214,181,109,.55);
-      outline-offset:3px;
-    }
 
     .wrap{
       max-width:var(--max);
@@ -135,9 +131,6 @@
       letter-spacing:.14em;
       text-transform:uppercase;
       color:rgba(255,255,255,.55);
-      display:flex;
-      gap:10px;
-      white-space:nowrap;
     }
 
     .desc{
@@ -148,12 +141,6 @@
       margin:0;
     }
 
-    .actions{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-
     .btn{
       padding:8px 14px;
       border:1px solid var(--goldLine);
@@ -162,11 +149,8 @@
       letter-spacing:.10em;
       text-transform:uppercase;
       background:none;
-      cursor:pointer;
       transition:.15s ease;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
+      display:inline-block;
     }
 
     .btn:hover{
@@ -207,76 +191,51 @@
   </div>
 </header>
 
-<main class="grid" aria-label="Ressources presse">
+<main class="grid">
 
-  <!-- PRESS KIT -->
   <section class="item">
-    <div>
-      <div class="head">
-        <h2>Press kit — Médias</h2>
-        <div class="formats"><span>ZIP</span></div>
-      </div>
-      <p class="desc">Dossier presse complet (visuels + bio + éléments institutionnels).</p>
+    <div class="head">
+      <h2>Press kit — Médias</h2>
+      <div class="formats">ZIP</div>
     </div>
-    <div class="actions">
-      <a class="btn" href="../assets/press/presskit-franck-bometon.zip" download>Télécharger</a>
-    </div>
+    <p class="desc">Dossier presse complet.</p>
+    <a class="btn" href="../presskit-franck-bometon.zip" download>Télécharger</a>
   </section>
 
-  <!-- NOTE DE POSTURE -->
   <section class="item">
-    <div>
-      <div class="head">
-        <h2>Note de posture intellectuelle — Médias</h2>
-        <div class="formats"><span>PDF</span></div>
-      </div>
-      <p class="desc">Document de cadrage présentant la posture intellectuelle et les principes éditoriaux.</p>
+    <div class="head">
+      <h2>Note de posture intellectuelle</h2>
+      <div class="formats">PDF</div>
     </div>
-    <div class="actions">
-      <a class="btn" href="../assets/franck-bometon-note-de-posture-intellectuelle.pdf" download>Télécharger</a>
-    </div>
+    <p class="desc">Posture, principes éditoriaux et cadre intellectuel.</p>
+    <a class="btn" href="../franck-bometon-note-de-postureintellectuelle.pdf" download>Télécharger</a>
   </section>
 
-  <!-- OPQF -->
   <section class="item">
-    <div>
-      <div class="head">
-        <h2>Qualification OPQF — Services intellectuels</h2>
-        <div class="formats"><span>JPG</span></div>
-      </div>
-      <p class="desc">Reconnaissance officielle attestant de la qualité et de la conformité des prestations intellectuelles.</p>
+    <div class="head">
+      <h2>Qualification OPQF</h2>
+      <div class="formats">JPG</div>
     </div>
-    <div class="actions">
-      <a class="btn" href="../assets/opqf-qualification-services-intellectuels.jpg" download>Télécharger</a>
-    </div>
+    <p class="desc">Reconnaissance officielle des services intellectuels.</p>
+    <a class="btn" href="../opqf-qualification-services-intellectuels.jpg" download>Télécharger</a>
   </section>
 
-  <!-- ICF -->
   <section class="item">
-    <div>
-      <div class="head">
-        <h2>Affiliation ICF — Membre</h2>
-        <div class="formats"><span>PNG</span></div>
-      </div>
-      <p class="desc">Appartenance à l’International Coaching Federation.</p>
+    <div class="head">
+      <h2>Affiliation ICF</h2>
+      <div class="formats">PNG</div>
     </div>
-    <div class="actions">
-      <a class="btn" href="../assets/icf-member-badge.png" download>Télécharger</a>
-    </div>
+    <p class="desc">Membre de l’International Coaching Federation.</p>
+    <a class="btn" href="../icf-member-badge.png" download>Télécharger</a>
   </section>
 
-  <!-- PORTRAIT -->
   <section class="item">
-    <div>
-      <div class="head">
-        <h2>Portrait — Format standard</h2>
-        <div class="formats"><span>JPG</span></div>
-      </div>
-      <p class="desc">Portrait officiel. Usage web et médias.</p>
+    <div class="head">
+      <h2>Portrait officiel</h2>
+      <div class="formats">JPG</div>
     </div>
-    <div class="actions">
-      <a class="btn" href="../assets/portrait-franck.jpg" download>Télécharger</a>
-    </div>
+    <p class="desc">Portrait standard pour usage presse.</p>
+    <a class="btn" href="../portrait-franck.jpg" download>Télécharger</a>
   </section>
 
 </main>
@@ -284,7 +243,7 @@
 <footer>
   <div>
     <strong>Usage</strong><br>
-    Ces ressources peuvent être citées ou reproduites à des fins de presse avec mention de la source.
+    Reproduction autorisée à des fins de presse avec mention de la source.
   </div>
   <div class="footer-links">
     <a href="../">Accueil</a>
