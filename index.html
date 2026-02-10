@@ -6,7 +6,11 @@
   <meta name="theme-color" content="#0b0b0b" />
   <meta name="color-scheme" content="dark light" />
 
+  <!-- Canonical + hreflang -->
   <link rel="canonical" href="https://franck-bometon.fr/" />
+  <link rel="alternate" hreflang="fr" href="https://franck-bometon.fr/" />
+  <link rel="alternate" hreflang="en" href="https://franck-bometon.fr/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://franck-bometon.fr/" />
 
   <!-- Robots -->
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
@@ -41,17 +45,34 @@
   <!-- Perf -->
   <link rel="preconnect" href="https://www.amazon.fr" crossorigin />
   <link rel="preconnect" href="https://author.amazon.fr" crossorigin />
-  <link rel="preload" as="image" href="/portrait-franck.jpg" imagesrcset="/portrait-franck.jpg" />
+  <link rel="preload" as="image" href="/portrait-franck.jpg" />
   <link rel="preload" as="image" href="/assets/og.jpg" />
 
-  <!-- JSON-LD -->
+  <!-- Matomo (RGPD-friendly) — À ACTIVER en remplaçant TON-MATOMO-DOMAINE + SITE_ID -->
+  <!--
+  <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://TON-MATOMO-DOMAINE/"; // ex: https://stats.franck-bometon.fr/
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', 'SITE_ID']); // ex: '1'
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  -->
+  <!-- End Matomo Code -->
+
+  <!-- JSON-LD (Person + Website + WebPage) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://franck-bometon.fr/#franck-bometon",
+        "@id": "https://franck-bometon.fr/#person",
         "name": "Franck Bometon",
         "alternateName": "Franky",
         "jobTitle": "Auteur · Essayiste",
@@ -71,16 +92,16 @@
         "@id": "https://franck-bometon.fr/#website",
         "url": "https://franck-bometon.fr/",
         "name": "Franck Bometon — Franky | Noir & Or",
-        "publisher": { "@id": "https://franck-bometon.fr/#franck-bometon" },
+        "publisher": { "@id": "https://franck-bometon.fr/#person" },
         "inLanguage": "fr-FR"
       },
       {
         "@type": "WebPage",
-        "@id": "https://franck-bometon.fr/#homepage",
+        "@id": "https://franck-bometon.fr/#webpage",
         "url": "https://franck-bometon.fr/",
         "name": "Franck Bometon — Franky | Noir & Or",
         "isPartOf": { "@id": "https://franck-bometon.fr/#website" },
-        "about": { "@id": "https://franck-bometon.fr/#franck-bometon" },
+        "about": { "@id": "https://franck-bometon.fr/#person" },
         "primaryImageOfPage": {
           "@type": "ImageObject",
           "@id": "https://franck-bometon.fr/#portrait",
@@ -93,28 +114,6 @@
   </script>
 
   <style>
-    .lang{
-  display:flex;
-  gap:10px;
-  align-items:center;
-}
-.lang a{
-  font-size:13px;
-  color:var(--muted);
-  padding:8px 10px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background:rgba(214,181,109,.06);
-}
-.lang a:hover{
-  color:var(--ink);
-  border-color:rgba(214,181,109,.45);
-}
-.lang a[aria-current="page"]{
-  color:var(--ink);
-  background:rgba(214,181,109,.18);
-  border-color:rgba(214,181,109,.55);
-}
     :root{
       --bg:#0b0b0b;
       --ink:#f2f0ea;
@@ -175,6 +174,19 @@
     .navlinks{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
     .navlinks a{font-size:13px;color:var(--muted)}
     .navlinks a:hover{color:var(--ink)}
+
+    .lang{display:flex;gap:10px;align-items:center}
+    .lang a{
+      font-size:13px;color:var(--muted);
+      padding:8px 10px;border:1px solid var(--line);
+      border-radius:999px;background:rgba(214,181,109,.06);
+    }
+    .lang a:hover{color:var(--ink);border-color:rgba(214,181,109,.45)}
+    .lang a[aria-current="page"]{
+      color:var(--ink);
+      background:rgba(214,181,109,.18);
+      border-color:rgba(214,181,109,.55);
+    }
 
     .btn{
       display:inline-flex;align-items:center;justify-content:center;gap:10px;
@@ -254,7 +266,6 @@
     .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .sep{height:1px;background:var(--line);margin:18px 0}
 
-    /* Books */
     .controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:12px 0 18px}
     .chip{
       border:1px solid var(--line);background:rgba(255,255,255,.02);
@@ -323,34 +334,15 @@
 </head>
 
 <body>
-  <header>
-  <div class="container nav">
-    <div class="brand">
-      <span class="name">Franck Bometon — Franky</span>
-      <span class="tag">Noir & Or</span>
-    </div>
-
-    <div class="navlinks">
-      <a href="/#apropos">À propos</a>
-      <a href="/works/">Œuvres</a>
-      <a href="/presse/">Presse</a>
-      <a href="/contact/">Contact</a>
-    </div>
-
-    <div class="lang" aria-label="Language">
-      <a href="/" aria-current="page">FR</a>
-      <a href="/en/" lang="en">EN</a>
-    </div>
-  </div>
-</header>
   <a class="skip" href="#content">Aller au contenu</a>
 
+  <!-- HEADER UNIQUE (desktop + lang + burger) -->
   <header>
     <div class="container">
       <div class="nav">
         <a class="brand" href="#top" aria-label="Retour en haut">
-          <span class="name">Franck Bometon</span>
-          <span class="tag">— Franky</span>
+          <span class="name">Franck Bometon — Franky</span>
+          <span class="tag">Noir & Or</span>
         </a>
 
         <nav class="navlinks" aria-label="Navigation principale">
@@ -361,9 +353,16 @@
           <a href="#contact">Contact</a>
         </nav>
 
-        <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-controls="drawer" aria-expanded="false" type="button">
-          <span></span><span></span><span></span>
-        </button>
+        <div style="display:flex;gap:10px;align-items:center;">
+          <div class="lang" aria-label="Language">
+            <a href="/" aria-current="page">FR</a>
+            <a href="/en/" lang="en">EN</a>
+          </div>
+
+          <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-controls="drawer" aria-expanded="false" type="button">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
 
       <div class="drawer" id="drawer">
@@ -406,7 +405,7 @@
         <aside class="portrait" aria-label="Portrait">
           <img
             src="/portrait-franck.jpg"
-            alt="Franck Bometon, auteur et essayiste"
+            alt="Franck Bometon (Franky), auteur et essayiste — portrait officiel"
             width="900"
             height="1125"
             loading="eager"
@@ -582,7 +581,7 @@
         .replace(/\p{Diacritic}/gu,'');
     }
 
-    // ===== Books data (reprend ton mapping covers) =====
+    // ===== Books data =====
     const BOOKS = [
       { cat:'essais',    title:"Philosophie de l'Assertivité : Oser Être, Dire et Agir", url:"https://www.amazon.fr/dp/B0F21VYGJZ", cover:"/covers/01-philosophie-assertivite.jpg" },
       { cat:'essais',    title:"La Synergologie : Lire l’humain sans le réduire", url:"https://www.amazon.fr/dp/B0GHWBDFMR", cover:"/covers/02-synergologie.jpg" },
@@ -673,3 +672,5 @@
   </script>
 </body>
 </html>
+ 
+ 
